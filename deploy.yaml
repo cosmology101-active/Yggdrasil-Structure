@@ -15,6 +15,7 @@ curseforge:
     project_id: 1135665
     java_versions:
       - Java 21
+      - Java 22
     environments:
       - server
 package_as_mod:
