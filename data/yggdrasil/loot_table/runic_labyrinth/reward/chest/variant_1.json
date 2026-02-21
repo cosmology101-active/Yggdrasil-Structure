@@ -213,21 +213,6 @@
 					"type": "minecraft:item",
 					"name": "minecraft:music_disc_wait",
 					"weight": 2
-				},
-				{
-					"type": "minecraft:item",
-					"name": "minecraft:iron_chain",
-					"weight": 8,
-					"functions": [
-						{
-							"function": "minecraft:set_count",
-							"count": {
-								"type": "minecraft:uniform",
-								"min": 4,
-								"max": 16
-							}
-						}
-					]
 				}
 			]
 		}
