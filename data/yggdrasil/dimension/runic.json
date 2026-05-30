@@ -1,0 +1,11 @@
+{
+	"type": "yggdrasil:runic",
+	"generator": {
+		"type": "minecraft:noise",
+		"settings": "yggdrasil:runic",
+		"biome_source": {
+			"type": "minecraft:fixed",
+			"biome": "yggdrasil:runic"
+		}
+	}
+}

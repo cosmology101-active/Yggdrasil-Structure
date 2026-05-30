@@ -153,7 +153,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "yggdrasil:helheim/enchanted_book/trial_spawner",
+					"value": "yggdrasil:asgard/enchanted_book/trial_spawner",
 					"weight": 2,
 					"conditions": [
 						{
@@ -180,16 +180,16 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "yggdrasil:helheim/reward/barrel",
+					"value": "yggdrasil:asgard/reward/barrel",
 					"weight": 2
 				},
 				{
 					"type": "minecraft:loot_table",
-					"value": "yggdrasil:helheim/reward/chest",
+					"value": "yggdrasil:asgard/reward/chest",
 					"weight": 8
 				}
 			]
 		}
 	],
-	"random_sequence": "yggdrasil:helheim/reward"
+	"random_sequence": "yggdrasil:asgard/reward"
 }

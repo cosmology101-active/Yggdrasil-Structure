@@ -1,0 +1,23 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "player": {
+                    "location": {
+                        "dimension": "yggdrasil:runic"
+                    }
+                },
+                "block": "minecraft:end_gateway"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "requirement"
+        ]
+    ],
+    "rewards": {
+        "function": "yggdrasil:teleporation_in_overworld"
+    }
+}

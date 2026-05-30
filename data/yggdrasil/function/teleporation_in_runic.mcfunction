@@ -1,0 +1,1 @@
+execute as @s at @s in yggdrasil:runic run tp @s ~ 300 ~

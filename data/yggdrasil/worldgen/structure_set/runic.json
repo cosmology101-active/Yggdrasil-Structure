@@ -1,0 +1,28 @@
+{
+	"structures": [
+		{
+			"structure": "yggdrasil:cubeoid",
+			"weight": 5
+		},
+		{
+			"structure": "yggdrasil:runic_fracture",
+			"weight": 2
+		},
+		{
+			"structure": "yggdrasil:dokkalfar_ruins",
+			"weight": 2
+		},
+		{
+			"structure": "yggdrasil:runic_labyrinth",
+			"weight": 1
+		}
+	],
+	"placement": {
+		"type": "minecraft:random_spread",
+		"salt": 485184823,
+		"frequency": 0.75,
+		"spread_type": "linear",
+		"spacing": 20,
+		"separation": 10
+	}
+}

@@ -1,0 +1,1 @@
+execute as @s at @s in minecraft:overworld run tp @s ~ 300 ~

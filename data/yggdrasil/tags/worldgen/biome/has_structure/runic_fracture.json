@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
+		"yggdrasil:runic",
 		"minecraft:flower_forest",
 		"minecraft:plains",
 		"minecraft:meadow",
