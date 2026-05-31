@@ -442,6 +442,9 @@
 
 	"item.yggdrasil.generic.ran_fruit": "Manzana de Rân",
 	"item.yggdrasil.generic.ran_fruit.teleport": "Teletransportarse a la cima del mundo",
+	"item.yggdrasil.generic.era_fruit": "Manzana de Era",
+	"item.yggdrasil.generic.era_fruit.teleport": "Teletransportarse al mundo principal",
+	"item.yggdrasil.era_fruit.location": "[Cristal Rúnico]",
 
 	"item.yggdrasil.asgard.gungnir": "Gungnir",
 	"item.yggdrasil.asgard.gungnir.lore": "La lanza sagrada del Padre de todas las cosas",

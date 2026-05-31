@@ -454,6 +454,9 @@
 
 	"item.yggdrasil.generic.ran_fruit": "兰之果",
 	"item.yggdrasil.generic.ran_fruit.teleport": "传送到世界顶端",
+	"item.yggdrasil.generic.era_fruit": "纪元之果",
+	"item.yggdrasil.generic.era_fruit.teleport": "传送到主世界",
+	"item.yggdrasil.era_fruit.location": "[符文水晶]",
 
 	"item.yggdrasil.asgard.gungnir": "冈格尼尔",
 	"item.yggdrasil.asgard.gungnir.lore": "所有事物的父亲的神圣长矛",

@@ -1,0 +1,65 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/shulker/white/variant_1",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/shulker/white/variant_2",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/shulker/white/variant_3",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/shulker/black/variant_1",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/shulker/black/variant_2",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/shulker/black/variant_3",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/chest/variant_1",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/chest/variant_2",
+                    "weight": 1
+                },
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_labyrinth/reward/chest/variant_3",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "yggdrasil:runic_crystal/treasure/era_apple",
+                    "weight": 1
+                }
+            ]
+        }
+    ],
+    "random_sequence": "yggdrasil:runic_crystal/chest"
+}

@@ -455,6 +455,9 @@
 
 	"item.yggdrasil.generic.ran_fruit": "Apple of Rân",
 	"item.yggdrasil.generic.ran_fruit.teleport": "Teleport to the top of the world",
+	"item.yggdrasil.generic.era_fruit": "Apple of Era",
+	"item.yggdrasil.generic.era_fruit.teleport": "Teleport to the overworld",
+	"item.yggdrasil.era_fruit.location": "[Runic Crystal]",
 
 	"item.yggdrasil.asgard.gungnir": "Gungnir",
 	"item.yggdrasil.asgard.gungnir.lore": "The sacred lance of the Father of All Things",

@@ -1,0 +1,26 @@
+{
+	"criteria": {
+		"requirement": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"components": {
+						"minecraft:custom_data": {
+							"yggdrasil": {
+								"id": "yggdrasil.runic_crystal.treasure.era_fruit"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"requirement"
+		]
+	],
+	"rewards": {
+		"function": "yggdrasil:era_fruit"
+	}
+}

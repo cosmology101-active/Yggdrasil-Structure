@@ -454,6 +454,9 @@
 
 	"item.yggdrasil.generic.ran_fruit": "ランのリンゴ",
 	"item.yggdrasil.generic.ran_fruit.teleport": "世界の頂上へテレポート",
+	"item.yggdrasil.generic.era_fruit": "時代のリンゴ",
+	"item.yggdrasil.generic.era_fruit.teleport": "オーバーワールドへテレポート",
+	"item.yggdrasil.era_fruit.location": "[ルーンクリスタル]",
 
 	"item.yggdrasil.asgard.gungnir": "グングニル",
 	"item.yggdrasil.asgard.gungnir.lore": "すべてのものの父の聖なる槍",

@@ -1,0 +1,68 @@
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"target": "item_name",
+							"name": {
+								"translate": "item.yggdrasil.generic.era_fruit",
+								"fallback": "Apple of Era"
+							}
+						},
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:rarity": "epic",
+								"minecraft:enchantment_glint_override": true,
+								"minecraft:custom_data": {
+									"yggdrasil": {
+										"id": "yggdrasil.runic_crystal.treasure.era_fruit"
+									}
+								}
+							}
+						},
+						{
+							"function": "minecraft:set_lore",
+							"entity": "this",
+							"lore": [
+								{
+									"translate": "item.yggdrasil.generic.era_fruit.teleport",
+									"fallback": "Teleport to the overworld",
+									"color": "#a0a0a0",
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"obfuscated": false
+								},
+								{
+									"text": ""
+								},
+								{
+									"translate": "item.yggdrasil.era_fruit.location",
+									"fallback": "[Runic Crystal]",
+									"color": "#b1249c",
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"obfuscated": false
+								}
+							],
+							"mode": "replace_all"
+						}
+					]
+				}
+			]
+		}
+	],
+	"random_sequence": "yggdrasil:runic_crystal/treasure"
+}

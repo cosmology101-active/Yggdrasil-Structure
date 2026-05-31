@@ -454,6 +454,9 @@
 
 	"item.yggdrasil.generic.ran_fruit": "Яблоко Ран",
 	"item.yggdrasil.generic.ran_fruit.teleport": "Телепортироваться на вершину мира",
+	"item.yggdrasil.generic.era_fruit": "Яблоко Эры",
+	"item.yggdrasil.generic.era_fruit.teleport": "Телепортироваться в верхний мир",
+	"item.yggdrasil.era_fruit.location": "[Рунический Кристалл]",
 
 	"item.yggdrasil.asgard.gungnir": "Гунгнир",
 	"item.yggdrasil.asgard.gungnir.lore": "Священное копьё отца всех вещей",

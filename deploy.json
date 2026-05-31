@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "5.4.0",
+    "version": "6.0.0",
     "name": "Yggdrasil",
     "filename": "Yggdrasil"
   },
@@ -29,8 +29,7 @@
       "enabled": true,
       "project_id": 1135665,
       "java_versions": [
-        "Java 21",
-        "Java 22"
+        "Java 25"
       ],
       "environments": [
         "server"

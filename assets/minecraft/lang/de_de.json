@@ -455,6 +455,9 @@
 
 	"item.yggdrasil.generic.ran_fruit": "Apfel der Rân",
 	"item.yggdrasil.generic.ran_fruit.teleport": "Teleportiere dich an die Spitze der Welt",
+	"item.yggdrasil.generic.era_fruit": "Apfel der Ära",
+	"item.yggdrasil.generic.era_fruit.teleport": "Teleportiere dich in die Oberwelt",
+	"item.yggdrasil.era_fruit.location": "[Runenkristall]",
 
 	"item.yggdrasil.asgard.gungnir": "Gungnir",
 	"item.yggdrasil.asgard.gungnir.lore": "Die heilige Lanze des Vaters aller Dinge",
