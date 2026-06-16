@@ -3,41 +3,32 @@
 <head>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Yggdrasil Loot Table Reference</title>
-<style>
-:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08)}
-body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
-.container{max-width:1180px;margin:0 auto;padding:20px}
-header,footer{padding:18px 0;text-align:center}
-header h1{margin:0;font-size:2.2rem;color:var(--accent)}
-header p,footer p{margin:10px 0;color:var(--muted)}
-.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
-.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
-.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}
-.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}
-.structure-card span{color:var(--muted);font-size:0.95rem}
-.structure-card.big{grid-column:1/-1;text-align:center}
-.table{width:100%;border-collapse:collapse;margin-top:12px}
-.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
-.table th{background:rgba(255,255,255,0.06)}
-.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
-.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}
-.link{color:var(--accent2);text-decoration:none}
-.link:hover{text-decoration:underline}
-details summary{cursor:pointer;outline:none}
-.details-card{margin-bottom:18px}
-ul{margin:0 0 0 18px;padding:0}
-li{margin-bottom:6px}
-.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(126,231,135,0.15);color:var(--accent);font-size:0.9rem;margin-right:8px}
-@media(max-width:860px){.container{padding:16px}}
-</style>
+<title>Yggdrasil Structure Loot Tables</title>
+<style>:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08);--entry:#e6b3ff;--pct:#ffc299}body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}.container{max-width:1180px;margin:0 auto;padding:20px}header,footer{padding:18px 0;text-align:center}header h1{margin:0;font-size:2.2rem;color:var(--accent)}header p,footer p{margin:10px 0;color:var(--muted)}.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}.structure-card span{color:var(--muted);font-size:0.95rem}.table{width:100%;border-collapse:collapse;margin:12px 0}.table tr{border-bottom:1px solid rgba(255,255,255,0.08)}.table td{padding:10px;text-align:left;vertical-align:top}.table td.entry{color:var(--entry);font-weight:500;width:70%}.table td.pct{color:var(--pct);text-align:right;width:30%;font-variant-numeric:tabular-nums}.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}.link{color:var(--accent2);text-decoration:none}.link:hover{text-decoration:underline}details summary{cursor:pointer;outline:none;user-select:none}details summary:hover{background:rgba(255,255,255,0.03);border-radius:6px;padding:8px}.details-card{margin-bottom:18px}.pool{margin-bottom:16px}ul{margin:0 0 0 18px;padding:0}li{margin-bottom:6px}.cat-badge{display:inline-block;padding:4px 8px;border-radius:6px;color:#000;font-size:0.9rem;font-weight:600}.rolls{color:var(--muted);font-size:0.9rem;font-style:italic;margin-left:auto}@media(max-width:860px){.container{padding:16px}.table td.entry{width:60%}.table td.pct{width:40%}}</style>
 </head>
 <body>
 <div class='container'>
-<header><h1>Yggdrasil Loot Table Reference</h1></header>
-<div class='card'><p class='meta'>Browse structures by name. Each structure page groups loot tables by usage category and shows reward distributions, enchantment pools, and nested loot paths.</p></div><div class='card'><h2>Structures</h2><div class='structure-grid'><a class='structure-card' href='alfheim_tree.html'><strong>Alfheim Tree</strong><span>20 tables</span></a><a class='structure-card' href='asflors.html'><strong>Asflors</strong><span>34 tables</span></a><a class='structure-card' href='asgard.html'><strong>Asgard</strong><span>42 tables</span></a><a class='structure-card' href='cubeoid.html'><strong>Cubeoid</strong><span>3 tables</span></a><a class='structure-card' href='dokkalfar_ruins.html'><strong>Dokkalfar Ruins</strong><span>1 tables</span></a><a class='structure-card' href='folkvangr.html'><strong>Folkvangr</strong><span>2 tables</span></a><a class='structure-card' href='generic.html'><strong>Generic</strong><span>90 tables</span></a><a class='structure-card' href='helblom.html'><strong>Helblom</strong><span>3 tables</span></a><a class='structure-card' href='helheim.html'><strong>Helheim</strong><span>36 tables</span></a><a class='structure-card' href='lifblom.html'><strong>Lifblom</strong><span>3 tables</span></a><a class='structure-card' href='proto_fracture.html'><strong>Proto Fracture</strong><span>2 tables</span></a><a class='structure-card' href='runic_crystal.html'><strong>Runic Crystal</strong><span>4 tables</span></a><a class='structure-card' href='runic_fracture.html'><strong>Runic Fracture</strong><span>5 tables</span></a><a class='structure-card' href='runic_labyrinth.html'><strong>Runic Labyrinth</strong><span>41 tables</span></a><a class='structure-card' href='vanaheim.html'><strong>Vanaheim</strong><span>33 tables</span></a><a class='structure-card' href='voroblom.html'><strong>Voroblom</strong><span>3 tables</span></a><a class='structure-card' href='zenflors.html'><strong>Zenflors</strong><span>3 tables</span></a></div></div><div class='card'><h2>Legendary items</h2><p class='meta'>Named weapons and treasure items with stats, enchant pools, and their source tables.</p><a class='structure-card big' href='legendary_weapons.html'><strong>Legendary Items</strong><span>weapon stats + enchant pools</span></a></div>
-<footer><p>Generated from <code>data/yggdrasil/loot_table</code>. Enchant pools shown inline where available.</p></footer>
+<header><h1>Yggdrasil Structure Loot Tables</h1></header>
+<div class='card'><p class='meta'>Browse per-structure loot table pages with container-category organization and English labels.</p></div>
+<div class='structure-grid'>
+<a class='structure-card' href='alfheim_tree.html'><strong>Alfheim Tree</strong><span>alfheim_tree</span></a>
+<a class='structure-card' href='asflors.html'><strong>Asflors</strong><span>asflors</span></a>
+<a class='structure-card' href='asgard.html'><strong>Asgard</strong><span>asgard</span></a>
+<a class='structure-card' href='cubeoid.html'><strong>Cubeoid</strong><span>cubeoid</span></a>
+<a class='structure-card' href='dokkalfar_ruins.html'><strong>Dokkalfar Ruins</strong><span>dokkalfar_ruins</span></a>
+<a class='structure-card' href='folkvangr.html'><strong>Folkvangr</strong><span>folkvangr</span></a>
+<a class='structure-card' href='generic.html'><strong>Generic</strong><span>generic</span></a>
+<a class='structure-card' href='helblom.html'><strong>Helblom</strong><span>helblom</span></a>
+<a class='structure-card' href='helheim.html'><strong>Helheim</strong><span>helheim</span></a>
+<a class='structure-card' href='lifblom.html'><strong>Lifblom</strong><span>lifblom</span></a>
+<a class='structure-card' href='proto_fracture.html'><strong>Proto Fracture</strong><span>proto_fracture</span></a>
+<a class='structure-card' href='runic_crystal.html'><strong>Runic Crystal</strong><span>runic_crystal</span></a>
+<a class='structure-card' href='runic_fracture.html'><strong>Runic Fracture</strong><span>runic_fracture</span></a>
+<a class='structure-card' href='runic_labyrinth.html'><strong>Runic Labyrinth</strong><span>runic_labyrinth</span></a>
+<a class='structure-card' href='vanaheim.html'><strong>Vanaheim</strong><span>vanaheim</span></a>
+<a class='structure-card' href='voroblom.html'><strong>Voroblom</strong><span>voroblom</span></a>
+<a class='structure-card' href='zenflors.html'><strong>Zenflors</strong><span>zenflors</span></a>
+<a class='structure-card' href='items.html'><strong>Legendary Items</strong><span>treasures & rewards</span></a>
 </div>
-</body>
-</html>
+<footer><p>Generated from <code>data/yggdrasil/loot_table</code>.</p></footer>
+</div></body></html>

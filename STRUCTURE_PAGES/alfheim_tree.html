@@ -4,40 +4,457 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Yggdrasil — Alfheim Tree</title>
-<style>
-:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08)}
-body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
-.container{max-width:1180px;margin:0 auto;padding:20px}
-header,footer{padding:18px 0;text-align:center}
-header h1{margin:0;font-size:2.2rem;color:var(--accent)}
-header p,footer p{margin:10px 0;color:var(--muted)}
-.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
-.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
-.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}
-.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}
-.structure-card span{color:var(--muted);font-size:0.95rem}
-.structure-card.big{grid-column:1/-1;text-align:center}
-.table{width:100%;border-collapse:collapse;margin-top:12px}
-.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
-.table th{background:rgba(255,255,255,0.06)}
-.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
-.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}
-.link{color:var(--accent2);text-decoration:none}
-.link:hover{text-decoration:underline}
-details summary{cursor:pointer;outline:none}
-.details-card{margin-bottom:18px}
-ul{margin:0 0 0 18px;padding:0}
-li{margin-bottom:6px}
-.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(126,231,135,0.15);color:var(--accent);font-size:0.9rem;margin-right:8px}
-@media(max-width:860px){.container{padding:16px}}
-</style>
+<style>:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08);--entry:#e6b3ff;--pct:#ffc299}body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}.container{max-width:1180px;margin:0 auto;padding:20px}header,footer{padding:18px 0;text-align:center}header h1{margin:0;font-size:2.2rem;color:var(--accent)}header p,footer p{margin:10px 0;color:var(--muted)}.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}.structure-card span{color:var(--muted);font-size:0.95rem}.table{width:100%;border-collapse:collapse;margin:12px 0}.table tr{border-bottom:1px solid rgba(255,255,255,0.08)}.table td{padding:10px;text-align:left;vertical-align:top}.table td.entry{color:var(--entry);font-weight:500;width:70%}.table td.pct{color:var(--pct);text-align:right;width:30%;font-variant-numeric:tabular-nums}.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}.link{color:var(--accent2);text-decoration:none}.link:hover{text-decoration:underline}details summary{cursor:pointer;outline:none;user-select:none}details summary:hover{background:rgba(255,255,255,0.03);border-radius:6px;padding:8px}.details-card{margin-bottom:18px}.pool{margin-bottom:16px}ul{margin:0 0 0 18px;padding:0}li{margin-bottom:6px}.cat-badge{display:inline-block;padding:4px 8px;border-radius:6px;color:#000;font-size:0.9rem;font-weight:600}.rolls{color:var(--muted);font-size:0.9rem;font-style:italic;margin-left:auto}@media(max-width:860px){.container{padding:16px}.table td.entry{width:60%}.table td.pct{width:40%}}</style>
 </head>
 <body>
 <div class='container'>
 <header><h1>Yggdrasil — Alfheim Tree</h1></header>
-<div class='card'><p class='meta'>Structure: <strong>Alfheim Tree</strong>.</p><p class='meta'>Grouped by container/use-case category. Each table row below shows its content summary and nested reward distribution.</p><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div><div class='card'><h2>Category summary</h2><ul><li><strong>Alfheim Tree</strong>: 20 tables</li></ul></div><div class='card'><h2>Alfheim Tree</h2><table class='table'><thead><tr><th>Table</th><th>Type</th><th>Pools</th><th>Summary</th><th>Top entries</th></tr></thead><tbody><tr><td><a class='link' href='#alfheim_tree\chest\barrel'>Alfheim Tree Chest Barrel</a><br><span class='code'>alfheim_tree/chest/barrel.json</span></td><td>minecraft:chest</td><td>1</td><td>Sequence (2)</td><td>Sequence (2)</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\barrel\common'>Alfheim Tree Chest Barrel Common</a><br><span class='code'>alfheim_tree/chest/barrel/common.json</span></td><td>minecraft:chest</td><td>2</td><td>alfheim_tree/spawner/key / diamond_axe, diamond_pickaxe, diamond +9</td><td>alfheim_tree/spawner/key</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\barrel\rare'>Alfheim Tree Chest Barrel Rare</a><br><span class='code'>alfheim_tree/chest/barrel/rare.json</span></td><td>minecraft:chest</td><td>2</td><td>alfheim_tree/enchanted_book/random_loot / diamond_block, emerald_block, diamond_axe +8</td><td>alfheim_tree/enchanted_book/random_loot</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\ominous_vault'>Alfheim Tree Chest Ominous Vault</a><br><span class='code'>alfheim_tree/chest/ominous_vault.json</span></td><td>minecraft:chest</td><td>4</td><td>alfheim_tree/chest/reward/rare / alfheim_tree/chest/reward/common / alfheim_tree/chest/reward/unique / alfheim_tree/enchanted_book/ominous_vault</td><td>alfheim_tree/chest/reward/rare</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\pots'>Alfheim Tree Chest Pots</a><br><span class='code'>alfheim_tree/chest/pots.json</span></td><td>minecraft:chest</td><td>3</td><td>alfheim_tree/spawner/key / alfheim_tree/enchanted_book/random_loot / ender_pearl, torch, arrow +4</td><td>alfheim_tree/spawner/key</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\reward\common'>Alfheim Tree Chest Reward Common</a><br><span class='code'>alfheim_tree/chest/reward/common.json</span></td><td>minecraft:chest</td><td>1</td><td>arrow, tipped_arrow, emerald +7</td><td>arrow, tipped_arrow, emerald +7</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\reward\rare'>Alfheim Tree Chest Reward Rare</a><br><span class='code'>alfheim_tree/chest/reward/rare.json</span></td><td>minecraft:chest</td><td>1</td><td>emerald, bow, crossbow +12</td><td>emerald, bow, crossbow +12</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\reward\unique'>Alfheim Tree Chest Reward Unique</a><br><span class='code'>alfheim_tree/chest/reward/unique.json</span></td><td>minecraft:chest</td><td>1</td><td>enchanted_golden_apple, dragon_breath, netherite_scrap +4</td><td>enchanted_golden_apple, dragon_breath, netherite_scrap +4</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\shulker'>Alfheim Tree Chest Shulker</a><br><span class='code'>alfheim_tree/chest/shulker.json</span></td><td>minecraft:chest</td><td>3</td><td>alfheim_tree/spawner/key / diamond, emerald, golden_apple +12 / alfheim_tree/enchanted_book/random_loot</td><td>alfheim_tree/spawner/key</td></tr><tr><td><a class='link' href='#alfheim_tree\chest\vault'>Alfheim Tree Chest Vault</a><br><span class='code'>alfheim_tree/chest/vault.json</span></td><td>minecraft:chest</td><td>2</td><td>alfheim_tree/enchanted_book/random_loot / alfheim_tree/enchanted_book/vault</td><td>alfheim_tree/enchanted_book/random_loot</td></tr><tr><td><a class='link' href='#alfheim_tree\enchanted_book\ominous_trial_spawner'>Alfheim Tree Enchanted Book Ominous Trial Spawner</a><br><span class='code'>alfheim_tree/enchanted_book/ominous_trial_spawner.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#alfheim_tree\enchanted_book\ominous_vault'>Alfheim Tree Enchanted Book Ominous Vault</a><br><span class='code'>alfheim_tree/enchanted_book/ominous_vault.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#alfheim_tree\enchanted_book\random_loot'>Alfheim Tree Enchanted Book Random Loot</a><br><span class='code'>alfheim_tree/enchanted_book/random_loot.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#alfheim_tree\enchanted_book\trial_spawner'>Alfheim Tree Enchanted Book Trial Spawner</a><br><span class='code'>alfheim_tree/enchanted_book/trial_spawner.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#alfheim_tree\enchanted_book\vault'>Alfheim Tree Enchanted Book Vault</a><br><span class='code'>alfheim_tree/enchanted_book/vault.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#alfheim_tree\key\normal'>Alfheim Tree Key Normal</a><br><span class='code'>alfheim_tree/key/normal.json</span></td><td>minecraft:chest</td><td>1</td><td>trial_key</td><td>trial_key</td></tr><tr><td><a class='link' href='#alfheim_tree\key\ominous'>Alfheim Tree Key Ominous</a><br><span class='code'>alfheim_tree/key/ominous.json</span></td><td>minecraft:chest</td><td>1</td><td>ominous_trial_key</td><td>ominous_trial_key</td></tr><tr><td><a class='link' href='#alfheim_tree\spawner\consumables'>Alfheim Tree Spawner Consumables</a><br><span class='code'>alfheim_tree/spawner/consumables.json</span></td><td>minecraft:chest</td><td>3</td><td>experience_bottle, wind_charge, iron_ingot +6 / alfheim_tree/enchanted_book/trial_spawner / alfheim_tree/chest/reward/rare, alfheim_tree/chest/reward/common</td><td>experience_bottle, wind_charge, iron_ingot +6</td></tr><tr><td><a class='link' href='#alfheim_tree\spawner\key'>Alfheim Tree Spawner Key</a><br><span class='code'>alfheim_tree/spawner/key.json</span></td><td>minecraft:chest</td><td>1</td><td>alfheim_tree/key/normal, alfheim_tree/key/ominous</td><td>alfheim_tree/key/normal, alfheim_tree/key/ominous</td></tr><tr><td><a class='link' href='#alfheim_tree\spawner\ominous'>Alfheim Tree Spawner Ominous</a><br><span class='code'>alfheim_tree/spawner/ominous.json</span></td><td>minecraft:chest</td><td>4</td><td>alfheim_tree/key/ominous / alfheim_tree/chest/reward/rare / alfheim_tree/chest/reward/common / alfheim_tree/enchanted_book/ominous_trial_spawner</td><td>alfheim_tree/key/ominous</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\barrel'><h3>Alfheim Tree Chest Barrel</h3><p class='meta'>File: <code>alfheim_tree/chest/barrel.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>Sequence: alfheim_tree/chest/barrel/common, alfheim_tree/chest/barrel/rare</td><td>minecraft:sequence</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\barrel\common'><h3>Alfheim Tree Chest Barrel Common</h3><p class='meta'>File: <code>alfheim_tree/chest/barrel/common.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-spawner-key'>alfheim_tree/spawner/key</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>2 to 6</span> | Entries: 12 | Total weight: 24</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>diamond_axe</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.4,"max":0.9},"add":false}</li><li>Random enchantments from None</li></ul>—</td></tr><tr><td class='code'>diamond_pickaxe</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.15,"max":0.8},"add":false}</li></ul>—</td></tr><tr><td class='code'>diamond</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>compass</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.15,"max":0.8},"add":false}</li></ul>—</td></tr><tr><td class='code'>bucket</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>golden_axe</td><td>minecraft:item</td><td>4</td><td>16.667%</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.15,"max":0.8},"add":false}</li></ul>—</td></tr><tr><td class='code'>golden_pickaxe</td><td>minecraft:item</td><td>4</td><td>16.667%</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.15,"max":0.8},"add":false}</li></ul>—</td></tr><tr><td class='code'>cherry_sapling</td><td>minecraft:item</td><td>4</td><td>16.667%</td><td><ul><li>Set count: 1 to 8</li></ul>—</td></tr><tr><td class='code'>experience_bottle</td><td>minecraft:item</td><td>4</td><td>16.667%</td><td><ul><li>Set count: 1 to 4</li></ul>—</td></tr><tr><td class='code'>torch</td><td>minecraft:item</td><td>2</td><td>8.333%</td><td><ul><li>Set count: 8 to 17</li></ul>—</td></tr><tr><td class='code'>golden_carrot</td><td>minecraft:item</td><td>2</td><td>8.333%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>4</td><td>16.667%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\barrel\rare'><h3>Alfheim Tree Chest Barrel Rare</h3><p class='meta'>File: <code>alfheim_tree/chest/barrel/rare.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-random_loot'>alfheim_tree/enchanted_book/random_loot</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.15}</li></ul></td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1 to 3</span> | Entries: 11 | Total weight: 101</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>diamond_block</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li></ul>—</td></tr><tr><td class='code'>emerald_block</td><td>minecraft:item</td><td>5</td><td>4.95%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>diamond_axe</td><td>minecraft:item</td><td>5</td><td>4.95%</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.1,"max":0.5},"add":false}</li></ul>—</td></tr><tr><td class='code'>diamond_pickaxe</td><td>minecraft:item</td><td>5</td><td>4.95%</td><td><ul><li>Set count: 1</li><li>set_damage {"damage":{"type":"minecraft:uniform","min":0.1,"max":0.5},"add":false}</li></ul>—</td></tr><tr><td class='code'>diamond</td><td>minecraft:item</td><td>10</td><td>9.901%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>cake</td><td>minecraft:item</td><td>10</td><td>9.901%</td><td><ul><li>Set count: 1 to 4</li></ul>—</td></tr><tr><td class='code'>amethyst_shard</td><td>minecraft:item</td><td>15</td><td>14.851%</td><td><ul><li>Set count: 8 to 20</li></ul>—</td></tr><tr><td class='code'>iron_block</td><td>minecraft:item</td><td>10</td><td>9.901%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>emerald</td><td>minecraft:item</td><td>15</td><td>14.851%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>gold_ingot</td><td>minecraft:item</td><td>12</td><td>11.881%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>coal</td><td>minecraft:item</td><td>14</td><td>13.861%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\ominous_vault'><h3>Alfheim Tree Chest Ominous Vault</h3><p class='meta'>File: <code>alfheim_tree/chest/ominous_vault.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-rare'>alfheim_tree/chest/reward/rare</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1.0 to 3.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-common'>alfheim_tree/chest/reward/common</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-unique'>alfheim_tree/chest/reward/unique</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>2.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-ominous_vault'>alfheim_tree/enchanted_book/ominous_vault</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.35}</li></ul></td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\pots'><h3>Alfheim Tree Chest Pots</h3><p class='meta'>File: <code>alfheim_tree/chest/pots.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-spawner-key'>alfheim_tree/spawner/key</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-random_loot'>alfheim_tree/enchanted_book/random_loot</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.15}</li></ul></td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 7 | Total weight: 30</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>ender_pearl</td><td>minecraft:item</td><td>8</td><td>26.667%</td><td><ul><li>Set count: 2 to 3</li></ul>—</td></tr><tr><td class='code'>torch</td><td>minecraft:item</td><td>8</td><td>26.667%</td><td><ul><li>Set count: 3 to 12</li></ul>—</td></tr><tr><td class='code'>arrow</td><td>minecraft:item</td><td>6</td><td>20.0%</td><td><ul><li>Set count: 4 to 8</li></ul>—</td></tr><tr><td class='code'>potion</td><td>minecraft:item</td><td>3</td><td>10.0%</td><td><ul><li>set_potion {"id":"minecraft:strong_healing"}</li></ul>—</td></tr><tr><td class='code'>golden_carrot</td><td>minecraft:item</td><td>2</td><td>6.667%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>spectral_arrow</td><td>minecraft:item</td><td>2</td><td>6.667%</td><td><ul><li>Set count: 2 to 6</li></ul>—</td></tr><tr><td class='code'>diamond</td><td>minecraft:item</td><td>1</td><td>3.333%</td><td>——</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\reward\common'><h3>Alfheim Tree Chest Reward Common</h3><p class='meta'>File: <code>alfheim_tree/chest/reward/common.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>3</span> | Entries: 10 | Total weight: 21</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>arrow</td><td>minecraft:item</td><td>4</td><td>19.048%</td><td><ul><li>Set count: 2 to 8</li></ul>—</td></tr><tr><td class='code'>tipped_arrow</td><td>minecraft:item</td><td>4</td><td>19.048%</td><td><ul><li>Set count: 2 to 8</li><li>set_potion {"id":"minecraft:poison"}</li></ul>—</td></tr><tr><td class='code'>emerald</td><td>minecraft:item</td><td>4</td><td>19.048%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>3</td><td>14.286%</td><td><ul><li>Set count: 1 to 4</li></ul>—</td></tr><tr><td class='code'>ominous_bottle</td><td>minecraft:item</td><td>2</td><td>9.524%</td><td><ul><li>Set count: 1</li><li>set_ominous_bottle_amplifier {"amplifier":{"type":"minecraft:uniform","min":0,"max":1}}</li></ul>—</td></tr><tr><td class='code'>wind_charge</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 4 to 12</li></ul>—</td></tr><tr><td class='code'>lapis_lazuli</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 4 to 18</li></ul>—</td></tr><tr><td class='code'>glow_ink_sac</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 2 to 5</li></ul>—</td></tr><tr><td class='code'>golden_apple</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>torch</td><td>minecraft:item</td><td>4</td><td>19.048%</td><td><ul><li>Set count: 6 to 12</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\reward\rare'><h3>Alfheim Tree Chest Reward Rare</h3><p class='meta'>File: <code>alfheim_tree/chest/reward/rare.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>2</span> | Entries: 15 | Total weight: 10</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>emerald</td><td>minecraft:item</td><td>3</td><td>30.0%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>bow</td><td>minecraft:item</td><td>3</td><td>30.0%</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>crossbow</td><td>minecraft:item</td><td>2</td><td>20.0%</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":5,"max":20}}</li></ul>—</td></tr><tr><td class='code'>book</td><td>minecraft:item</td><td>2</td><td>20.0%</td><td><ul><li>Random enchantments from None</li></ul>—</td></tr><tr><td class='code'>diamond_chestplate</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>diamond_axe</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>diamond_pickaxe</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>enchant_with_levels {"levels":{"min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>enchanting_table</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'>end_crystal</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'>heart_of_the_sea</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'>ender_eye</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'>diamond_sword</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>diamond_helmet</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>diamond_leggings</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr><tr><td class='code'>diamond_boots</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>enchant_with_levels {"levels":{"type":"minecraft:uniform","min":15,"max":75}}</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\reward\unique'><h3>Alfheim Tree Chest Reward Unique</h3><p class='meta'>File: <code>alfheim_tree/chest/reward/unique.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 7 | Total weight: 23</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>enchanted_golden_apple</td><td>minecraft:item</td><td>3</td><td>13.043%</td><td>——</td></tr><tr><td class='code'>dragon_breath</td><td>minecraft:item</td><td>4</td><td>17.391%</td><td>——</td></tr><tr><td class='code'>netherite_scrap</td><td>minecraft:item</td><td>5</td><td>21.739%</td><td>——</td></tr><tr><td class='code'>breeze_spawn_egg</td><td>minecraft:item</td><td>2</td><td>8.696%</td><td>——</td></tr><tr><td class='code'>witch_spawn_egg</td><td>minecraft:item</td><td>4</td><td>17.391%</td><td>——</td></tr><tr><td class='code'>totem_of_undying</td><td>minecraft:item</td><td>4</td><td>17.391%</td><td>——</td></tr><tr><td class='code'>budding_amethyst</td><td>minecraft:item</td><td>1</td><td>4.348%</td><td>——</td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\shulker'><h3>Alfheim Tree Chest Shulker</h3><p class='meta'>File: <code>alfheim_tree/chest/shulker.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-spawner-key'>alfheim_tree/spawner/key</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>3 to 5</span> | Entries: 15 | Total weight: 195</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>diamond</td><td>minecraft:item</td><td>2</td><td>1.026%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>emerald</td><td>minecraft:item</td><td>20</td><td>10.256%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>golden_apple</td><td>minecraft:item</td><td>18</td><td>9.231%</td><td>——</td></tr><tr><td class='code'>tipped_arrow</td><td>minecraft:item</td><td>15</td><td>7.692%</td><td><ul><li>Set count: 6 to 12</li><li>set_potion {"id":"minecraft:harming"}</li></ul>—</td></tr><tr><td class='code'>amethyst_shard</td><td>minecraft:item</td><td>20</td><td>10.256%</td><td><ul><li>Set count: 3 to 5</li></ul>—</td></tr><tr><td class='code'>ender_pearl</td><td>minecraft:item</td><td>8</td><td>4.103%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>blaze_rod</td><td>minecraft:item</td><td>4</td><td>2.051%</td><td>——</td></tr><tr><td class='code'>redstone</td><td>minecraft:item</td><td>18</td><td>9.231%</td><td><ul><li>Set count: 6 to 20</li></ul>—</td></tr><tr><td class='code'>fire_charge</td><td>minecraft:item</td><td>15</td><td>7.692%</td><td><ul><li>Set count: 3 to 6</li></ul>—</td></tr><tr><td class='code'>wind_charge</td><td>minecraft:item</td><td>15</td><td>7.692%</td><td><ul><li>Set count: 4 to 8</li></ul>—</td></tr><tr><td class='code'>quartz</td><td>minecraft:item</td><td>20</td><td>10.256%</td><td><ul><li>Set count: 6 to 16</li></ul>—</td></tr><tr><td class='code'>experience_bottle</td><td>minecraft:item</td><td>12</td><td>6.154%</td><td><ul><li>Set count: 6 to 8</li></ul>—</td></tr><tr><td class='code'>firework_rocket</td><td>minecraft:item</td><td>8</td><td>4.103%</td><td><ul><li>set_fireworks {"flight_duration":5}</li><li>Set count: 2 to 6</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>20</td><td>10.256%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>lapis_lazuli</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 8 to 16</li></ul>—</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-random_loot'>alfheim_tree/enchanted_book/random_loot</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.25}</li></ul></td></tr></tbody></table></div><div class='card' id='alfheim_tree\chest\vault'><h3>Alfheim Tree Chest Vault</h3><p class='meta'>File: <code>alfheim_tree/chest/vault.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>3.0</span> | Entries: 1 | Total weight: 8</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-random_loot'>alfheim_tree/enchanted_book/random_loot</a></td><td>minecraft:loot_table</td><td>8</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-vault'>alfheim_tree/enchanted_book/vault</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.25}</li></ul></td></tr></tbody></table></div><div class='card' id='alfheim_tree\enchanted_book\ominous_trial_spawner'><h3>Alfheim Tree Enchanted Book Ominous Trial Spawner</h3><p class='meta'>File: <code>alfheim_tree/enchanted_book/ominous_trial_spawner.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/alfheim_tree/ominous_trial_spawner: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\enchanted_book\ominous_vault'><h3>Alfheim Tree Enchanted Book Ominous Vault</h3><p class='meta'>File: <code>alfheim_tree/enchanted_book/ominous_vault.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/alfheim_tree/ominous_vault: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\enchanted_book\random_loot'><h3>Alfheim Tree Enchanted Book Random Loot</h3><p class='meta'>File: <code>alfheim_tree/enchanted_book/random_loot.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/alfheim_tree/random_loot: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\enchanted_book\trial_spawner'><h3>Alfheim Tree Enchanted Book Trial Spawner</h3><p class='meta'>File: <code>alfheim_tree/enchanted_book/trial_spawner.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/alfheim_tree/trial_spawner: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\enchanted_book\vault'><h3>Alfheim Tree Enchanted Book Vault</h3><p class='meta'>File: <code>alfheim_tree/enchanted_book/vault.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/alfheim_tree/vault: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\key\normal'><h3>Alfheim Tree Key Normal</h3><p class='meta'>File: <code>alfheim_tree/key/normal.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/spawner/key</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 5</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>trial_key</td><td>minecraft:item</td><td>5</td><td>100%</td><td><ul><li>Name: Alfheim Key</li><li>Components: rarity=epic, id=yggdrasil.alfheim_tree.key.normal</li><li>Lore: This key can only be used on</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\key\ominous'><h3>Alfheim Tree Key Ominous</h3><p class='meta'>File: <code>alfheim_tree/key/ominous.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/spawner/key</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>ominous_trial_key</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Name: Ominous Alfheim Key</li><li>Components: rarity=epic, id=yggdrasil.alfheim_tree.key.ominous_key</li><li>Lore: This key can only be used on</li></ul>—</td></tr></tbody></table></div><div class='card' id='alfheim_tree\spawner\consumables'><h3>Alfheim Tree Spawner Consumables</h3><p class='meta'>File: <code>alfheim_tree/spawner/consumables.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/spawner/consumables</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>3</span> | Entries: 9 | Total weight: 17</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>experience_bottle</td><td>minecraft:item</td><td>2</td><td>11.765%</td><td><ul><li>Set count: 2 to 5</li></ul>—</td></tr><tr><td class='code'>wind_charge</td><td>minecraft:item</td><td>2</td><td>11.765%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>1</td><td>5.882%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>golden_apple</td><td>minecraft:item</td><td>4</td><td>23.529%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>diamond</td><td>minecraft:item</td><td>3</td><td>17.647%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>bread</td><td>minecraft:item</td><td>3</td><td>17.647%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>baked_potato</td><td>minecraft:item</td><td>2</td><td>11.765%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>potion</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_potion {"id":"minecraft:regeneration"}</li></ul>—</td></tr><tr><td class='code'>potion</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_potion {"id":"minecraft:swiftness"}</li></ul>—</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-trial_spawner'>alfheim_tree/enchanted_book/trial_spawner</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 2 | Total weight: 10</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-rare'>alfheim_tree/chest/reward/rare</a></td><td>minecraft:loot_table</td><td>2</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-common'>alfheim_tree/chest/reward/common</a></td><td>minecraft:loot_table</td><td>8</td><td>80.0%</td><td>——</td></tr></tbody></table></div><div class='card' id='alfheim_tree\spawner\key'><h3>Alfheim Tree Spawner Key</h3><p class='meta'>File: <code>alfheim_tree/spawner/key.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/spawner/key</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 2 | Total weight: 11</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-key-normal'>alfheim_tree/key/normal</a></td><td>minecraft:loot_table</td><td>10</td><td>90.909%</td><td>——</td></tr><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-key-ominous'>alfheim_tree/key/ominous</a></td><td>minecraft:loot_table</td><td>1</td><td>9.091%</td><td>——</td></tr></tbody></table></div><div class='card' id='alfheim_tree\spawner\ominous'><h3>Alfheim Tree Spawner Ominous</h3><p class='meta'>File: <code>alfheim_tree/spawner/ominous.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:alfheim_tree/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>2.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-key-ominous'>alfheim_tree/key/ominous</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-rare'>alfheim_tree/chest/reward/rare</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-chest-reward-common'>alfheim_tree/chest/reward/common</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>2.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='alfheim_tree.html#yggdrasil-alfheim_tree-enchanted_book-ominous_trial_spawner'>alfheim_tree/enchanted_book/ominous_trial_spawner</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.35}</li></ul></td></tr></tbody></table></div>
-<footer><p>Generated from <code>data/yggdrasil/loot_table</code>. Enchant pools shown inline where available.</p></footer>
+<div class='card'><p class='meta'>Structure details grouped by container category.</p><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div>
+<div class='card'><h2>Category summary</h2><ul>
+<li><span class='cat-badge' style='background:#b366ff'>Shulker</span>: 1 tables</li>
+<li><span class='cat-badge' style='background:#66b3ff'>Barrel</span>: 3 tables</li>
+<li><span class='cat-badge' style='background:#ffb366'>Vault</span>: 2 tables</li>
+<li><span class='cat-badge' style='background:#66ff99'>Pot</span>: 1 tables</li>
+<li><span class='cat-badge' style='background:#ff6666'>Spawner</span>: 3 tables</li>
+<li><span class='cat-badge' style='background:#ffff66'>Chest</span>: 4 tables</li>
+</ul></div>
+<div class='card'><h2 style='color:#b366ff'>Shulker</h2>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Shulker</strong> — <span class='muted'>alfheim_tree/chest/shulker.json</span> <span class='rolls'>Rolls: 1.0; 3–5; 1.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/spawner/key</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/key/normal</td><td class='pct'>90.9%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table alfheim_tree/key/ominous</td><td class='pct'>9.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
 </div>
-</body>
-</html>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Diamond, count 1–2</td><td class='pct'>1.0%</td></tr>
+<tr><td class='entry'>Emerald, count 1–3</td><td class='pct'>10.2%</td></tr>
+<tr><td class='entry'>Golden Apple</td><td class='pct'>9.2%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 6–12</td><td class='pct'>7.7%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 3–5</td><td class='pct'>10.2%</td></tr>
+<tr><td class='entry'>Ender Pearl, count 1–2</td><td class='pct'>4.1%</td></tr>
+<tr><td class='entry'>Blaze Rod</td><td class='pct'>2.0%</td></tr>
+<tr><td class='entry'>Redstone, count 6–20</td><td class='pct'>9.2%</td></tr>
+<tr><td class='entry'>Fire Charge, count 3–6</td><td class='pct'>7.7%</td></tr>
+<tr><td class='entry'>Wind Charge, count 4–8</td><td class='pct'>7.7%</td></tr>
+<tr><td class='entry'>Quartz, count 6–16</td><td class='pct'>10.2%</td></tr>
+<tr><td class='entry'>Experience Bottle, count 6–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Firework Rocket, count 2–6</td><td class='pct'>4.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–3</td><td class='pct'>10.2%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 8–16</td><td class='pct'>0.5%</td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/random_loot</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#66b3ff'>Barrel</h2>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Barrel</strong> — <span class='muted'>alfheim_tree/chest/barrel.json</span> <span class='rolls'>Rolls: 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Sequence</td><td class='pct'>100.0%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Barrel Common</strong> — <span class='muted'>alfheim_tree/chest/barrel/common.json</span> <span class='rolls'>Rolls: 1.0; 2–6</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/spawner/key</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/key/normal</td><td class='pct'>90.9%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table alfheim_tree/key/ominous</td><td class='pct'>9.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Diamond Axe, count 1, 0.4–0.9 damage ratio, Random enchantments</td><td class='pct'>3.4%</td></tr>
+<tr><td class='entry'>Diamond Pickaxe, count 1, 0.15–0.8 damage ratio</td><td class='pct'>3.4%</td></tr>
+<tr><td class='entry'>Diamond, count 1–3</td><td class='pct'>3.4%</td></tr>
+<tr><td class='entry'>Compass, count 1, 0.15–0.8 damage ratio</td><td class='pct'>3.4%</td></tr>
+<tr><td class='entry'>Bucket, count 1–2</td><td class='pct'>3.4%</td></tr>
+<tr><td class='entry'>Golden Axe, count 1, 0.15–0.8 damage ratio</td><td class='pct'>13.8%</td></tr>
+<tr><td class='entry'>Golden Pickaxe, count 1, 0.15–0.8 damage ratio</td><td class='pct'>13.8%</td></tr>
+<tr><td class='entry'>Cherry Sapling, count 1–8</td><td class='pct'>13.8%</td></tr>
+<tr><td class='entry'>Experience Bottle, count 1–4</td><td class='pct'>13.8%</td></tr>
+<tr><td class='entry'>Torch, count 8–17</td><td class='pct'>6.9%</td></tr>
+<tr><td class='entry'>Golden Carrot, count 2–4</td><td class='pct'>6.9%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>13.8%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Barrel Rare</strong> — <span class='muted'>alfheim_tree/chest/barrel/rare.json</span> <span class='rolls'>Rolls: 1.0; 1–3</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/random_loot</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Diamond Block, count 1</td><td class='pct'>1.0%</td></tr>
+<tr><td class='entry'>Emerald Block, count 1–3</td><td class='pct'>4.9%</td></tr>
+<tr><td class='entry'>Diamond Axe, count 1, 0.1–0.5 damage ratio</td><td class='pct'>4.9%</td></tr>
+<tr><td class='entry'>Diamond Pickaxe, count 1, 0.1–0.5 damage ratio</td><td class='pct'>4.9%</td></tr>
+<tr><td class='entry'>Diamond, count 1–2</td><td class='pct'>9.8%</td></tr>
+<tr><td class='entry'>Cake, count 1–4</td><td class='pct'>9.8%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 8–20</td><td class='pct'>14.7%</td></tr>
+<tr><td class='entry'>Iron Block, count 1–2</td><td class='pct'>9.8%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>14.7%</td></tr>
+<tr><td class='entry'>Gold Ingot, count 2–4</td><td class='pct'>11.8%</td></tr>
+<tr><td class='entry'>Coal, count 2–4</td><td class='pct'>13.7%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#ffb366'>Vault</h2>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Vault</strong> — <span class='muted'>alfheim_tree/chest/vault.json</span> <span class='rolls'>Rolls: 3.0; 1.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/random_loot</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/vault</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Enchanted Book Vault</strong> — <span class='muted'>alfheim_tree/enchanted_book/vault.json</span> <span class='rolls'>Rolls: 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#66ff99'>Pot</h2>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Pots</strong> — <span class='muted'>alfheim_tree/chest/pots.json</span> <span class='rolls'>Rolls: 1.0; 1.0; 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/spawner/key</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/key/normal</td><td class='pct'>90.9%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table alfheim_tree/key/ominous</td><td class='pct'>9.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/random_loot</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Ender Pearl, count 2–3</td><td class='pct'>26.7%</td></tr>
+<tr><td class='entry'>Torch, count 3–12</td><td class='pct'>26.7%</td></tr>
+<tr><td class='entry'>Arrow, count 4–8</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Potion</td><td class='pct'>10.0%</td></tr>
+<tr><td class='entry'>Golden Carrot, count 2–4</td><td class='pct'>6.7%</td></tr>
+<tr><td class='entry'>Spectral Arrow, count 2–6</td><td class='pct'>6.7%</td></tr>
+<tr><td class='entry'>Diamond</td><td class='pct'>3.3%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#ff6666'>Spawner</h2>
+<details class='details-card'><summary><strong>Alfheim Tree Spawner Consumables</strong> — <span class='muted'>alfheim_tree/spawner/consumables.json</span> <span class='rolls'>Rolls: 3; 1; 1.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Experience Bottle, count 2–5</td><td class='pct'>10.5%</td></tr>
+<tr><td class='entry'>Wind Charge, count 1–3</td><td class='pct'>10.5%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>5.3%</td></tr>
+<tr><td class='entry'>Golden Apple, count 1–2</td><td class='pct'>21.1%</td></tr>
+<tr><td class='entry'>Diamond, count 1–2</td><td class='pct'>15.8%</td></tr>
+<tr><td class='entry'>Bread, count 1–3</td><td class='pct'>15.8%</td></tr>
+<tr><td class='entry'>Baked Potato, count 1–3</td><td class='pct'>10.5%</td></tr>
+<tr><td class='entry'>Potion, count 1</td><td class='pct'>5.3%</td></tr>
+<tr><td class='entry'>Potion, count 1</td><td class='pct'>5.3%</td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/trial_spawner</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/rare</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels 15–75</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Crossbow, Random enchantments with levels 5–20</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Diamond Chestplate, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Axe, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Pickaxe, Random enchantments with levels</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Enchanting Table</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>End Crystal</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Heart Of The Sea</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Ender Eye</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Sword, count 1, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Helmet, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Leggings, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Boots, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/common</td><td class='pct'>80.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–4</td><td class='pct'>12.0%</td></tr>
+<tr><td class='entry'>Ominous Bottle, count 1</td><td class='pct'>8.0%</td></tr>
+<tr><td class='entry'>Wind Charge, count 4–12</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Golden Apple, count 1–2</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>16.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Spawner Key</strong> — <span class='muted'>alfheim_tree/spawner/key.json</span> <span class='rolls'>Rolls: 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/key/normal</td><td class='pct'>90.9%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table alfheim_tree/key/ominous</td><td class='pct'>9.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Spawner Ominous</strong> — <span class='muted'>alfheim_tree/spawner/ominous.json</span> <span class='rolls'>Rolls: 2.0; 1.0; 1.0; 2.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/key/ominous</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Alfheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/rare</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels 15–75</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Crossbow, Random enchantments with levels 5–20</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Diamond Chestplate, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Axe, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Pickaxe, Random enchantments with levels</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Enchanting Table</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>End Crystal</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Heart Of The Sea</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Ender Eye</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Sword, count 1, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Helmet, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Leggings, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Boots, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–4</td><td class='pct'>12.0%</td></tr>
+<tr><td class='entry'>Ominous Bottle, count 1</td><td class='pct'>8.0%</td></tr>
+<tr><td class='entry'>Wind Charge, count 4–12</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Golden Apple, count 1–2</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>16.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/ominous_trial_spawner</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#ffff66'>Chest</h2>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Ominous Vault</strong> — <span class='muted'>alfheim_tree/chest/ominous_vault.json</span> <span class='rolls'>Rolls: 1.0; 1.0–3.0; 1.0; 2.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/rare</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels 15–75</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Crossbow, Random enchantments with levels 5–20</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Diamond Chestplate, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Axe, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Pickaxe, Random enchantments with levels</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Enchanting Table</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>End Crystal</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Heart Of The Sea</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Ender Eye</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Sword, count 1, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Helmet, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Leggings, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Boots, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–4</td><td class='pct'>12.0%</td></tr>
+<tr><td class='entry'>Ominous Bottle, count 1</td><td class='pct'>8.0%</td></tr>
+<tr><td class='entry'>Wind Charge, count 4–12</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Golden Apple, count 1–2</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>16.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/chest/reward/unique</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Enchanted Golden Apple</td><td class='pct'>13.0%</td></tr>
+<tr><td class='entry'>Dragon Breath</td><td class='pct'>17.4%</td></tr>
+<tr><td class='entry'>Netherite Scrap</td><td class='pct'>21.7%</td></tr>
+<tr><td class='entry'>Breeze Spawn Egg</td><td class='pct'>8.7%</td></tr>
+<tr><td class='entry'>Witch Spawn Egg</td><td class='pct'>17.4%</td></tr>
+<tr><td class='entry'>Totem Of Undying</td><td class='pct'>17.4%</td></tr>
+<tr><td class='entry'>Budding Amethyst</td><td class='pct'>4.3%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table alfheim_tree/enchanted_book/ominous_vault</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Reward Common</strong> — <span class='muted'>alfheim_tree/chest/reward/common.json</span> <span class='rolls'>Rolls: 3</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 2–8</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>16.0%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–4</td><td class='pct'>12.0%</td></tr>
+<tr><td class='entry'>Ominous Bottle, count 1</td><td class='pct'>8.0%</td></tr>
+<tr><td class='entry'>Wind Charge, count 4–12</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Golden Apple, count 1–2</td><td class='pct'>4.0%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>16.0%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Reward Rare</strong> — <span class='muted'>alfheim_tree/chest/reward/rare.json</span> <span class='rolls'>Rolls: 2</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels 15–75</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Crossbow, Random enchantments with levels 5–20</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>9.5%</td></tr>
+<tr><td class='entry'>Diamond Chestplate, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Axe, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Pickaxe, Random enchantments with levels</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Enchanting Table</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>End Crystal</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Heart Of The Sea</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Ender Eye</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Sword, count 1, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Helmet, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Leggings, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Diamond Boots, Random enchantments with levels 15–75</td><td class='pct'>4.8%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Alfheim Tree Chest Reward Unique</strong> — <span class='muted'>alfheim_tree/chest/reward/unique.json</span> <span class='rolls'>Rolls: 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Enchanted Golden Apple</td><td class='pct'>13.0%</td></tr>
+<tr><td class='entry'>Dragon Breath</td><td class='pct'>17.4%</td></tr>
+<tr><td class='entry'>Netherite Scrap</td><td class='pct'>21.7%</td></tr>
+<tr><td class='entry'>Breeze Spawn Egg</td><td class='pct'>8.7%</td></tr>
+<tr><td class='entry'>Witch Spawn Egg</td><td class='pct'>17.4%</td></tr>
+<tr><td class='entry'>Totem Of Undying</td><td class='pct'>17.4%</td></tr>
+<tr><td class='entry'>Budding Amethyst</td><td class='pct'>4.3%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<footer><p>Generated from <code>data/yggdrasil/loot_table</code>. Categories are based on container keywords and use the most specific container type in the path.</p></footer>
+</div></body></html>

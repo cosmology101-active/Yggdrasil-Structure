@@ -4,40 +4,1036 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
 <title>Yggdrasil — Helheim</title>
-<style>
-:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08)}
-body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
-.container{max-width:1180px;margin:0 auto;padding:20px}
-header,footer{padding:18px 0;text-align:center}
-header h1{margin:0;font-size:2.2rem;color:var(--accent)}
-header p,footer p{margin:10px 0;color:var(--muted)}
-.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
-.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
-.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}
-.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}
-.structure-card span{color:var(--muted);font-size:0.95rem}
-.structure-card.big{grid-column:1/-1;text-align:center}
-.table{width:100%;border-collapse:collapse;margin-top:12px}
-.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
-.table th{background:rgba(255,255,255,0.06)}
-.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
-.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}
-.link{color:var(--accent2);text-decoration:none}
-.link:hover{text-decoration:underline}
-details summary{cursor:pointer;outline:none}
-.details-card{margin-bottom:18px}
-ul{margin:0 0 0 18px;padding:0}
-li{margin-bottom:6px}
-.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(126,231,135,0.15);color:var(--accent);font-size:0.9rem;margin-right:8px}
-@media(max-width:860px){.container{padding:16px}}
-</style>
+<style>:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08);--entry:#e6b3ff;--pct:#ffc299}body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}.container{max-width:1180px;margin:0 auto;padding:20px}header,footer{padding:18px 0;text-align:center}header h1{margin:0;font-size:2.2rem;color:var(--accent)}header p,footer p{margin:10px 0;color:var(--muted)}.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}.structure-card span{color:var(--muted);font-size:0.95rem}.table{width:100%;border-collapse:collapse;margin:12px 0}.table tr{border-bottom:1px solid rgba(255,255,255,0.08)}.table td{padding:10px;text-align:left;vertical-align:top}.table td.entry{color:var(--entry);font-weight:500;width:70%}.table td.pct{color:var(--pct);text-align:right;width:30%;font-variant-numeric:tabular-nums}.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}.link{color:var(--accent2);text-decoration:none}.link:hover{text-decoration:underline}details summary{cursor:pointer;outline:none;user-select:none}details summary:hover{background:rgba(255,255,255,0.03);border-radius:6px;padding:8px}.details-card{margin-bottom:18px}.pool{margin-bottom:16px}ul{margin:0 0 0 18px;padding:0}li{margin-bottom:6px}.cat-badge{display:inline-block;padding:4px 8px;border-radius:6px;color:#000;font-size:0.9rem;font-weight:600}.rolls{color:var(--muted);font-size:0.9rem;font-style:italic;margin-left:auto}@media(max-width:860px){.container{padding:16px}.table td.entry{width:60%}.table td.pct{width:40%}}</style>
 </head>
 <body>
 <div class='container'>
 <header><h1>Yggdrasil — Helheim</h1></header>
-<div class='card'><p class='meta'>Structure: <strong>Helheim</strong>.</p><p class='meta'>Grouped by container/use-case category. Each table row below shows its content summary and nested reward distribution.</p><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div><div class='card'><h2>Category summary</h2><ul><li><strong>Helheim</strong>: 36 tables</li></ul></div><div class='card'><h2>Helheim</h2><table class='table'><thead><tr><th>Table</th><th>Type</th><th>Pools</th><th>Summary</th><th>Top entries</th></tr></thead><tbody><tr><td><a class='link' href='#helheim\enchanted_book\common'>Helheim Enchanted Book Common</a><br><span class='code'>helheim/enchanted_book/common.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#helheim\enchanted_book\ominous_trial_spawner'>Helheim Enchanted Book Ominous Trial Spawner</a><br><span class='code'>helheim/enchanted_book/ominous_trial_spawner.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#helheim\enchanted_book\ominous_vault'>Helheim Enchanted Book Ominous Vault</a><br><span class='code'>helheim/enchanted_book/ominous_vault.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#helheim\enchanted_book\rare'>Helheim Enchanted Book Rare</a><br><span class='code'>helheim/enchanted_book/rare.json</span></td><td>minecraft:chest</td><td>2</td><td>book / book</td><td>book</td></tr><tr><td><a class='link' href='#helheim\enchanted_book\trial_spawner'>Helheim Enchanted Book Trial Spawner</a><br><span class='code'>helheim/enchanted_book/trial_spawner.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#helheim\enchanted_book\vault'>Helheim Enchanted Book Vault</a><br><span class='code'>helheim/enchanted_book/vault.json</span></td><td>minecraft:chest</td><td>1</td><td>book</td><td>book</td></tr><tr><td><a class='link' href='#helheim\key\normal'>Helheim Key Normal</a><br><span class='code'>helheim/key/normal.json</span></td><td>minecraft:chest</td><td>1</td><td>trial_key</td><td>trial_key</td></tr><tr><td><a class='link' href='#helheim\key\ominous'>Helheim Key Ominous</a><br><span class='code'>helheim/key/ominous.json</span></td><td>minecraft:chest</td><td>1</td><td>ominous_trial_key</td><td>ominous_trial_key</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_1'>Helheim Lore Chapter 1</a><br><span class='code'>helheim/lore/chapter_1.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_10'>Helheim Lore Chapter 10</a><br><span class='code'>helheim/lore/chapter_10.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_2'>Helheim Lore Chapter 2</a><br><span class='code'>helheim/lore/chapter_2.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_3'>Helheim Lore Chapter 3</a><br><span class='code'>helheim/lore/chapter_3.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_4'>Helheim Lore Chapter 4</a><br><span class='code'>helheim/lore/chapter_4.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_5'>Helheim Lore Chapter 5</a><br><span class='code'>helheim/lore/chapter_5.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_6'>Helheim Lore Chapter 6</a><br><span class='code'>helheim/lore/chapter_6.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_7'>Helheim Lore Chapter 7</a><br><span class='code'>helheim/lore/chapter_7.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_8'>Helheim Lore Chapter 8</a><br><span class='code'>helheim/lore/chapter_8.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\chapter_9'>Helheim Lore Chapter 9</a><br><span class='code'>helheim/lore/chapter_9.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\quest_assembly'>Helheim Lore Quest Assembly</a><br><span class='code'>helheim/lore/quest_assembly.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\quest_collection'>Helheim Lore Quest Collection</a><br><span class='code'>helheim/lore/quest_collection.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\lore\quest_familiar'>Helheim Lore Quest Familiar</a><br><span class='code'>helheim/lore/quest_familiar.json</span></td><td>minecraft:chest</td><td>1</td><td>written_book</td><td>written_book</td></tr><tr><td><a class='link' href='#helheim\reward\barrel'>Helheim Reward Barrel</a><br><span class='code'>helheim/reward/barrel.json</span></td><td>minecraft:chest</td><td>4</td><td>helheim/key/normal / helheim/reward/shared/lore / helheim/reward/shared/deepslate / helheim/reward/shared/enchantment, helheim/reward/shared/common</td><td>helheim/key/normal</td></tr><tr><td><a class='link' href='#helheim\reward\chest'>Helheim Reward Chest</a><br><span class='code'>helheim/reward/chest.json</span></td><td>minecraft:chest</td><td>5</td><td>helheim/key/normal / helheim/reward/shared/common / helheim/reward/shared/lore / helheim/reward/shared/deepslate, helheim/reward/shared/lantern, helheim/reward/shared/wood / helheim/reward/shared/common</td><td>helheim/key/normal</td></tr><tr><td><a class='link' href='#helheim\reward\pots'>Helheim Reward Pots</a><br><span class='code'>helheim/reward/pots.json</span></td><td>minecraft:chest</td><td>2</td><td>helheim/key/normal / helheim/reward/shared/deepslate, helheim/reward/shared/lantern, helheim/reward/shared/wood +14</td><td>helheim/key/normal</td></tr><tr><td><a class='link' href='#helheim\reward\shared\common'>Helheim Reward Shared Common</a><br><span class='code'>helheim/reward/shared/common.json</span></td><td>minecraft:chest</td><td>1</td><td>helheim/key/normal, arrow, emerald +18</td><td>helheim/key/normal, arrow, emerald +18</td></tr><tr><td><a class='link' href='#helheim\reward\shared\deepslate'>Helheim Reward Shared Deepslate</a><br><span class='code'>helheim/reward/shared/deepslate.json</span></td><td>minecraft:chest</td><td>1</td><td>deepslate_tiles, deepslate_brick_stairs, deepslate_brick_slab +2</td><td>deepslate_tiles, deepslate_brick_stairs, deepslate_brick_slab +2</td></tr><tr><td><a class='link' href='#helheim\reward\shared\enchantment'>Helheim Reward Shared Enchantment</a><br><span class='code'>helheim/reward/shared/enchantment.json</span></td><td>minecraft:chest</td><td>2</td><td>helheim/enchanted_book/rare / generic/reward/random/magic</td><td>helheim/enchanted_book/rare</td></tr><tr><td><a class='link' href='#helheim\reward\shared\lantern'>Helheim Reward Shared Lantern</a><br><span class='code'>helheim/reward/shared/lantern.json</span></td><td>minecraft:chest</td><td>1</td><td>lantern, soul_lantern</td><td>lantern, soul_lantern</td></tr><tr><td><a class='link' href='#helheim\reward\shared\lore'>Helheim Reward Shared Lore</a><br><span class='code'>helheim/reward/shared/lore.json</span></td><td>minecraft:chest</td><td>1</td><td>asflors/lore/chapter_1, asflors/lore/chapter_2, asflors/lore/chapter_3 +4</td><td>asflors/lore/chapter_1, asflors/lore/chapter_2, asflors/lore/chapter_3 +4</td></tr><tr><td><a class='link' href='#helheim\reward\shared\wood'>Helheim Reward Shared Wood</a><br><span class='code'>helheim/reward/shared/wood.json</span></td><td>minecraft:chest</td><td>1</td><td>mangrove_log, mangrove_planks, mangrove_slab +2</td><td>mangrove_log, mangrove_planks, mangrove_slab +2</td></tr><tr><td><a class='link' href='#helheim\reward\vault\normal'>Helheim Reward Vault Normal</a><br><span class='code'>helheim/reward/vault/normal.json</span></td><td>minecraft:chest</td><td>4</td><td>helheim/enchanted_book/vault / helheim/key/ominous, generic/reward/rare/ominous_potion, helheim/reward/shared/deepslate +2 / generic/reward/rare/enchanted_item_25 / helheim/lore/chapter_8</td><td>helheim/enchanted_book/vault</td></tr><tr><td><a class='link' href='#helheim\reward\vault\ominous'>Helheim Reward Vault Ominous</a><br><span class='code'>helheim/reward/vault/ominous.json</span></td><td>minecraft:chest</td><td>4</td><td>helheim/enchanted_book/ominous_vault / helheim/lore/chapter_9 / generic/reward/rare/trim, helheim/reward/shared/deepslate, helheim/reward/shared/wood +1 / heavy_core, spawner, totem_of_undying +1</td><td>helheim/enchanted_book/ominous_vault</td></tr><tr><td><a class='link' href='#helheim\spawner\consumables'>Helheim Spawner Consumables</a><br><span class='code'>helheim/spawner/consumables.json</span></td><td>minecraft:chest</td><td>4</td><td>experience_bottle, wind_charge, iron_ingot +6 / helheim/enchanted_book/trial_spawner / generic/reward/normal/weak_equipement / helheim/reward/barrel, helheim/reward/chest</td><td>experience_bottle, wind_charge, iron_ingot +6</td></tr><tr><td><a class='link' href='#helheim\spawner\key'>Helheim Spawner Key</a><br><span class='code'>helheim/spawner/key.json</span></td><td>minecraft:chest</td><td>1</td><td>helheim/key/normal, helheim/key/ominous</td><td>helheim/key/normal, helheim/key/ominous</td></tr><tr><td><a class='link' href='#helheim\spawner\ominous'>Helheim Spawner Ominous</a><br><span class='code'>helheim/spawner/ominous.json</span></td><td>minecraft:chest</td><td>5</td><td>helheim/key/ominous / helheim/reward/barrel / helheim/reward/chest / generic/reward/normal/equipement / helheim/enchanted_book/ominous_trial_spawner</td><td>helheim/key/ominous</td></tr><tr><td><a class='link' href='#helheim\treasure\rune_of_reva'>Helheim Treasure Rune Of Reva</a><br><span class='code'>helheim/treasure/rune_of_reva.json</span></td><td>minecraft:chest</td><td>1</td><td>amethyst_shard</td><td>amethyst_shard</td></tr></tbody></table></div><div class='card' id='helheim\enchanted_book\common'><h3>Helheim Enchanted Book Common</h3><p class='meta'>File: <code>helheim/enchanted_book/common.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/common: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\enchanted_book\ominous_trial_spawner'><h3>Helheim Enchanted Book Ominous Trial Spawner</h3><p class='meta'>File: <code>helheim/enchanted_book/ominous_trial_spawner.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/ominous_trial_spawner: minecraft:mending, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\enchanted_book\ominous_vault'><h3>Helheim Enchanted Book Ominous Vault</h3><p class='meta'>File: <code>helheim/enchanted_book/ominous_vault.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/ominous_vault: minecraft:mending, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\enchanted_book\rare'><h3>Helheim Enchanted Book Rare</h3><p class='meta'>File: <code>helheim/enchanted_book/rare.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/rare: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/common: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\enchanted_book\trial_spawner'><h3>Helheim Enchanted Book Trial Spawner</h3><p class='meta'>File: <code>helheim/enchanted_book/trial_spawner.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/trial_spawner: minecraft:mending, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\enchanted_book\vault'><h3>Helheim Enchanted Book Vault</h3><p class='meta'>File: <code>helheim/enchanted_book/vault.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/helheim/vault: #minecraft:non_treasure, compatible only</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\key\normal'><h3>Helheim Key Normal</h3><p class='meta'>File: <code>helheim/key/normal.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/key</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 3</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>trial_key</td><td>minecraft:item</td><td>3</td><td>100%</td><td><ul><li>Name: Helheim Key</li><li>Components: rarity=epic, id=yggdrasil.helheim.key.normal</li><li>Lore: Can only be used on Vault in Helheim</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\key\ominous'><h3>Helheim Key Ominous</h3><p class='meta'>File: <code>helheim/key/ominous.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/key</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>ominous_trial_key</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Name: Ominous Helheim Key</li><li>Components: rarity=epic, id=yggdrasil.helheim.key.ominous_key</li><li>Lore: Can only be used on Ominous Vault in Helheim</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_1'><h3>Helheim Lore Chapter 1</h3><p class='meta'>File: <code>helheim/lore/chapter_1.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 1: L'Éveil dans les Ténèbres</li><li>Components: id=yggdrasil.helheim.lore.chapter_1</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch1.p1"},{"translate":"item.yggdrasil.helheim.chronicles.ch1.p2"},{"translate":"item.yggdrasil.helheim.chronicles.ch1.p3"},{"translate":"item.yggdrasil.helheim.chronicles.ch1.p4"},{"translate":"item.yggdrasil.helheim.chronicles.ch1.p5"}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_10'><h3>Helheim Lore Chapter 10</h3><p class='meta'>File: <code>helheim/lore/chapter_10.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Secret Chapter 10: The Last Page</li><li>Components: id=yggdrasil.helheim.lore.chapter_10</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch10.p1","fallback":"Well, I'm tired, the final battle is tomorrow. I'm really exhausted, but the discussions with Odin give me so much hope."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p2","fallback":"It's time for all these crimes to end."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p3","fallback":"When I found the child, they were accompanied by a fox. Now that the child is safe in their dimension, You who read this can use this fox."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p4","fallback":"It emanates an aura of protection and wisdom - as if it had absorbed all that remained of humanity in the child."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p5","fallback":"Use it to protect the mortals."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p6","fallback":"If I fail, I leave you then the responsibility, that of saving these immortals through Ragnar\u00f6k. This is my last entry, make good use of it."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p7","fallback":"The fox waits in the vault, it is locked in a rune. To summon it, use the rune - the one with the orange gem."},{"translate":"item.yggdrasil.helheim.chronicles.ch10.p8","fallback":"It has become one with the child's essence now, perhaps the last trace of their lost innocence."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_2'><h3>Helheim Lore Chapter 2</h3><p class='meta'>File: <code>helheim/lore/chapter_2.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 2: Les Échos du Passé</li><li>Components: id=yggdrasil.helheim.lore.chapter_2</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch2.p1"},{"translate":"item.yggdrasil.helheim.chronicles.ch2.p2"},{"translate":"item.yggdrasil.helheim.chronicles.ch2.p3"},{"translate":"item.yggdrasil.helheim.chronicles.ch2.p4"}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_3'><h3>Helheim Lore Chapter 3</h3><p class='meta'>File: <code>helheim/lore/chapter_3.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 3: The First Observer</li><li>Components: id=yggdrasil.helheim.lore.chapter_3</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch3.p1","fallback":"A fascinating discovery today! I found notes left by the very first Hel. Her journey strangely resembles mine."},{"translate":"item.yggdrasil.helheim.chronicles.ch3.p2","fallback":"She too began by playing the game, until she understood the true nature of this world."},{"translate":"item.yggdrasil.helheim.chronicles.ch3.p3","fallback":"She didn't immediately know that the races of this world seemed conscious, and for a strategic plan, she granted immortality to someone."},{"translate":"item.yggdrasil.helheim.chronicles.ch3.p4","fallback":"This is indeed part of our powers, Hel has the ability to make someone immortal and strategically it's interesting."},{"translate":"item.yggdrasil.helheim.chronicles.ch3.p5","fallback":"Subsequently, she realized that this being she had made immortal seemed to experience emotions, and from there, she describes her relationship with this immortal being, a child she took under her wing."},{"translate":"item.yggdrasil.helheim.chronicles.ch3.p6","fallback":"With this being's consent, they began to cooperate to understand more about this world. She describes this person as a child full of life and happy to be protected."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_4'><h3>Helheim Lore Chapter 4</h3><p class='meta'>File: <code>helheim/lore/chapter_4.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 4: The Cursed Gift</li><li>Components: id=yggdrasil.helheim.lore.chapter_4</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch4.p1","fallback":"I'm trying to find this child but so far in vain, they must be in a neighboring realm."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p2","fallback":"The story of this child takes a dark turn. On the walls of Helheim, I found traces."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p3","fallback":"This gift of immortality, meant to be a blessing, transformed into a curse."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p4","fallback":"The eternal child, once described as full of life, has traversed millennia of wars and chaos."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p5","fallback":"Unable to die, an eternal witness to our \"game\", they gradually lost their humanity."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p6","fallback":"The echoes and rumors now speak of a being consumed by destruction, seeking to ease their madness in chaos."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p7","fallback":"The first observer had described them as a child full of life, and seemed to love them, and the child seemed to say they felt protected. Hmm..."},{"translate":"item.yggdrasil.helheim.chronicles.ch4.p8","fallback":"Not surprising, I would probably end up the same if I had no possibility of dying."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_5'><h3>Helheim Lore Chapter 5</h3><p class='meta'>File: <code>helheim/lore/chapter_5.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 5: The Second Heir</li><li>Components: id=yggdrasil.helheim.lore.chapter_5</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch5.p1","fallback":"The archives of Helheim are vaster than I imagined. Each new Hel seems to have contributed to this collection of knowledge."},{"translate":"item.yggdrasil.helheim.chronicles.ch5.p2","fallback":"I couldn't have dreamed better, I am the eleventh incarnation of Hel."},{"translate":"item.yggdrasil.helheim.chronicles.ch5.p3","fallback":"I found a particularly touching account from Hel II. She warns against using the power of immortality - an irreversible gift that persists even after our \"games\" end."},{"translate":"item.yggdrasil.helheim.chronicles.ch5.p4","fallback":"Yet, she too succumbed to this temptation. She speaks of a wise old man to whom she offered eternity, seduced by his knowledge."},{"translate":"item.yggdrasil.helheim.chronicles.ch5.p5","fallback":"Their love story runs through the pages of her journals."},{"translate":"item.yggdrasil.helheim.chronicles.ch5.p6","fallback":"So two immortals walk somewhere in this world... Bearing the burden of our \"game\" for eternity."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_6'><h3>Helheim Lore Chapter 6</h3><p class='meta'>File: <code>helheim/lore/chapter_6.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 6: Whispers of Madness</li><li>Components: id=yggdrasil.helheim.lore.chapter_6</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch6.p1","fallback":"Time is running out. This \"game\" is coming to an end, and the other realms refuse any cooperation except for Odin."},{"translate":"item.yggdrasil.helheim.chronicles.ch6.p2","fallback":"Each remains locked in their own objectives, unaware of the true nature of this world."},{"translate":"item.yggdrasil.helheim.chronicles.ch6.p3","fallback":"I found the immortal child. This encounter... By all the gods, their power surpasses anything I could imagine."},{"translate":"item.yggdrasil.helheim.chronicles.ch6.p4","fallback":"They have nothing left of the innocent being described in the ancient chronicles. Their eyes... they reflect millennia of suffering and madness. I nearly lost my life."},{"translate":"item.yggdrasil.helheim.chronicles.ch6.p5","fallback":"With Odin's help, we managed to imprison them in their own dimension."},{"translate":"item.yggdrasil.helheim.chronicles.ch6.p6","fallback":"Odin speaks of Ragnar\u00f6k as the only solution and indeed I hadn't thought of it. It's in my opinion the only way to free this being from their torment."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_7'><h3>Helheim Lore Chapter 7</h3><p class='meta'>File: <code>helheim/lore/chapter_7.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Chapter 7: The Truth of Worlds</li><li>Components: id=yggdrasil.helheim.lore.chapter_7</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch7.p1","fallback":"We were visiting the imprisoned child, as we did every evening to provide comfort and warmth, when we lowered our guard."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p2","fallback":"In seconds, Odin fell. Only the hero of Svartalfheim remains."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p3","fallback":"Before disappearing, I remember a discussion with Odin, he had told me that in Asgard too, the incarnations passed messages to each other."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p4","fallback":"And that Helheim has never won a single war - our offensive power is too weak, and we had to rely on our Necromancer abilities."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p5","fallback":"But it's unthinkable to do that knowing the truth about the beings of this world. As for Asgard, they have won several times."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p6","fallback":"Victory brings the power of Ragnar\u00f6k - the ability to rewrite the rules of the world for the next game."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p7","fallback":"If I win, I can save them and all the immortals."},{"translate":"item.yggdrasil.helheim.chronicles.ch7.p8","fallback":"I must win, or else do it in my place!"}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_8'><h3>Helheim Lore Chapter 8</h3><p class='meta'>File: <code>helheim/lore/chapter_8.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Secret Chapter 8: Loki's Hidden Notes</li><li>Components: id=yggdrasil.helheim.lore.chapter_8</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch8.p1","fallback":"I am in X5042, I have just won victory over Helheim. My heart is heavy."},{"translate":"item.yggdrasil.helheim.chronicles.ch8.p2","fallback":"If only I had known earlier that the hero of Helheim shared the same objective as me..."},{"translate":"item.yggdrasil.helheim.chronicles.ch8.p3","fallback":"I write these lines with regret. To you who will read me, future incarnations: cooperate with the Hero of J\u00f6tunheim."},{"translate":"item.yggdrasil.helheim.chronicles.ch8.p4","fallback":"We share the same goal - saving the races from these endless wars."},{"translate":"item.yggdrasil.helheim.chronicles.ch8.p5","fallback":"We attacked Helheim out of fear, because of rumors about their ability to create immortal and immoral monsters. What a terrible mistake..."},{"translate":"item.yggdrasil.helheim.chronicles.ch8.p6","fallback":"I am truly sorry, Julia. Rest in peace."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\chapter_9'><h3>Helheim Lore Chapter 9</h3><p class='meta'>File: <code>helheim/lore/chapter_9.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Secret Chapter 9: The Eternal Child</li><li>Components: id=yggdrasil.helheim.lore.chapter_9</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.ch9.p1","fallback":"I'm Yve Stella! And Hel is the best!"},{"translate":"item.yggdrasil.helheim.chronicles.ch9.p2","fallback":"At first, I was super scared of her because she looked mean, but actually she's super cute!"},{"translate":"item.yggdrasil.helheim.chronicles.ch9.p3","fallback":"I would do anything to make her happy &amp;gt;.&amp;lt;"},{"translate":"item.yggdrasil.helheim.chronicles.ch9.p4","fallback":"She comes to see me all the time and I have so much fun with her, and she tells me incredible stories about a better and amazing world."},{"translate":"item.yggdrasil.helheim.chronicles.ch9.p5","fallback":"I love when she talks about moving pictures that tell stories."},{"translate":"item.yggdrasil.helheim.chronicles.ch9.p6","fallback":"She says I'll stay with her forever, and I believe her! Adults never lie."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\quest_assembly'><h3>Helheim Lore Quest Assembly</h3><p class='meta'>File: <code>helheim/lore/quest_assembly.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: The Assembly of Secrets</li><li>Components: id=yggdrasil.helheim.lore.quest_assembly</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.quest.assembly.p1","fallback":"The pedestals in this room are not mere supports. Each represents a crucial moment in our history."},{"translate":"item.yggdrasil.helheim.chronicles.quest.assembly.p2","fallback":"When you place the chronicles, you will see the truth emerge in its entirety."},{"translate":"item.yggdrasil.helheim.chronicles.quest.assembly.p3","fallback":"The first Hel created an immortal child out of curiosity. The second granted immortality out of love."},{"translate":"item.yggdrasil.helheim.chronicles.quest.assembly.p4","fallback":"Others followed, each adding their stone to the edifice of our collective tragedy."},{"translate":"item.yggdrasil.helheim.chronicles.quest.assembly.p5","fallback":"Only when you understand the whole story will you grasp the significance of the gift I am about to bestow upon you."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\quest_collection'><h3>Helheim Lore Quest Collection</h3><p class='meta'>File: <code>helheim/lore/quest_collection.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: The Collection of Chronicles</li><li>Components: id=yggdrasil.helheim.lore.quest_collection</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.quest.collection.p1","fallback":"These writings scattered throughout Helheim are not mere records."},{"translate":"item.yggdrasil.helheim.chronicles.quest.collection.p2","fallback":"Each page contains a fragment of understanding, a piece of the puzzle that reveals the true nature of our existence."},{"translate":"item.yggdrasil.helheim.chronicles.quest.collection.p3","fallback":"Gather them, and you will begin to understand why we, the successive Hels, have maintained this archive."},{"translate":"item.yggdrasil.helheim.chronicles.quest.collection.p4","fallback":"Why each of us has contributed to this growing testament of our shared experience."},{"translate":"item.yggdrasil.helheim.chronicles.quest.collection.p5","fallback":"These writings are more than just a collection - they are the key to understanding why we must change this world."},{"translate":"item.yggdrasil.helheim.chronicles.quest.collection.p6","fallback":"Why Ragnar\u00f6k is not an end, but perhaps our only hope for redemption."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\lore\quest_familiar'><h3>Helheim Lore Quest Familiar</h3><p class='meta'>File: <code>helheim/lore/quest_familiar.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: The Origins of the Familiar</li><li>Components: id=yggdrasil.helheim.lore.quest_familiar</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p1","fallback":"In the tower, beneath the first staircase, you will find a rune."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p2","fallback":"It contains the true essence of what remains of the immortal child's innocence - a fox that accompanied them in their last moments of clarity."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p3","fallback":"The fox appeared during my final encounter with the immortal child."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p4","fallback":"As we fought, I noticed this creature following them, seeming to absorb every spark of goodness that still escaped from their tormented soul."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p5","fallback":"This creature is no ordinary animal. It carries the last fragments of the child's humanity, their ability to love, to protect."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p6","fallback":"The fox absorbed these qualities as the child gradually descended into madness."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p7","fallback":"Take care of it. It will be your guide, your protector."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p8","fallback":"It represents everything we should have preserved, everything we must try to restore over the centuries as the child lost their humanity."},{"translate":"item.yggdrasil.helheim.chronicles.quest.familiar.p9","fallback":"I managed to capture its essence in a rune, freeing it means protecting the mortals."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\reward\barrel'><h3>Helheim Reward Barrel</h3><p class='meta'>File: <code>helheim/reward/barrel.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-normal'>helheim/key/normal</a></td><td>minecraft:loot_table</td><td>1</td><td>100%</td><td>—<ul><li>minecraft:random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-lore'>helheim/reward/shared/lore</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>—<ul><li>minecraft:random_chance {"chance":0.1}</li></ul></td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-deepslate'>helheim/reward/shared/deepslate</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-enchantment'>helheim/reward/shared/enchantment</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-common'>helheim/reward/shared/common</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\reward\chest'><h3>Helheim Reward Chest</h3><p class='meta'>File: <code>helheim/reward/chest.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-normal'>helheim/key/normal</a></td><td>minecraft:loot_table</td><td>1</td><td>100%</td><td>—<ul><li>minecraft:random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-common'>helheim/reward/shared/common</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>—<ul><li>minecraft:random_chance {"chance":0.1}</li></ul></td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-lore'>helheim/reward/shared/lore</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>—<ul><li>minecraft:random_chance {"chance":0.1}</li></ul></td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 3 | Total weight: 9</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-deepslate'>helheim/reward/shared/deepslate</a></td><td>minecraft:loot_table</td><td>4</td><td>44.444%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-lantern'>helheim/reward/shared/lantern</a></td><td>minecraft:loot_table</td><td>2</td><td>22.222%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-wood'>helheim/reward/shared/wood</a></td><td>minecraft:loot_table</td><td>3</td><td>33.333%</td><td>——</td></tr></tbody></table><h4>Pool 5</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-common'>helheim/reward/shared/common</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\reward\pots'><h3>Helheim Reward Pots</h3><p class='meta'>File: <code>helheim/reward/pots.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-normal'>helheim/key/normal</a></td><td>minecraft:loot_table</td><td>1</td><td>100%</td><td>—<ul><li>minecraft:random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 17 | Total weight: 62</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-deepslate'>helheim/reward/shared/deepslate</a></td><td>minecraft:loot_table</td><td>4</td><td>6.452%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-lantern'>helheim/reward/shared/lantern</a></td><td>minecraft:loot_table</td><td>2</td><td>3.226%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-wood'>helheim/reward/shared/wood</a></td><td>minecraft:loot_table</td><td>3</td><td>4.839%</td><td>——</td></tr><tr><td class='code'>arrow</td><td>minecraft:item</td><td>4</td><td>6.452%</td><td><ul><li>Set count: 2 to 8</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>4</td><td>6.452%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>ender_pearl</td><td>minecraft:item</td><td>4</td><td>6.452%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>copper_ingot</td><td>minecraft:item</td><td>4</td><td>6.452%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>gold_ingot</td><td>minecraft:item</td><td>4</td><td>6.452%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>emerald</td><td>minecraft:item</td><td>4</td><td>6.452%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>1</td><td>1.613%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>bone_meal</td><td>minecraft:item</td><td>5</td><td>8.065%</td><td><ul><li>Set count: 3 to 5</li></ul>—</td></tr><tr><td class='code'>wheat</td><td>minecraft:item</td><td>5</td><td>8.065%</td><td><ul><li>Set count: 3 to 8</li></ul>—</td></tr><tr><td class='code'>lapis_lazuli</td><td>minecraft:item</td><td>5</td><td>8.065%</td><td><ul><li>Set count: 4 to 18</li></ul>—</td></tr><tr><td class='code'>glow_ink_sac</td><td>minecraft:item</td><td>3</td><td>4.839%</td><td><ul><li>Set count: 2 to 5</li></ul>—</td></tr><tr><td class='code'>torch</td><td>minecraft:item</td><td>5</td><td>8.065%</td><td><ul><li>Set count: 6 to 12</li></ul>—</td></tr><tr><td class='code'>amethyst_shard</td><td>minecraft:item</td><td>3</td><td>4.839%</td><td><ul><li>Set count: 1 to 5</li></ul>—</td></tr><tr><td class='code'>honeycomb</td><td>minecraft:item</td><td>2</td><td>3.226%</td><td><ul><li>Set count: 1 to 8</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\reward\shared\common'><h3>Helheim Reward Shared Common</h3><p class='meta'>File: <code>helheim/reward/shared/common.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/reward</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1 to 3</span> | Entries: 21 | Total weight: 66</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-normal'>helheim/key/normal</a></td><td>minecraft:loot_table</td><td>2</td><td>3.03%</td><td>——</td></tr><tr><td class='code'>arrow</td><td>minecraft:item</td><td>4</td><td>6.061%</td><td><ul><li>Set count: 2 to 8</li></ul>—</td></tr><tr><td class='code'>emerald</td><td>minecraft:item</td><td>4</td><td>6.061%</td><td><ul><li>Set count: 2 to 4</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>1</td><td>1.515%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>bone_meal</td><td>minecraft:item</td><td>5</td><td>7.576%</td><td><ul><li>Set count: 3 to 5</li></ul>—</td></tr><tr><td class='code'>wheat</td><td>minecraft:item</td><td>5</td><td>7.576%</td><td><ul><li>Set count: 3 to 8</li></ul>—</td></tr><tr><td class='code'>lapis_lazuli</td><td>minecraft:item</td><td>5</td><td>7.576%</td><td><ul><li>Set count: 4 to 18</li></ul>—</td></tr><tr><td class='code'>glow_ink_sac</td><td>minecraft:item</td><td>3</td><td>4.545%</td><td><ul><li>Set count: 2 to 5</li></ul>—</td></tr><tr><td class='code'>torch</td><td>minecraft:item</td><td>5</td><td>7.576%</td><td><ul><li>Set count: 6 to 12</li></ul>—</td></tr><tr><td class='code'>amethyst_shard</td><td>minecraft:item</td><td>3</td><td>4.545%</td><td><ul><li>Set count: 1 to 5</li></ul>—</td></tr><tr><td class='code'>honeycomb</td><td>minecraft:item</td><td>2</td><td>3.03%</td><td><ul><li>Set count: 1 to 8</li></ul>—</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-archer'>generic/reward/random/archer</a></td><td>minecraft:loot_table</td><td>3</td><td>4.545%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-arrow'>generic/reward/random/arrow</a></td><td>minecraft:loot_table</td><td>3</td><td>4.545%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-dye'>generic/reward/random/dye</a></td><td>minecraft:loot_table</td><td>3</td><td>4.545%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-redstone'>generic/reward/random/redstone</a></td><td>minecraft:loot_table</td><td>4</td><td>6.061%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-echo'>generic/reward/random/echo</a></td><td>minecraft:loot_table</td><td>2</td><td>3.03%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-food'>generic/reward/random/food</a></td><td>minecraft:loot_table</td><td>4</td><td>6.061%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-harvest'>generic/reward/random/harvest</a></td><td>minecraft:loot_table</td><td>3</td><td>4.545%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-small'>generic/reward/random/small</a></td><td>minecraft:loot_table</td><td>3</td><td>4.545%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-treasure'>generic/reward/random/treasure</a></td><td>minecraft:loot_table</td><td>1</td><td>1.515%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-magic'>generic/reward/random/magic</a></td><td>minecraft:loot_table</td><td>1</td><td>1.515%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\reward\shared\deepslate'><h3>Helheim Reward Shared Deepslate</h3><p class='meta'>File: <code>helheim/reward/shared/deepslate.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 5 | Total weight: 18</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>deepslate_tiles</td><td>minecraft:item</td><td>5</td><td>27.778%</td><td><ul><li>Set count: 2 to 16</li></ul>—</td></tr><tr><td class='code'>deepslate_brick_stairs</td><td>minecraft:item</td><td>2</td><td>11.111%</td><td><ul><li>Set count: 2 to 7</li></ul>—</td></tr><tr><td class='code'>deepslate_brick_slab</td><td>minecraft:item</td><td>5</td><td>27.778%</td><td><ul><li>Set count: 2 to 19</li></ul>—</td></tr><tr><td class='code'>deepslate_brick_wall</td><td>minecraft:item</td><td>4</td><td>22.222%</td><td><ul><li>Set count: 2 to 11</li></ul>—</td></tr><tr><td class='code'>deepslate_bricks</td><td>minecraft:item</td><td>2</td><td>11.111%</td><td><ul><li>Set count: 2 to 12</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\reward\shared\enchantment'><h3>Helheim Reward Shared Enchantment</h3><p class='meta'>File: <code>helheim/reward/shared/enchantment.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1 to 2</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-enchanted_book-rare'>helheim/enchanted_book/rare</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-random-magic'>generic/reward/random/magic</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\reward\shared\lantern'><h3>Helheim Reward Shared Lantern</h3><p class='meta'>File: <code>helheim/reward/shared/lantern.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 2 | Total weight: 4</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>lantern</td><td>minecraft:item</td><td>1</td><td>25.0%</td><td><ul><li>Set count: 1 to 4</li></ul>—</td></tr><tr><td class='code'>soul_lantern</td><td>minecraft:item</td><td>3</td><td>75.0%</td><td><ul><li>Set count: 1 to 4</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\reward\shared\lore'><h3>Helheim Reward Shared Lore</h3><p class='meta'>File: <code>helheim/reward/shared/lore.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>2</span> | Entries: 7</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_1'>asflors/lore/chapter_1</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_2'>asflors/lore/chapter_2</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_3'>asflors/lore/chapter_3</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_4'>asflors/lore/chapter_4</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_5'>asflors/lore/chapter_5</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_6'>asflors/lore/chapter_6</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr><tr><td class='code'><a class='link' href='asflors.html#yggdrasil-asflors-lore-chapter_7'>asflors/lore/chapter_7</a></td><td>minecraft:loot_table</td><td>n/a</td><td>n/a</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\reward\shared\wood'><h3>Helheim Reward Shared Wood</h3><p class='meta'>File: <code>helheim/reward/shared/wood.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 5 | Total weight: 18</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>mangrove_log</td><td>minecraft:item</td><td>5</td><td>27.778%</td><td><ul><li>Set count: 2 to 16</li></ul>—</td></tr><tr><td class='code'>mangrove_planks</td><td>minecraft:item</td><td>2</td><td>11.111%</td><td><ul><li>Set count: 2 to 7</li></ul>—</td></tr><tr><td class='code'>mangrove_slab</td><td>minecraft:item</td><td>5</td><td>27.778%</td><td><ul><li>Set count: 2 to 19</li></ul>—</td></tr><tr><td class='code'>mangrove_stairs</td><td>minecraft:item</td><td>4</td><td>22.222%</td><td><ul><li>Set count: 2 to 11</li></ul>—</td></tr><tr><td class='code'>mangrove_slab</td><td>minecraft:item</td><td>2</td><td>11.111%</td><td><ul><li>Set count: 2 to 12</li></ul>—</td></tr></tbody></table></div><div class='card' id='helheim\reward\vault\normal'><h3>Helheim Reward Vault Normal</h3><p class='meta'>File: <code>helheim/reward/vault/normal.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-enchanted_book-vault'>helheim/enchanted_book/vault</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 5 | Total weight: 5</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-ominous'>helheim/key/ominous</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-rare-ominous_potion'>generic/reward/rare/ominous_potion</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-deepslate'>helheim/reward/shared/deepslate</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-wood'>helheim/reward/shared/wood</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-lantern'>helheim/reward/shared/lantern</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-rare-enchanted_item_25'>generic/reward/rare/enchanted_item_25</a></td><td>minecraft:loot_table</td><td>1</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-lore-chapter_8'>helheim/lore/chapter_8</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\reward\vault\ominous'><h3>Helheim Reward Vault Ominous</h3><p class='meta'>File: <code>helheim/reward/vault/ominous.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-enchanted_book-ominous_vault'>helheim/enchanted_book/ominous_vault</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-lore-chapter_9'>helheim/lore/chapter_9</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 4 | Total weight: 5</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-rare-trim'>generic/reward/rare/trim</a></td><td>minecraft:loot_table</td><td>2</td><td>40.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-deepslate'>helheim/reward/shared/deepslate</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-wood'>helheim/reward/shared/wood</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-shared-lantern'>helheim/reward/shared/lantern</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 4 | Total weight: 5</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>heavy_core</td><td>minecraft:item</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'>spawner</td><td>minecraft:item</td><td>1</td><td>20.0%</td><td>——</td></tr><tr><td class='code'>totem_of_undying</td><td>minecraft:item</td><td>2</td><td>40.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-rare-enchanted_item_50'>generic/reward/rare/enchanted_item_50</a></td><td>minecraft:loot_table</td><td>1</td><td>20.0%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\spawner\consumables'><h3>Helheim Spawner Consumables</h3><p class='meta'>File: <code>helheim/spawner/consumables.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/reward</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>3</span> | Entries: 9 | Total weight: 17</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>experience_bottle</td><td>minecraft:item</td><td>2</td><td>11.765%</td><td><ul><li>Set count: 2 to 5</li></ul>—</td></tr><tr><td class='code'>wind_charge</td><td>minecraft:item</td><td>2</td><td>11.765%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>iron_ingot</td><td>minecraft:item</td><td>1</td><td>5.882%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>golden_apple</td><td>minecraft:item</td><td>4</td><td>23.529%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>diamond</td><td>minecraft:item</td><td>3</td><td>17.647%</td><td><ul><li>Set count: 1 to 2</li></ul>—</td></tr><tr><td class='code'>bread</td><td>minecraft:item</td><td>3</td><td>17.647%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>baked_potato</td><td>minecraft:item</td><td>2</td><td>11.765%</td><td><ul><li>Set count: 1 to 3</li></ul>—</td></tr><tr><td class='code'>potion</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_potion {"id":"minecraft:regeneration"}</li></ul>—</td></tr><tr><td class='code'>potion</td><td>minecraft:item</td><td>n/a</td><td>n/a</td><td><ul><li>Set count: 1</li><li>set_potion {"id":"minecraft:swiftness"}</li></ul>—</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-enchanted_book-trial_spawner'>helheim/enchanted_book/trial_spawner</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-normal-weak_equipement'>generic/reward/normal/weak_equipement</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 2 | Total weight: 10</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-barrel'>helheim/reward/barrel</a></td><td>minecraft:loot_table</td><td>2</td><td>20.0%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-chest'>helheim/reward/chest</a></td><td>minecraft:loot_table</td><td>8</td><td>80.0%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\spawner\key'><h3>Helheim Spawner Key</h3><p class='meta'>File: <code>helheim/spawner/key.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/reward</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 2 | Total weight: 11</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-normal'>helheim/key/normal</a></td><td>minecraft:loot_table</td><td>10</td><td>90.909%</td><td>——</td></tr><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-ominous'>helheim/key/ominous</a></td><td>minecraft:loot_table</td><td>1</td><td>9.091%</td><td>——</td></tr></tbody></table></div><div class='card' id='helheim\spawner\ominous'><h3>Helheim Spawner Ominous</h3><p class='meta'>File: <code>helheim/spawner/ominous.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/reward</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>2.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-key-ominous'>helheim/key/ominous</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.25}</li></ul></td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-barrel'>helheim/reward/barrel</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-reward-chest'>helheim/reward/chest</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 4</h4><p class='meta'>Rolls: <span class='code'>1.0</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='generic.html#yggdrasil-generic-reward-normal-equipement'>generic/reward/normal/equipement</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 5</h4><p class='meta'>Rolls: <span class='code'>2.0</span> | Entries: 1 | Total weight: 2</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helheim.html#yggdrasil-helheim-enchanted_book-ominous_trial_spawner'>helheim/enchanted_book/ominous_trial_spawner</a></td><td>minecraft:loot_table</td><td>2</td><td>100%</td><td>—<ul><li>random_chance {"chance":0.35}</li></ul></td></tr></tbody></table></div><div class='card' id='helheim\treasure\rune_of_reva'><h3>Helheim Treasure Rune Of Reva</h3><p class='meta'>File: <code>helheim/treasure/rune_of_reva.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helheim/treasure</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance</th><th>Generation</th></tr></thead><tbody><tr><td class='code'>amethyst_shard</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Rune of Reva</li><li>Components: rarity=epic, id=yggdrasil.helheim.treasure.rune_of_reva</li><li>Lore: Free Reva from his slumber</li></ul>—</td></tr></tbody></table></div>
-<footer><p>Generated from <code>data/yggdrasil/loot_table</code>. Enchant pools shown inline where available.</p></footer>
+<div class='card'><p class='meta'>Structure details grouped by container category.</p><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div>
+<div class='card'><h2>Category summary</h2><ul>
+<li><span class='cat-badge' style='background:#66b3ff'>Barrel</span>: 1 tables</li>
+<li><span class='cat-badge' style='background:#ffb366'>Vault</span>: 3 tables</li>
+<li><span class='cat-badge' style='background:#66ff99'>Pot</span>: 1 tables</li>
+<li><span class='cat-badge' style='background:#ff6666'>Spawner</span>: 3 tables</li>
+<li><span class='cat-badge' style='background:#ffff66'>Chest</span>: 1 tables</li>
+</ul></div>
+<div class='card'><h2 style='color:#66b3ff'>Barrel</h2>
+<details class='details-card'><summary><strong>Helheim Reward Barrel</strong> — <span class='muted'>helheim/reward/barrel.json</span> <span class='rolls'>Rolls: 1; 1; 1; 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
 </div>
-</body>
-</html>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/lore</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table asflors/lore/chapter_1</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 1: The Arrival</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_2</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 2: The Discovery</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_3</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 3: Friendship</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_4</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 4: The Secret</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_5</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 5: The Departure</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_6</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 6: Solitude</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_7</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 7: The Legacy</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/enchantment</td><td class='pct'>50.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/rare</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Experience Bottle, count 1–4</td><td class='pct'>35.7%</td></tr>
+<tr><td class='entry'>Emerald, count 1–3</td><td class='pct'>21.4%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Gold Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Echo Shard, count 1–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Ender Pearl, count 1–2</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>50.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Crossbow, 0.1–0.5 damage ratio, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Spectral Arrow, count 10–28</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Sword, count 1</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Chestplate, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Helmet, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Chainmail Leggings, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Leather Boots, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Stone Axe, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 5–12</td><td class='pct'>100.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–2</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–4</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Black Dye, count 2–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Red Dye, count 2–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Blue Dye, count 1</td><td class='pct'>28.6%</td></tr>
+<tr><td class='entry'>Green Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Yellow Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>White Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Flint, count 2–3</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Redstone, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Feather, count 1–3</td><td class='pct'>33.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Echo Shard, count 2–5</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Bone, count 2–4</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>String, count 2–4</td><td class='pct'>40.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Melon Slice, count 1</td><td class='pct'>12.5%</td></tr>
+<tr><td class='entry'>Bread, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Tropical Fish, count 4–17</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Apple, count 4–17</td><td class='pct'>12.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Dried Kelp, count 2–7</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Sweet Berries, count 2–7</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Milk Bucket, count 1</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Leather, count 2–3</td><td class='pct'>20.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>String, count 1–6</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Leather, count 1–3</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Iron Nugget, count 2–6</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Gold Nugget, count 2–6</td><td class='pct'>25.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Quartz, count 1</td><td class='pct'>12.5%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Gold Nugget, count 4–17</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Iron Nugget, count 4–17</td><td class='pct'>12.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Experience Bottle, count 1–4</td><td class='pct'>35.7%</td></tr>
+<tr><td class='entry'>Emerald, count 1–3</td><td class='pct'>21.4%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Gold Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Echo Shard, count 1–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Ender Pearl, count 1–2</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#ffb366'>Vault</h2>
+<details class='details-card'><summary><strong>Helheim Enchanted Book Vault</strong> — <span class='muted'>helheim/enchanted_book/vault.json</span> <span class='rolls'>Rolls: 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Helheim Reward Vault Normal</strong> — <span class='muted'>helheim/reward/vault/normal.json</span> <span class='rolls'>Rolls: 1; 1; 1; 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/vault</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/ominous</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/rare/ominous_potion</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Bottle</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/wood</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Mangrove Log, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Planks, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Stairs, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lantern</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Lantern, count 1–4</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Soul Lantern, count 1–4</td><td class='pct'>75.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table generic/reward/rare/enchanted_item_25</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>minecraft:tag</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/lore/chapter_8</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Secret Chapter 8: Loki's Hidden Notes</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Helheim Reward Vault Ominous</strong> — <span class='muted'>helheim/reward/vault/ominous.json</span> <span class='rolls'>Rolls: 1; 1; 1; 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/ominous_vault</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/lore/chapter_9</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Secret Chapter 9: The Eternal Child</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table generic/reward/rare/trim</td><td class='pct'>40.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Eye Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Rib Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Vex Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Bolt Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Dune Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Host Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Tide Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Ward Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Wild Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Silence Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Wayfinder Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Shaper Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Sentry Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Raiser Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Spire Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Snout Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+<tr><td class='entry'>Coast Armor Trim Smithing Template</td><td class='pct'>5.9%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/wood</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Mangrove Log, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Planks, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Stairs, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lantern</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Lantern, count 1–4</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Soul Lantern, count 1–4</td><td class='pct'>75.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Heavy Core</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Spawner</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Totem Of Undying</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/rare/enchanted_item_50</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>minecraft:tag</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#66ff99'>Pot</h2>
+<details class='details-card'><summary><strong>Helheim Reward Pots</strong> — <span class='muted'>helheim/reward/pots.json</span> <span class='rolls'>Rolls: 1; 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>6.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lantern</td><td class='pct'>3.2%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Lantern, count 1–4</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Soul Lantern, count 1–4</td><td class='pct'>75.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/wood</td><td class='pct'>4.8%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Mangrove Log, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Planks, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Stairs, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.5%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–3</td><td class='pct'>6.5%</td></tr>
+<tr><td class='entry'>Ender Pearl, count 1–2</td><td class='pct'>6.5%</td></tr>
+<tr><td class='entry'>Copper Ingot, count 1–3</td><td class='pct'>6.5%</td></tr>
+<tr><td class='entry'>Gold Ingot, count 1–2</td><td class='pct'>6.5%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.5%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.6%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>8.1%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>8.1%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>8.1%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>8.1%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.8%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.2%</td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#ff6666'>Spawner</h2>
+<details class='details-card'><summary><strong>Helheim Spawner Consumables</strong> — <span class='muted'>helheim/spawner/consumables.json</span> <span class='rolls'>Rolls: 3; 1; 1.0; 1.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Experience Bottle, count 2–5</td><td class='pct'>10.5%</td></tr>
+<tr><td class='entry'>Wind Charge, count 1–3</td><td class='pct'>10.5%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>5.3%</td></tr>
+<tr><td class='entry'>Golden Apple, count 1–2</td><td class='pct'>21.1%</td></tr>
+<tr><td class='entry'>Diamond, count 1–2</td><td class='pct'>15.8%</td></tr>
+<tr><td class='entry'>Bread, count 1–3</td><td class='pct'>15.8%</td></tr>
+<tr><td class='entry'>Baked Potato, count 1–3</td><td class='pct'>10.5%</td></tr>
+<tr><td class='entry'>Potion, count 1</td><td class='pct'>5.3%</td></tr>
+<tr><td class='entry'>Potion, count 1</td><td class='pct'>5.3%</td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/trial_spawner</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table generic/reward/normal/weak_equipement</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>minecraft:tag</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/barrel</td><td class='pct'>20.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lore</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table asflors/lore/chapter_1</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_2</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_5</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_6</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_7</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/enchantment</td><td class='pct'>50.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/rare</td><td class='pct'>100.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>50.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/chest</td><td class='pct'>80.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lore</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table asflors/lore/chapter_1</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_2</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_5</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_6</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_7</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>44.4%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lantern</td><td class='pct'>22.2%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Lantern, count 1–4</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Soul Lantern, count 1–4</td><td class='pct'>75.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/wood</td><td class='pct'>33.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Mangrove Log, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Planks, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Stairs, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Helheim Spawner Key</strong> — <span class='muted'>helheim/spawner/key.json</span> <span class='rolls'>Rolls: 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>90.9%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/key/ominous</td><td class='pct'>9.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+<details class='details-card'><summary><strong>Helheim Spawner Ominous</strong> — <span class='muted'>helheim/spawner/ominous.json</span> <span class='rolls'>Rolls: 2.0; 1.0; 1.0; 1.0; 2.0</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/ominous</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Ominous Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/barrel</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lore</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table asflors/lore/chapter_1</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_2</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_5</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_6</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_7</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/enchantment</td><td class='pct'>50.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/rare</td><td class='pct'>100.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>50.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/chest</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lore</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table asflors/lore/chapter_1</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_2</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_4</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_5</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_6</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_7</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>44.4%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lantern</td><td class='pct'>22.2%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Lantern, count 1–4</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Soul Lantern, count 1–4</td><td class='pct'>75.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/wood</td><td class='pct'>33.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Mangrove Log, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Planks, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Stairs, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table generic/reward/normal/equipement</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>minecraft:tag</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/enchanted_book/ominous_trial_spawner</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Book, Random enchantments</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<div class='card'><h2 style='color:#ffff66'>Chest</h2>
+<details class='details-card'><summary><strong>Helheim Reward Chest</strong> — <span class='muted'>helheim/reward/chest.json</span> <span class='rolls'>Rolls: 1; 1; 1; 1; 1</span></summary>
+<div class='section'>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Crossbow, 0.1–0.5 damage ratio, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Spectral Arrow, count 10–28</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Sword, count 1</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Chestplate, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Helmet, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Chainmail Leggings, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Leather Boots, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Stone Axe, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 5–12</td><td class='pct'>100.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–2</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–4</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Black Dye, count 2–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Red Dye, count 2–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Blue Dye, count 1</td><td class='pct'>28.6%</td></tr>
+<tr><td class='entry'>Green Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Yellow Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>White Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Flint, count 2–3</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Redstone, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Feather, count 1–3</td><td class='pct'>33.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Echo Shard, count 2–5</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Bone, count 2–4</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>String, count 2–4</td><td class='pct'>40.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Melon Slice, count 1</td><td class='pct'>12.5%</td></tr>
+<tr><td class='entry'>Bread, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Tropical Fish, count 4–17</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Apple, count 4–17</td><td class='pct'>12.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Dried Kelp, count 2–7</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Sweet Berries, count 2–7</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Milk Bucket, count 1</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Leather, count 2–3</td><td class='pct'>20.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>String, count 1–6</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Leather, count 1–3</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Iron Nugget, count 2–6</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Gold Nugget, count 2–6</td><td class='pct'>25.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Quartz, count 1</td><td class='pct'>12.5%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Gold Nugget, count 4–17</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Iron Nugget, count 4–17</td><td class='pct'>12.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Experience Bottle, count 1–4</td><td class='pct'>35.7%</td></tr>
+<tr><td class='entry'>Emerald, count 1–3</td><td class='pct'>21.4%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Gold Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Echo Shard, count 1–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Ender Pearl, count 1–2</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/lore</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table asflors/lore/chapter_1</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 1: The Arrival</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_2</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 2: The Discovery</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_3</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 3: Friendship</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_4</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 4: The Secret</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_5</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 5: The Departure</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_6</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 6: Solitude</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table asflors/lore/chapter_7</td><td class='pct'>14.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Chapter 7: The Legacy</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/deepslate</td><td class='pct'>44.4%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Deepslate Tiles, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Stairs, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Deepslate Brick Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Deepslate Brick Wall, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Deepslate Bricks, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/lantern</td><td class='pct'>22.2%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Lantern, count 1–4</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Soul Lantern, count 1–4</td><td class='pct'>75.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table helheim/reward/shared/wood</td><td class='pct'>33.3%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Mangrove Log, count 2–16</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Planks, count 2–7</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–19</td><td class='pct'>27.8%</td></tr>
+<tr><td class='entry'>Mangrove Stairs, count 2–11</td><td class='pct'>22.2%</td></tr>
+<tr><td class='entry'>Mangrove Slab, count 2–12</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+<div class='pool'>
+<table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/reward/shared/common</td><td class='pct'>100.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Loot table helheim/key/normal</td><td class='pct'>3.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Helheim Key</td><td class='pct'>100.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Arrow, count 2–8</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Emerald, count 2–4</td><td class='pct'>6.1%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–2</td><td class='pct'>1.5%</td></tr>
+<tr><td class='entry'>Bone Meal, count 3–5</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Wheat, count 3–8</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 4–18</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Glow Ink Sac, count 2–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Torch, count 6–12</td><td class='pct'>7.6%</td></tr>
+<tr><td class='entry'>Amethyst Shard, count 1–5</td><td class='pct'>4.5%</td></tr>
+<tr><td class='entry'>Honeycomb, count 1–8</td><td class='pct'>3.0%</td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/archer</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Crossbow, 0.1–0.5 damage ratio, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Spectral Arrow, count 10–28</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Sword, count 1</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Chestplate, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Iron Helmet, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Chainmail Leggings, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Leather Boots, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Stone Axe, count 1, Random enchantments</td><td class='pct'>11.1%</td></tr>
+<tr><td class='entry'>Bow, Random enchantments with levels</td><td class='pct'>11.1%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/arrow</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Arrow, count 5–12</td><td class='pct'>100.0%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–2</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–4</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Tipped Arrow, count 1–5</td><td class='pct'>16.7%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/dye</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Black Dye, count 2–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Red Dye, count 2–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Blue Dye, count 1</td><td class='pct'>28.6%</td></tr>
+<tr><td class='entry'>Green Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Yellow Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>White Dye, count 2–3</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/redstone</td><td class='pct'>6.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Flint, count 2–3</td><td class='pct'>16.7%</td></tr>
+<tr><td class='entry'>Redstone, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Feather, count 1–3</td><td class='pct'>33.3%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/echo</td><td class='pct'>3.0%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Echo Shard, count 2–5</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Bone, count 2–4</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>String, count 2–4</td><td class='pct'>40.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/food</td><td class='pct'>6.1%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Melon Slice, count 1</td><td class='pct'>12.5%</td></tr>
+<tr><td class='entry'>Bread, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Tropical Fish, count 4–17</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Apple, count 4–17</td><td class='pct'>12.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/harvest</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Dried Kelp, count 2–7</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Sweet Berries, count 2–7</td><td class='pct'>20.0%</td></tr>
+<tr><td class='entry'>Milk Bucket, count 1</td><td class='pct'>40.0%</td></tr>
+<tr><td class='entry'>Leather, count 2–3</td><td class='pct'>20.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/small</td><td class='pct'>4.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>String, count 1–6</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Leather, count 1–3</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Iron Nugget, count 2–6</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Gold Nugget, count 2–6</td><td class='pct'>25.0%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/treasure</td><td class='pct'>1.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Quartz, count 1</td><td class='pct'>12.5%</td></tr>
+<tr><td class='entry'>Lapis Lazuli, count 2–7</td><td class='pct'>50.0%</td></tr>
+<tr><td class='entry'>Gold Nugget, count 4–17</td><td class='pct'>25.0%</td></tr>
+<tr><td class='entry'>Iron Nugget, count 4–17</td><td class='pct'>12.5%</td></tr>
+</tbody></table></div></td></tr>
+<tr><td class='entry'>Loot table generic/reward/random/magic</td><td class='pct'>1.5%</td></tr>
+<tr><td colspan='2' style='padding:0;border:none'><div style='margin-left:20px;margin-top:8px;padding:8px;background:rgba(255,255,255,0.02);border-left:3px solid #888'><table class='table'><tbody>
+<tr><td class='entry'>Experience Bottle, count 1–4</td><td class='pct'>35.7%</td></tr>
+<tr><td class='entry'>Emerald, count 1–3</td><td class='pct'>21.4%</td></tr>
+<tr><td class='entry'>Iron Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Gold Ingot, count 1–3</td><td class='pct'>7.1%</td></tr>
+<tr><td class='entry'>Echo Shard, count 1–7</td><td class='pct'>14.3%</td></tr>
+<tr><td class='entry'>Ender Pearl, count 1–2</td><td class='pct'>14.3%</td></tr>
+</tbody></table></div></td></tr>
+</tbody></table></div></td></tr>
+</tbody></table>
+</div>
+</div></details>
+</div>
+<footer><p>Generated from <code>data/yggdrasil/loot_table</code>. Categories are based on container keywords and use the most specific container type in the path.</p></footer>
+</div></body></html>
