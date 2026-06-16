@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Yggdrasil Legendary Items</title>
+<style>
+:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1180px;margin:0 auto;padding:20px}
+header,footer{padding:18px 0;text-align:center}
+header h1{margin:0;font-size:2.2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
+.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}
+.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}
+.structure-card span{color:var(--muted);font-size:0.95rem}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.06)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}
+.link{color:var(--accent2);text-decoration:none}
+.link:hover{text-decoration:underline}
+details summary{cursor:pointer;outline:none}
+.details-card{margin-bottom:18px}
+.list-summary{margin:10px 0 0 20px}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(126,231,135,0.15);color:var(--accent);font-size:0.9rem;margin-right:8px}
+@media(max-width:860px){.container{padding:16px}}
+</style>
+</head>
+<body>
+<div class='container'>
+<header><h1>Yggdrasil Legendary Items</h1></header>
+<div class='card'><p class='meta'>Legendary weapons and treasure items with stats and enchant tags, organized by source table.</p></div><div class='card'><h2>Fake Asflors Sword</h2><ul><li>Source: <code>asflors/treasure/fake_asflors_sword.json</code></li><li>Item Type: <code>minecraft:diamond_sword</code></li><li>Name: Asflors Sword</li><li>Enchant pool: <code>#yggdrasil:structure/asflors/stand</code></li></ul></div><div class='card'><h2>Real Asflors Sword</h2><ul><li>Source: <code>asflors/treasure/real_asflors_sword.json</code></li><li>Item Type: <code>minecraft:diamond_sword</code></li><li>Name: The Authentic Asflors Sword</li><li>Lore: Indestructible legendary weapon</li><li>Attributes: attack_damage +7, attack_speed +1.6, sweeping_damage_ratio +0.75×total, attack_speed +0.15×base, attack_damage +0.25×base</li><li>Enchant pool: <code>#yggdrasil:structure/asflors/asflors_sword</code></li></ul></div><div class='card'><h2>Gungnir</h2><ul><li>Source: <code>asgard/treasure/gungnir.json</code></li><li>Item Type: <code>minecraft:trident</code></li><li>Name: Gungnir</li><li>Lore: The sacred lance of the Father of All Things</li><li>Attributes: attack_damage +20, attack_speed +0.4×base, movement_speed +0.2×base</li><li>Fixed enchants: sharpness 6, loyalty 5, impaling 5, riptide 5, channeling 1</li></ul></div><div class='card'><h2>Midas</h2><ul><li>Source: <code>asgard/treasure/midas.json</code></li><li>Item Type: <code>minecraft:book</code></li><li>Name: Midas Book</li><li>Lore: Transform blocks into gold</li><li>Enchant pool: <code>#yggdrasil:equipment/midas_book</code> → minecraft:sharpness</li></ul></div><div class='card'><h2>Dark Elven Bow</h2><ul><li>Source: <code>runic_labyrinth/treasure/dark_elven_bow.json</code></li><li>Item Type: <code>minecraft:bow</code></li><li>Name: Dark Elven Bow</li><li>Lore: Bow from the Dark Elves</li><li>Attributes: movement_speed +0.65×base, step_height +2, safe_fall_distance +5, gravity +0.5×total</li><li>Enchant pool: <code>#yggdrasil:structure/runic_labyrinth/dark_elven_bow</code></li></ul></div><div class='card'><h2>Twilight Of Yggdrasil Bow</h2><ul><li>Source: <code>runic_labyrinth/treasure/twilight_of_yggdrasil_bow.json</code></li><li>Item Type: <code>minecraft:bow</code></li><li>Name: Twilight of Yggdrasil Bow</li><li>Lore: Twilight of Yggdrasil Bow</li><li>Attributes: movement_speed +1.15×base, knockback_resistance +0.25×total, safe_fall_distance +7, gravity +1.25×total</li><li>Enchant pool: <code>#yggdrasil:structure/runic_labyrinth/twilight_of_yggdrasil_bow</code></li></ul></div><div class='card'><h2>Vanir Blessing</h2><ul><li>Source: <code>vanaheim/treasure/vanir_blessing.json</code></li><li>Item Type: <code>minecraft:book</code></li><li>Name: Vanir Blessing</li><li>Lore: A gift from the Vanir gods</li><li>Enchant pool: <code>#yggdrasil:structure/vanaheim/ominous_vault</code></li></ul></div><div class='card'><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div>
+<footer><p>Generated from <code>data/yggdrasil/loot_table</code>.</p></footer>
+</div>
+</body>
+</html>

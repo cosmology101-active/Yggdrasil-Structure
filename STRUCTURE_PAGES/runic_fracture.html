@@ -1,129 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yggdrasil — runic_fracture</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Yggdrasil — Runic Fracture</title>
 <style>
-:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08)}
 body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
-.container{max-width:1160px;margin:0 auto;padding:24px}
-header,footer{padding:20px 0;text-align:center}
-header h1{margin:0;font-size:2rem;color:var(--accent)}
+.container{max-width:1180px;margin:0 auto;padding:20px}
+header,footer{padding:18px 0;text-align:center}
+header h1{margin:0;font-size:2.2rem;color:var(--accent)}
 header p,footer p{margin:10px 0;color:var(--muted)}
-.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
-.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
-@media(max-width:980px){.grid{grid-template-columns:1fr}}
-.structure-list{list-style:none;margin:0;padding:0}
-.structure-list li{margin:0 0 10px}
-.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
-.structure-list a:hover{text-decoration:underline}
+.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
+.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}
+.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}
+.structure-card span{color:var(--muted);font-size:0.95rem}
 .table{width:100%;border-collapse:collapse;margin-top:12px}
 .table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
-.table th{background:rgba(255,255,255,0.04)}
+.table th{background:rgba(255,255,255,0.06)}
 .code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
-.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
-.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}
+.link{color:var(--accent2);text-decoration:none}
+.link:hover{text-decoration:underline}
+details summary{cursor:pointer;outline:none}
+.details-card{margin-bottom:18px}
+.list-summary{margin:10px 0 0 20px}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(126,231,135,0.15);color:var(--accent);font-size:0.9rem;margin-right:8px}
+@media(max-width:860px){.container{padding:16px}}
 </style>
 </head>
 <body>
-<div class="container">
-<header><h1>Yggdrasil — runic_fracture</h1></header>
-<div class="card"><p class="meta">Structure: <strong>runic_fracture</strong>. Loot tables: 5.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/runic_fracture</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>runic_fracture/enchanted_book/boss_trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:runic_fracture/enchanted_book</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">minecraft:book</td>
-<td>minecraft:item</td>
-<td>1</td>
-<td>100.0%</td>
-<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/runic_fracture/boss_trial_spawner"})</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<div class="card"><h2>runic_fracture/enchanted_book/monster_trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:runic_fracture/enchanted_book</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">minecraft:book</td>
-<td>minecraft:item</td>
-<td>1</td>
-<td>100.0%</td>
-<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/runic_fracture/monster_trial_spawner"})</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<div class="card"><h2>runic_fracture/lore/hidden_truth.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:runic_fracture/lore</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">minecraft:written_book</td>
-<td>minecraft:item</td>
-<td>1</td>
-<td>100.0%</td>
-<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Hidden Truth of the Transcendent", "translate": "item.yggdrasil.runic_fracture.hidden_truth.name"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.runic_fracture.lore.hidden_truth"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "If you wish to help me, know one thing: my goal in life is not to save the world - it's a rather selfish one. I have lived long enough in this world, and I know enough of its reality. I simply want my immortality to end. If you can find a way, I will grant you my powers.", "translate": "item.yggdrasil.runic_fracture.hidden_truth.page1"}, {"fallback": "Here's what I know about this world. The gods are not actually from this world, and being here seems like a game to them. They appear to enjoy destroying each other for pleasure - I don't understand it, it makes no sense.", "translate": "item.yggdrasil.runic_fracture.hidden_truth.page2"}, {"fallback": "I have met Odin several times in the past, and each time it seemed to be a different person. Moreover, the Gods come and stay for a period, then disappear for some time. There isn't just one god but all at once - I assume they all communicate with each other.", "translate": "item.yggdrasil.runic_fracture.hidden_truth.page3"}, {"fallback": "The second thing is, despite being gods, they don't have full power over this world. Each has specific attributes and capabilities; their power seems limited. While we mortals - at least I was one - have the ability to evolve as much as we want.", "translate": "item.yggdrasil.runic_fracture.hidden_truth.page4"}, {"fallback": "When I first spoke to Odin, he explained that their powers are limited. They don't use magic - it comes from a system.", "translate": "item.yggdrasil.runic_fracture.hidden_truth.page5"}, {"fallback": "When we use magic, we use the ambient particles, and if an area is empty, then magic is impossible. They, however, don't have this limitation and can use their powers at will.", "translate": "item.yggdrasil.runic_fracture.hidden_truth.page6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffffff", "fallback": "[Runic Fracture]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.runic_fracture", "underlined": false}], "mode": "replace_all"})</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<div class="card"><h2>runic_fracture/lore/journal_transcendent.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">minecraft:written_book</td>
-<td>minecraft:item</td>
-<td>1</td>
-<td>100.0%</td>
-<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Journal of the Transcendent", "translate": "item.yggdrasil.runic_fracture.book.name"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.runic_fracture.lore.journal_transcendent"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I congratulate you on finding this place. The force emanating from it is unmistakable - you must have noticed that this island was floating. This is actually due to the powers of the dark elves. I know them well, but I do not approve of their deviousness.", "translate": "item.yggdrasil.runic_fracture.book.page1"}, {"fallback": "Know that this place is dangerous. Only a 'powerful' person can enter, and I truly hope such a person exists. If not, I won't lie to you, it would be the worst of despairs.", "translate": "item.yggdrasil.runic_fracture.book.page2"}, {"fallback": "Let me be honest: my power has surpassed that of the gods, and I have acquired a form of immortality. Despite everything I've tried, I have found no way to disappear. Even when disintegrating every particle of my body, it reappears.", "translate": "item.yggdrasil.runic_fracture.book.page3"}, {"fallback": "My mind and intelligence seem to exist in a far more complex higher universe, while every particle of my body manifests itself at every moment.", "translate": "item.yggdrasil.runic_fracture.book.page4"}, {"fallback": "At this point, it can no longer even be called magic. It is something more complex, something that transcends the laws of our world.", "translate": "item.yggdrasil.runic_fracture.book.page5"}, {"fallback": "Well, I talk a lot about myself, but if you want to enter, you'll need to find a certain village. You'll spot it easily: it has a fountain with black and white ground. In this village, you'll find my story and a way to open this tomb.", "translate": "item.yggdrasil.runic_fracture.book.page6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffffff", "fallback": "[Runic Fracture]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.runic_fracture", "underlined": false}], "mode": "replace_all"})</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<div class="card"><h2>runic_fracture/reward.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:runic_fracture/chest</span> | pools: 3</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">loot_table:yggdrasil:asflors/lore/chronicles_of_trials</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>100.0%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-<h3>Pool 2</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">loot_table:yggdrasil:runic_fracture/enchanted_book/boss_trial_spawner</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>100.0%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-<h3>Pool 3</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">loot_table:yggdrasil:asflors/key/ominous</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>100.0%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+<div class='container'>
+<header><h1>Yggdrasil — Runic Fracture</h1></header>
+<div class='card'><p class='meta'>Structure: <strong>Runic Fracture</strong></p><p class='meta'>Grouped by container/use-case category.</p><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div><div class='card'><h2>Container overview</h2><ul class='list-summary'><li><strong>Runic Fracture</strong>: 5 tables</li></ul></div><div class='card'><h2>Runic Fracture</h2><details open class='details-card' id='runic_fracture\enchanted_book\boss_trial_spawner'><summary><h3>Runic Fracture Enchanted Book Boss Trial Spawner</h3></summary><p class='meta'>Direct item: book</p><p class='meta'>File: <code>runic_fracture/enchanted_book/boss_trial_spawner.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:runic_fracture/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/runic_fracture/boss_trial_spawner, compatible only</li></ul>—</td></tr></tbody></table></details><details open class='details-card' id='runic_fracture\enchanted_book\monster_trial_spawner'><summary><h3>Runic Fracture Enchanted Book Monster Trial Spawner</h3></summary><p class='meta'>Direct item: book</p><p class='meta'>File: <code>runic_fracture/enchanted_book/monster_trial_spawner.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:runic_fracture/enchanted_book</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'>book</td><td>minecraft:item</td><td>1</td><td>100%</td><td><ul><li>Random enchantments from #yggdrasil:structure/runic_fracture/monster_trial_spawner, compatible only</li></ul>—</td></tr></tbody></table></details><details open class='details-card' id='runic_fracture\lore\hidden_truth'><summary><h3>Runic Fracture Lore Hidden Truth</h3></summary><p class='meta'>Direct item: written_book</p><p class='meta'>File: <code>runic_fracture/lore/hidden_truth.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:runic_fracture/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Hidden Truth of the Transcendent</li><li>Components: id=yggdrasil.runic_fracture.lore.hidden_truth</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.runic_fracture.hidden_truth.page1","fallback":"If you wish to help me, know one thing: my goal in life is not to save the world - it's a rather selfish one. I have lived long enough in this world, and I know enough of its reality. I simply want my immortality to end. If you can find a way, I will grant you my powers."},{"translate":"item.yggdrasil.runic_fracture.hidden_truth.page2","fallback":"Here's what I know about this world. The gods are not actually from this world, and being here seems like a game to them. They appear to enjoy destroying each other for pleasure - I don't understand it, it makes no sense."},{"translate":"item.yggdrasil.runic_fracture.hidden_truth.page3","fallback":"I have met Odin several times in the past, and each time it seemed to be a different person. Moreover, the Gods come and stay for a period, then disappear for some time. There isn't just one god but all at once - I assume they all communicate with each other."},{"translate":"item.yggdrasil.runic_fracture.hidden_truth.page4","fallback":"The second thing is, despite being gods, they don't have full power over this world. Each has specific attributes and capabilities; their power seems limited. While we mortals - at least I was one - have the ability to evolve as much as we want."},{"translate":"item.yggdrasil.runic_fracture.hidden_truth.page5","fallback":"When I first spoke to Odin, he explained that their powers are limited. They don't use magic - it comes from a system."},{"translate":"item.yggdrasil.runic_fracture.hidden_truth.page6","fallback":"When we use magic, we use the ambient particles, and if an area is empty, then magic is impossible. They, however, don't have this limitation and can use their powers at will."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></details><details open class='details-card' id='runic_fracture\lore\journal_transcendent'><summary><h3>Runic Fracture Lore Journal Transcendent</h3></summary><p class='meta'>Direct item: written_book</p><p class='meta'>File: <code>runic_fracture/lore/journal_transcendent.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:asflors/lore</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'>written_book</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Journal of the Transcendent</li><li>Components: id=yggdrasil.runic_fracture.lore.journal_transcendent</li><li>set_written_book_pages {"pages":[{"translate":"item.yggdrasil.runic_fracture.book.page1","fallback":"I congratulate you on finding this place. The force emanating from it is unmistakable - you must have noticed that this island was floating. This is actually due to the powers of the dark elves. I know them well, but I do not approve of their deviousness."},{"translate":"item.yggdrasil.runic_fracture.book.page2","fallback":"Know that this place is dangerous. Only a 'powerful' person can enter, and I truly hope such a person exists. If not, I won't lie to you, it would be the worst of despairs."},{"translate":"item.yggdrasil.runic_fracture.book.page3","fallback":"Let me be honest: my power has surpassed that of the gods, and I have acquired a form of immortality. Despite everything I've tried, I have found no way to disappear. Even when disintegrating every particle of my body, it reappears."},{"translate":"item.yggdrasil.runic_fracture.book.page4","fallback":"My mind and intelligence seem to exist in a far more complex higher universe, while every particle of my body manifests itself at every moment."},{"translate":"item.yggdrasil.runic_fracture.book.page5","fallback":"At this point, it can no longer even be called magic. It is something more complex, something that transcends the laws of our world."},{"translate":"item.yggdrasil.runic_fracture.book.page6","fallback":"Well, I talk a lot about myself, but if you want to enter, you'll need to find a certain village. You'll spot it easily: it has a fountain with black and white ground. In this village, you'll find my story and a way to open this tomb."}],"mode":"replace_all"}</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></details><details open class='details-card' id='runic_fracture\reward'><summary><h3>Runic Fracture Reward</h3></summary><p class='meta'>Delegates to asflors/lore/chronicles_of_trials / Delegates to runic_fracture/enchanted_book/boss_trial_spawner / Delegates to asflors/key/ominous</p><p class='meta'>File: <code>runic_fracture/reward.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:runic_fracture/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'><a class='link' href='asflors.html#asflors-lore-chronicles_of_trials'>asflors/lore/chronicles_of_trials</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 2</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'><a class='link' href='runic_fracture.html#runic_fracture-enchanted_book-boss_trial_spawner'>runic_fracture/enchanted_book/boss_trial_spawner</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table><h4>Pool 3</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'><a class='link' href='asflors.html#asflors-key-ominous'>asflors/key/ominous</a></td><td>minecraft:loot_table</td><td>n/a</td><td>100%</td><td>——</td></tr></tbody></table></details></div>
+<footer><p>Generated from <code>data/yggdrasil/loot_table</code>.</p></footer>
 </div>
 </body>
 </html>

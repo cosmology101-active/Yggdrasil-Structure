@@ -1,93 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yggdrasil — helblom</title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Yggdrasil — Helblom</title>
 <style>
-:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+:root{--bg:#071019;--card:#111827;--text:#e6eef6;--muted:#9aa4af;--accent:#7ee787;--accent2:#4fb5ff;--border:rgba(255,255,255,0.08)}
 body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
-.container{max-width:1160px;margin:0 auto;padding:24px}
-header,footer{padding:20px 0;text-align:center}
-header h1{margin:0;font-size:2rem;color:var(--accent)}
+.container{max-width:1180px;margin:0 auto;padding:20px}
+header,footer{padding:18px 0;text-align:center}
+header h1{margin:0;font-size:2.2rem;color:var(--accent)}
 header p,footer p{margin:10px 0;color:var(--muted)}
-.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
-.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
-@media(max-width:980px){.grid{grid-template-columns:1fr}}
-.structure-list{list-style:none;margin:0;padding:0}
-.structure-list li{margin:0 0 10px}
-.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
-.structure-list a:hover{text-decoration:underline}
+.card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 18px 40px rgba(0,0,0,0.22)}
+.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.structure-card{display:block;padding:18px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease}
+.structure-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.28)}
+.structure-card strong{display:block;font-size:1.05rem;margin-bottom:6px}
+.structure-card span{color:var(--muted);font-size:0.95rem}
 .table{width:100%;border-collapse:collapse;margin-top:12px}
 .table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
-.table th{background:rgba(255,255,255,0.04)}
+.table th{background:rgba(255,255,255,0.06)}
 .code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
-.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
-.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+.meta{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-top:10px}
+.link{color:var(--accent2);text-decoration:none}
+.link:hover{text-decoration:underline}
+details summary{cursor:pointer;outline:none}
+.details-card{margin-bottom:18px}
+.list-summary{margin:10px 0 0 20px}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(126,231,135,0.15);color:var(--accent);font-size:0.9rem;margin-right:8px}
+@media(max-width:860px){.container{padding:16px}}
 </style>
 </head>
 <body>
-<div class="container">
-<header><h1>Yggdrasil — helblom</h1></header>
-<div class="card"><p class="meta">Structure: <strong>helblom</strong>. Loot tables: 3.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/helblom</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>helblom/barrel.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helblom/chest</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 3</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">loot_table:yggdrasil:generic/reward/random/harvest</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>33.333%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td class="code">loot_table:yggdrasil:generic/reward/random/misc</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>33.333%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td class="code">loot_table:yggdrasil:generic/reward/random/common</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>33.333%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<div class="card"><h2>helblom/decorated_pot.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helblom/chest</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">loot_table:yggdrasil:helblom/treasure/helheim_map</td>
-<td>minecraft:loot_table</td>
-<td>1</td>
-<td>100.0%</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<div class="card"><h2>helblom/treasure/helheim_map.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helblom/treasure</span> | pools: 1</p>
-<h3>Pool 1</h3>
-<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
-<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
-<tr>
-<td class="code">minecraft:map</td>
-<td>minecraft:item</td>
-<td>1</td>
-<td>100.0%</td>
-<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Helheim Map", "translate": "item.yggdrasil.helheim.map"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helblom.treasure.helheim_map"}}, "minecraft:map_color": 16777215, "minecraft:rarity": "epic"}}); minecraft:exploration_map({"decoration": "mansion", "destination": "yggdrasil:helheim"}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
-<td>—</td>
-</tr>
-</tbody></table>
-</div>
-<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+<div class='container'>
+<header><h1>Yggdrasil — Helblom</h1></header>
+<div class='card'><p class='meta'>Structure: <strong>Helblom</strong></p><p class='meta'>Grouped by container/use-case category.</p><p class='meta'><a class='link' href='index.html'>Back to index</a></p></div><div class='card'><h2>Container overview</h2><ul class='list-summary'><li><strong>Helblom</strong>: 3 tables</li></ul></div><div class='card'><h2>Helblom</h2><details open class='details-card' id='helblom\barrel'><summary><h3>Helblom Barrel</h3></summary><p class='meta'>Contains 3 entries: generic/reward/random/harvest, generic/reward/random/misc, generic/reward/random/common</p><p class='meta'>File: <code>helblom/barrel.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helblom/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 3 | Total weight: 3</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'><a class='link' href='generic.html#generic-reward-random-harvest'>generic/reward/random/harvest</a></td><td>minecraft:loot_table</td><td>1</td><td>33.333%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#generic-reward-random-misc'>generic/reward/random/misc</a></td><td>minecraft:loot_table</td><td>1</td><td>33.333%</td><td>——</td></tr><tr><td class='code'><a class='link' href='generic.html#generic-reward-random-common'>generic/reward/random/common</a></td><td>minecraft:loot_table</td><td>1</td><td>33.333%</td><td>——</td></tr></tbody></table></details><details open class='details-card' id='helblom\decorated_pot'><summary><h3>Helblom Decorated Pot</h3></summary><p class='meta'>Delegates to helblom/treasure/helheim_map</p><p class='meta'>File: <code>helblom/decorated_pot.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helblom/chest</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1 | Total weight: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'><a class='link' href='helblom.html#helblom-treasure-helheim_map'>helblom/treasure/helheim_map</a></td><td>minecraft:loot_table</td><td>1</td><td>100%</td><td>——</td></tr></tbody></table></details><details open class='details-card' id='helblom\treasure\helheim_map'><summary><h3>Helblom Treasure Helheim Map</h3></summary><p class='meta'>Direct item: map</p><p class='meta'>File: <code>helblom/treasure/helheim_map.json</code></p><p class='meta'>Type: <span class='code'>minecraft:chest</span> | Random sequence: <span class='code'>yggdrasil:helblom/treasure</span></p><h4>Pool 1</h4><p class='meta'>Rolls: <span class='code'>1</span> | Entries: 1</p><table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Generation details</th></tr></thead><tbody><tr><td class='code'>map</td><td>minecraft:item</td><td>n/a</td><td>100%</td><td><ul><li>Name: Helheim Map</li><li>Components: rarity=epic, id=yggdrasil.helblom.treasure.helheim_map</li><li>Exploration map target</li><li>Lore: ...</li></ul>—</td></tr></tbody></table></details></div>
+<footer><p>Generated from <code>data/yggdrasil/loot_table</code>.</p></footer>
 </div>
 </body>
 </html>
