@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — asflors</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — asflors</h1></header>
+<div class="card"><p class="meta">Structure: <strong>asflors</strong>. Loot tables: 34.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/asflors</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>asflors/enchanted_book/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asflors/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/enchanted_book/ominous_vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asflors/ominous_vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/enchanted_book/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/enchanted_book</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asflors/rare"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asflors/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/enchanted_book/vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asflors/vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/key/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trial_key</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Traveler Key", "translate": "item.yggdrasil.asflors.key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.key.normal"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "I've hidden a secret vault", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.key.lore.1", "underlined": false}, {"bold": false, "color": "#a0a0a0", "fallback": "An ancient magic of the traveler", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.key.lore.2", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.vault", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/key/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ominous_trial_key</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Ominous Traveler Key", "translate": "item.yggdrasil.asflors.ominous_key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.key.ominous_key"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Get my biggest secret in the village of Asflors", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.ominous_key.lore.1", "underlined": false}, {"bold": false, "color": "#a0a0a0", "fallback": "my treasure is behind the fake asflors sword", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.ominous_key.lore.2", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Ominous Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.ominous_vault", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_1.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 1: The Arrival", "translate": "item.yggdrasil.chapter.1"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_1"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I descended among mortals, curious about their fleeting lives. The village welcomed me without knowing my true nature. Their sincere smiles and innocent laughter awakened feelings in me long forgotten over millennia.", "translate": "item.yggdrasil.chapter.1.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_2.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 2: The Discovery", "translate": "item.yggdrasil.chapter.2"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_2"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "As seasons passed, I learned their customs and shared their joys. Together, we celebrated harvests and told stories by the fire. Each moment was a treasure, a new lesson on the beauty of mortality.", "translate": "item.yggdrasil.chapter.2.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_3.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 3: Friendship", "translate": "item.yggdrasil.chapter.3"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_3"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I forged deep bonds with these fragile beings. Their simplicity touched me, and I found in them a family I had never known. The children followed me everywhere, eager for tales and knowledge.", "translate": "item.yggdrasil.chapter.3.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_4.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 4: The Secret", "translate": "item.yggdrasil.chapter.4"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_4"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Despite my affection for them, I kept my identity hidden. Yet, I chose to share with the wisest among them the mystery of the hidden weapon. I entrusted him with this responsibility, knowing he would guard it with devotion.", "translate": "item.yggdrasil.chapter.4.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_5.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 5: The Departure", "translate": "item.yggdrasil.chapter.5"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_5"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "The time came for me to leave. I had watched my friends age and pass away, and the weight of eternity grew heavy once more. As I left the village, I felt a mix of sadness and hope, carrying with me the precious memories we had created.", "translate": "item.yggdrasil.chapter.5.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_6.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 6: Solitude", "translate": "item.yggdrasil.chapter.6"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_6"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Away from the village, I found myself confronting my immortal solitude. I missed the laughter and voices. Yet, I knew that my departure would allow them to find their own path, without the influence of an eternal being.", "translate": "item.yggdrasil.chapter.6.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chapter_7.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 7: The Legacy", "translate": "item.yggdrasil.chapter.7"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chapter_7"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I leave behind a discreet but powerful legacy. The last villager, guardian of the secret, lives his final moments. I hope that whoever finds this message will understand the value of time and the importance of the bonds woven between souls.", "translate": "item.yggdrasil.chapter.7.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/chronicles_of_trials.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chronicles of the Trials Conquered", "translate": "item.yggdrasil.chronicles_of_trials"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.chronicles_of_trials"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Congratulations, brave soul! You have successfully passed my trials and proven your worth.", "translate": "item.yggdrasil.chronicles_of_trials.page1"}, {"fallback": "Take this key, a symbol of your achievement, and recover my treasure. You will find it in the village of Aslors, where you discovered the Sword of Rupture.", "translate": "item.yggdrasil.chronicles_of_trials.page2"}, {"fallback": "In the Hall of the Sword of Asflors, you will find a pedestal at the back of the room. Find the real rune of rupture, and use it on this pedestal to reveal access to my treasure.", "translate": "item.yggdrasil.chronicles_of_trials.page3"}, {"fallback": "I hope that with it, you will be able to forge a new destiny, one worthy of the legacy you carry. But I won't reveal too much just yet; let the journey unfold before you.", "translate": "item.yggdrasil.chronicles_of_trials.page4"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/last_villager_journal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Last Villager's Journal", "translate": "item.yggdrasil.last_villager_journal"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.last_villager_journal"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I have lived longer than any mortal should, sustained by the remnants of his fading power. My bones ache, and my eyes grow weary, but before my time comes, I must leave this message for whoever may find it.", "translate": "item.yggdrasil.last_villager_journal.page1"}, {"fallback": "For centuries, I dwelt in this village alongside him\u2014an immortal whose name was never spoken, yet whose presence was a constant companion. He walked among us, not as a god, but as a man burdened by endless time.", "translate": "item.yggdrasil.last_villager_journal.page2"}, {"fallback": "We shared stories by the hearth, tended the fields together, and watched as generations came and went like the changing seasons.", "translate": "item.yggdrasil.last_villager_journal.page3"}, {"fallback": "He was once consumed by sorrow, his eyes reflecting the weight of countless years. Yet, over time, something changed. Perhaps it was the simple joys of mortal life that kindled a spark within him.", "translate": "item.yggdrasil.last_villager_journal.page4"}, {"fallback": "Laughter around the table, the warmth of community\u2014these seemed to breathe new life into his weary soul. And then, one day, he departed, a subtle smile upon his face, carrying with him a glimmer of hope I had not seen before.", "translate": "item.yggdrasil.last_villager_journal.page5"}, {"fallback": "Now, as the last of my people, I feel the end drawing near. Before I go, I must ensure that a certain secret does not fade into oblivion. Hidden within the foliage atop the roof of the old wooden house\u2014the one with the green roof\u2014is a book of profound importance. ", "translate": "item.yggdrasil.last_villager_journal.page6"}, {"fallback": "I have done everything in my power to protect it, concealing it from those who might misuse its knowledge.", "translate": "item.yggdrasil.last_villager_journal.page7"}, {"fallback": "This book contains not just stories, but truths\u2014accounts of events that even the sagas of old have forgotten. Tales of gods and giants, of worlds born and undone. ", "translate": "item.yggdrasil.last_villager_journal.page8"}, {"fallback": "It holds the key to understanding the events that transpired here, and perhaps, it can guide you in ways it could not guide us.", "translate": "item.yggdrasil.last_villager_journal.page9"}, {"fallback": "I have watched over it all these years, knowing that one day, someone would come in search of answers. If you are reading this, then you are that person. Take the book, but do so with reverence and caution. Its pages are filled with both wisdom and warning.", "translate": "item.yggdrasil.last_villager_journal.page10"}, {"fallback": "As for me, I am content to rest at last. My duty is fulfilled, and I find peace in knowing that he left with a newfound purpose. The village may be silent now, but the echoes of our lives linger in the wind, carried to places unknown.", "translate": "item.yggdrasil.last_villager_journal.page11"}, {"fallback": "May this message find you well, and may the knowledge you uncover serve a greater good. Remember the lessons of those who came before, and tread carefully on the path ahead.", "translate": "item.yggdrasil.last_villager_journal.page12"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/secret_chapter_8.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret Chapter 8: The Return", "translate": "item.yggdrasil.secret_chapter.8"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.secret_chapter_8"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Centuries after my departure, I returned to the village. I found it on the brink of ruin, threatened by forces the mortals could not withstand. I used my power to protect this place dear to my heart, reinforcing its foundations and repelling the imminent decline. Without their knowledge, I watched over them once more.", "translate": "item.yggdrasil.secret_chapter.8.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/secret_chapter_9.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret Chapter 9: The Awakening", "translate": "item.yggdrasil.secret_chapter.9"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.secret_chapter_9"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "In my solitude, I discovered a glimmer of hope to escape the grasp of immortality. Ancient whispers speak of a way to defy the gods themselves, to break the chains of time that bind me. The path is obscure and fraught with uncertainty. I do not know where it will lead me, but the very idea of a possible end ignites a spark within me that I thought long extinguished.", "translate": "item.yggdrasil.secret_chapter.9.content"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/lore/timeless_one_journal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Fragmented Pages of the Timeless One's Journal", "translate": "item.yggdrasil.timeless_one_journal"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.lore.timeless_one_journal"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I have walked the threads of time longer than any mortal mind can fathom. Each sunrise and sunset blur into an endless tapestry of moments, woven with threads of gold and shadow. The upper realms", "translate": "item.yggdrasil.timeless_one_journal.page1"}, {"fallback": "once a place of wonder and discovery, now feel like a cage forged by the very hands of eternity.", "translate": "item.yggdrasil.timeless_one_journal.page2"}, {"fallback": "In the echoes of Asgard's halls, I have heard whispers of destiny and doom. The tales of Odin and his ravens, the cycles of Ragnarok that bind even the mightiest of gods", "translate": "item.yggdrasil.timeless_one_journal.page3"}, {"fallback": "\u2014these stories resonate with a truth I cannot ignore. Immortality, it seems, is both a gift and a curse, a paradox that even the All-Father grapples with.", "translate": "item.yggdrasil.timeless_one_journal.page4"}, {"fallback": "I find myself drawn to this humble village, far from the celestial spires. The simplicity of mortal lives, their fleeting joys and sorrows, offers a solace I have long been denied. ", "translate": "item.yggdrasil.timeless_one_journal.page5"}, {"fallback": "Here, the air is thick with the scent of pine and the distant roar of waterfalls\u2014a stark contrast to the sterile infinity of the upper world.", "translate": "item.yggdrasil.timeless_one_journal.page6"}, {"fallback": "In the quiet corners of this place, I have hidden something of great significance. A weapon, not in the traditional sense, but a creation imbued with the essence of my own timelessness. ", "translate": "item.yggdrasil.timeless_one_journal.page7"}, {"fallback": "Take this rune, imbued with ancient magic, and break the lock that leads to a timeless structure. Prove yourself worthy of recovering my treasure and open a passage to a place where time holds no sway. There, you will be able to discover what I have preserved through the ages.", "translate": "item.yggdrasil.timeless_one_journal.page8"}, {"fallback": "It holds the capacity to endure beyond destruction, a paradox wrapped in iron and rune. Perhaps it is my answer to the endless march of existence, a tether to something more finite, more real.", "translate": "item.yggdrasil.timeless_one_journal.page9"}, {"fallback": "I wonder if anyone will ever find it, or decipher the meanings etched into its surface. The runes speak of cycles and endings, of breaking free from the chains that bind us to our fates. Maybe, in the hands of another, it can serve a purpose I no longer can envision.", "translate": "item.yggdrasil.timeless_one_journal.page10"}, {"fallback": "The stars wheel overhead, indifferent to my musings. I feel the weight of ages pressing upon me, each moment stretching into the next without reprieve. The Norns weave their tapestries, and yet I stand apart, a solitary figure untouched by their designs.", "translate": "item.yggdrasil.timeless_one_journal.page11"}, {"fallback": "I yearn for closure, for an end to this unending journey. If the legends hold true, even the gods are not immune to fate. Perhaps my time will come, or perhaps I must forge my own path beyond the known realms.", "translate": "item.yggdrasil.timeless_one_journal.page12"}, {"fallback": "For now, these words are all I leave behind\u2014a trace of thought, a hint of purpose, scattered like leaves in the wind. Let whoever finds them ponder their meanings, and perhaps seek what I have hidden in plain sight.", "translate": "item.yggdrasil.timeless_one_journal.page13"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#ffcbfc", "fallback": "[Village of Asflors]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.location.asflors", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/barrel/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 11 | Total weight: 29</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/archer</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>10.345%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/arrow</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>10.345%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>6.897%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/dye</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>10.345%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/redstone</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>13.793%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/echo</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>6.897%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/food</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>13.793%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/harvest</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>10.345%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/small</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>10.345%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/treasure</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>3.448%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/magic</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>3.448%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/barrel/enchantment.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 2</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/enchanted_book/rare</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/magic</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/quest/traveler.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/chest</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/timeless_one_journal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/treasure/rune_of_rupture</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/treasure/runic_fracture_map</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/random_loot/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/random_loot/equipement.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/equipement</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/random_loot/fountain.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/misc</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/random_loot/house.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/house</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/random_loot/lake.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/water</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/chest/random_loot/lore.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 7 | Total weight: 7</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_1</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_2</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_3</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_4</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_5</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_6</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_7</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/pots.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 10 | Total weight: 37</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>10.811%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>10.811%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>2.703%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>13.514%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>13.514%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>13.514%</td>
+<td>minecraft:set_count({"count": {"max": 18, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>8.108%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>13.514%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 6}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>8.108%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:honeycomb</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>5.405%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/vault/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/enchanted_book/vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/secret_chapter_8</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/reward/vault/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/chest</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/treasure/real_asflors_sword</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/enchanted_book/ominous_vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/secret_chapter_9</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/treasure/fake_asflors_sword.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Asflors Sword", "translate": "item.yggdrasil.asflors.fake_sword"}, "target": "item_name"}); minecraft:enchant_randomly({"only_compatible": false, "options": "#yggdrasil:structure/asflors/stand"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.treasure.fake_sword"}}, "minecraft:rarity": "epic", "minecraft:tooltip_display": {"hidden_components": ["minecraft:unbreakable"]}}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/treasure/real_asflors_sword.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"color": "gold", "fallback": "The Authentic Asflors Sword", "translate": "item.yggdrasil.asflors.real_sword"}, "target": "item_name"}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asflors/asflors_sword"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.treasure.real_sword"}}, "minecraft:tooltip_display": {"hidden_components": ["minecraft:unbreakable"]}}}); minecraft:set_lore({"entity": "this", "lore": [{"color": "#707070", "fallback": "Indestructible legendary weapon", "translate": "item.yggdrasil.asflors.real_sword.lore"}], "mode": "replace_all"}); minecraft:set_attributes({"modifiers": [{"amount": 7, "attribute": "minecraft:attack_damage", "id": "minecraft.attack", "operation": "add_value", "slot": "mainhand"}, {"amount": 1.6, "attribute": "minecraft:attack_speed", "id": "minecraft.attack_speed", "operation": "add_value", "slot": "mainhand"}, {"amount": 0.75, "attribute": "minecraft:sweeping_damage_ratio", "id": "yggdrasil.asflors.sword.ratio", "operation": "add_multiplied_total", "slot": "mainhand"}, {"amount": 0.15, "attribute": "minecraft:attack_speed", "id": "yggdrasil.asflors.sword.attack_speed", "operation": "add_multiplied_base", "slot": "mainhand"}, {"amount": 0.25, "attribute": "minecraft:attack_damage", "id": "yggdrasil.asflors.sword.damage", "operation": "add_multiplied_base", "slot": "mainhand"}]})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/treasure/rune_of_rupture.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Rune of Rupture", "translate": "item.yggdrasil.asflors.rune_of_rupture"}, "target": "item_name"}); minecraft:set_attributes({"modifiers": [], "replace": true}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.treasure.rune_of_rupture"}}, "minecraft:enchantment_glint_override": true, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Break space and time to get access", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.rune_of_rupture.lore1", "underlined": false}, {"bold": false, "color": "#a0a0a0", "fallback": "to the place where i hid the secret", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asflors.rune_of_rupture.lore2", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#e7e7e7", "fallback": "[Runic Fracture]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.runic_fracture.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asflors/treasure/runic_fracture_map.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:map</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Runic Fracture Map", "translate": "item.yggdrasil.runic_labyrinth.map"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asflors.treasure.runic_fracture_map"}}, "minecraft:map_color": 16777215, "minecraft:rarity": "epic"}}); minecraft:exploration_map({"decoration": "mansion", "destination": "yggdrasil:runic_fracture"}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Structure)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.structure", "underlined": false}, {"bold": false, "color": "#e7e7e7", "fallback": "[Runic Fracture]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.runic_fracture.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — helheim</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — helheim</h1></header>
+<div class="card"><p class="meta">Structure: <strong>helheim</strong>. Loot tables: 36.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/helheim</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>helheim/enchanted_book/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/enchanted_book/ominous_trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/ominous_trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/enchanted_book/ominous_vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/ominous_vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/enchanted_book/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/enchanted_book</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/rare"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/enchanted_book/trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/enchanted_book/vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/helheim/vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/key/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trial_key</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Helheim Key", "translate": "item.yggdrasil.helheim.key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.key.normal"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Can only be used on Vault in Helheim", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.key.lore1", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.vault", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/key/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ominous_trial_key</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Ominous Helheim Key", "translate": "item.yggdrasil.helheim.ominous_key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.key.ominous_key"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Can only be used on Ominous Vault in Helheim", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.ominous_key.lore.1", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Ominous Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.ominous_vault", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_1.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 1: L'\u00c9veil dans les T\u00e9n\u00e8bres", "translate": "item.yggdrasil.helheim.chronicles.ch1.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_1"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"translate": "item.yggdrasil.helheim.chronicles.ch1.p1"}, {"translate": "item.yggdrasil.helheim.chronicles.ch1.p2"}, {"translate": "item.yggdrasil.helheim.chronicles.ch1.p3"}, {"translate": "item.yggdrasil.helheim.chronicles.ch1.p4"}, {"translate": "item.yggdrasil.helheim.chronicles.ch1.p5"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_10.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret Chapter 10: The Last Page", "translate": "item.yggdrasil.helheim.chronicles.ch10.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_10"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Well, I'm tired, the final battle is tomorrow. I'm really exhausted, but the discussions with Odin give me so much hope.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p1"}, {"fallback": "It's time for all these crimes to end.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p2"}, {"fallback": "When I found the child, they were accompanied by a fox. Now that the child is safe in their dimension, You who read this can use this fox.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p3"}, {"fallback": "It emanates an aura of protection and wisdom - as if it had absorbed all that remained of humanity in the child.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p4"}, {"fallback": "Use it to protect the mortals.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p5"}, {"fallback": "If I fail, I leave you then the responsibility, that of saving these immortals through Ragnar\u00f6k. This is my last entry, make good use of it.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p6"}, {"fallback": "The fox waits in the vault, it is locked in a rune. To summon it, use the rune - the one with the orange gem.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p7"}, {"fallback": "It has become one with the child's essence now, perhaps the last trace of their lost innocence.", "translate": "item.yggdrasil.helheim.chronicles.ch10.p8"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_2.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 2: Les \u00c9chos du Pass\u00e9", "translate": "item.yggdrasil.helheim.chronicles.ch2.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_2"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"translate": "item.yggdrasil.helheim.chronicles.ch2.p1"}, {"translate": "item.yggdrasil.helheim.chronicles.ch2.p2"}, {"translate": "item.yggdrasil.helheim.chronicles.ch2.p3"}, {"translate": "item.yggdrasil.helheim.chronicles.ch2.p4"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_3.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 3: The First Observer", "translate": "item.yggdrasil.helheim.chronicles.ch3.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_3"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "A fascinating discovery today! I found notes left by the very first Hel. Her journey strangely resembles mine.", "translate": "item.yggdrasil.helheim.chronicles.ch3.p1"}, {"fallback": "She too began by playing the game, until she understood the true nature of this world.", "translate": "item.yggdrasil.helheim.chronicles.ch3.p2"}, {"fallback": "She didn't immediately know that the races of this world seemed conscious, and for a strategic plan, she granted immortality to someone.", "translate": "item.yggdrasil.helheim.chronicles.ch3.p3"}, {"fallback": "This is indeed part of our powers, Hel has the ability to make someone immortal and strategically it's interesting.", "translate": "item.yggdrasil.helheim.chronicles.ch3.p4"}, {"fallback": "Subsequently, she realized that this being she had made immortal seemed to experience emotions, and from there, she describes her relationship with this immortal being, a child she took under her wing.", "translate": "item.yggdrasil.helheim.chronicles.ch3.p5"}, {"fallback": "With this being's consent, they began to cooperate to understand more about this world. She describes this person as a child full of life and happy to be protected.", "translate": "item.yggdrasil.helheim.chronicles.ch3.p6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_4.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 4: The Cursed Gift", "translate": "item.yggdrasil.helheim.chronicles.ch4.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_4"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I'm trying to find this child but so far in vain, they must be in a neighboring realm.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p1"}, {"fallback": "The story of this child takes a dark turn. On the walls of Helheim, I found traces.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p2"}, {"fallback": "This gift of immortality, meant to be a blessing, transformed into a curse.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p3"}, {"fallback": "The eternal child, once described as full of life, has traversed millennia of wars and chaos.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p4"}, {"fallback": "Unable to die, an eternal witness to our \"game\", they gradually lost their humanity.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p5"}, {"fallback": "The echoes and rumors now speak of a being consumed by destruction, seeking to ease their madness in chaos.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p6"}, {"fallback": "The first observer had described them as a child full of life, and seemed to love them, and the child seemed to say they felt protected. Hmm...", "translate": "item.yggdrasil.helheim.chronicles.ch4.p7"}, {"fallback": "Not surprising, I would probably end up the same if I had no possibility of dying.", "translate": "item.yggdrasil.helheim.chronicles.ch4.p8"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_5.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 5: The Second Heir", "translate": "item.yggdrasil.helheim.chronicles.ch5.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_5"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "The archives of Helheim are vaster than I imagined. Each new Hel seems to have contributed to this collection of knowledge.", "translate": "item.yggdrasil.helheim.chronicles.ch5.p1"}, {"fallback": "I couldn't have dreamed better, I am the eleventh incarnation of Hel.", "translate": "item.yggdrasil.helheim.chronicles.ch5.p2"}, {"fallback": "I found a particularly touching account from Hel II. She warns against using the power of immortality - an irreversible gift that persists even after our \"games\" end.", "translate": "item.yggdrasil.helheim.chronicles.ch5.p3"}, {"fallback": "Yet, she too succumbed to this temptation. She speaks of a wise old man to whom she offered eternity, seduced by his knowledge.", "translate": "item.yggdrasil.helheim.chronicles.ch5.p4"}, {"fallback": "Their love story runs through the pages of her journals.", "translate": "item.yggdrasil.helheim.chronicles.ch5.p5"}, {"fallback": "So two immortals walk somewhere in this world... Bearing the burden of our \"game\" for eternity.", "translate": "item.yggdrasil.helheim.chronicles.ch5.p6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_6.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 6: Whispers of Madness", "translate": "item.yggdrasil.helheim.chronicles.ch6.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_6"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Time is running out. This \"game\" is coming to an end, and the other realms refuse any cooperation except for Odin.", "translate": "item.yggdrasil.helheim.chronicles.ch6.p1"}, {"fallback": "Each remains locked in their own objectives, unaware of the true nature of this world.", "translate": "item.yggdrasil.helheim.chronicles.ch6.p2"}, {"fallback": "I found the immortal child. This encounter... By all the gods, their power surpasses anything I could imagine.", "translate": "item.yggdrasil.helheim.chronicles.ch6.p3"}, {"fallback": "They have nothing left of the innocent being described in the ancient chronicles. Their eyes... they reflect millennia of suffering and madness. I nearly lost my life.", "translate": "item.yggdrasil.helheim.chronicles.ch6.p4"}, {"fallback": "With Odin's help, we managed to imprison them in their own dimension.", "translate": "item.yggdrasil.helheim.chronicles.ch6.p5"}, {"fallback": "Odin speaks of Ragnar\u00f6k as the only solution and indeed I hadn't thought of it. It's in my opinion the only way to free this being from their torment.", "translate": "item.yggdrasil.helheim.chronicles.ch6.p6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_7.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 7: The Truth of Worlds", "translate": "item.yggdrasil.helheim.chronicles.ch7.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_7"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "We were visiting the imprisoned child, as we did every evening to provide comfort and warmth, when we lowered our guard.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p1"}, {"fallback": "In seconds, Odin fell. Only the hero of Svartalfheim remains.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p2"}, {"fallback": "Before disappearing, I remember a discussion with Odin, he had told me that in Asgard too, the incarnations passed messages to each other.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p3"}, {"fallback": "And that Helheim has never won a single war - our offensive power is too weak, and we had to rely on our Necromancer abilities.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p4"}, {"fallback": "But it's unthinkable to do that knowing the truth about the beings of this world. As for Asgard, they have won several times.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p5"}, {"fallback": "Victory brings the power of Ragnar\u00f6k - the ability to rewrite the rules of the world for the next game.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p6"}, {"fallback": "If I win, I can save them and all the immortals.", "translate": "item.yggdrasil.helheim.chronicles.ch7.p7"}, {"fallback": "I must win, or else do it in my place!", "translate": "item.yggdrasil.helheim.chronicles.ch7.p8"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_8.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret Chapter 8: Loki's Hidden Notes", "translate": "item.yggdrasil.helheim.chronicles.ch8.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_8"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I am in X5042, I have just won victory over Helheim. My heart is heavy.", "translate": "item.yggdrasil.helheim.chronicles.ch8.p1"}, {"fallback": "If only I had known earlier that the hero of Helheim shared the same objective as me...", "translate": "item.yggdrasil.helheim.chronicles.ch8.p2"}, {"fallback": "I write these lines with regret. To you who will read me, future incarnations: cooperate with the Hero of J\u00f6tunheim.", "translate": "item.yggdrasil.helheim.chronicles.ch8.p3"}, {"fallback": "We share the same goal - saving the races from these endless wars.", "translate": "item.yggdrasil.helheim.chronicles.ch8.p4"}, {"fallback": "We attacked Helheim out of fear, because of rumors about their ability to create immortal and immoral monsters. What a terrible mistake...", "translate": "item.yggdrasil.helheim.chronicles.ch8.p5"}, {"fallback": "I am truly sorry, Julia. Rest in peace.", "translate": "item.yggdrasil.helheim.chronicles.ch8.p6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/chapter_9.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret Chapter 9: The Eternal Child", "translate": "item.yggdrasil.helheim.chronicles.ch9.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.chapter_9"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I'm Yve Stella! And Hel is the best!", "translate": "item.yggdrasil.helheim.chronicles.ch9.p1"}, {"fallback": "At first, I was super scared of her because she looked mean, but actually she's super cute!", "translate": "item.yggdrasil.helheim.chronicles.ch9.p2"}, {"fallback": "I would do anything to make her happy &gt;.&lt;", "translate": "item.yggdrasil.helheim.chronicles.ch9.p3"}, {"fallback": "She comes to see me all the time and I have so much fun with her, and she tells me incredible stories about a better and amazing world.", "translate": "item.yggdrasil.helheim.chronicles.ch9.p4"}, {"fallback": "I love when she talks about moving pictures that tell stories.", "translate": "item.yggdrasil.helheim.chronicles.ch9.p5"}, {"fallback": "She says I'll stay with her forever, and I believe her! Adults never lie.", "translate": "item.yggdrasil.helheim.chronicles.ch9.p6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/quest_assembly.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Assembly of Secrets", "translate": "item.yggdrasil.helheim.chronicles.quest.assembly.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.quest_assembly"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "The pedestals in this room are not mere supports. Each represents a crucial moment in our history.", "translate": "item.yggdrasil.helheim.chronicles.quest.assembly.p1"}, {"fallback": "When you place the chronicles, you will see the truth emerge in its entirety.", "translate": "item.yggdrasil.helheim.chronicles.quest.assembly.p2"}, {"fallback": "The first Hel created an immortal child out of curiosity. The second granted immortality out of love.", "translate": "item.yggdrasil.helheim.chronicles.quest.assembly.p3"}, {"fallback": "Others followed, each adding their stone to the edifice of our collective tragedy.", "translate": "item.yggdrasil.helheim.chronicles.quest.assembly.p4"}, {"fallback": "Only when you understand the whole story will you grasp the significance of the gift I am about to bestow upon you.", "translate": "item.yggdrasil.helheim.chronicles.quest.assembly.p5"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/quest_collection.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Collection of Chronicles", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.quest_collection"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "These writings scattered throughout Helheim are not mere records.", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.p1"}, {"fallback": "Each page contains a fragment of understanding, a piece of the puzzle that reveals the true nature of our existence.", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.p2"}, {"fallback": "Gather them, and you will begin to understand why we, the successive Hels, have maintained this archive.", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.p3"}, {"fallback": "Why each of us has contributed to this growing testament of our shared experience.", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.p4"}, {"fallback": "These writings are more than just a collection - they are the key to understanding why we must change this world.", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.p5"}, {"fallback": "Why Ragnar\u00f6k is not an end, but perhaps our only hope for redemption.", "translate": "item.yggdrasil.helheim.chronicles.quest.collection.p6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/lore/quest_familiar.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Origins of the Familiar", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.lore.quest_familiar"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "In the tower, beneath the first staircase, you will find a rune.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p1"}, {"fallback": "It contains the true essence of what remains of the immortal child's innocence - a fox that accompanied them in their last moments of clarity.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p2"}, {"fallback": "The fox appeared during my final encounter with the immortal child.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p3"}, {"fallback": "As we fought, I noticed this creature following them, seeming to absorb every spark of goodness that still escaped from their tormented soul.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p4"}, {"fallback": "This creature is no ordinary animal. It carries the last fragments of the child's humanity, their ability to love, to protect.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p5"}, {"fallback": "The fox absorbed these qualities as the child gradually descended into madness.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p6"}, {"fallback": "Take care of it. It will be your guide, your protector.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p7"}, {"fallback": "It represents everything we should have preserved, everything we must try to restore over the centuries as the child lost their humanity.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p8"}, {"fallback": "I managed to capture its essence in a rune, freeing it means protecting the mortals.", "translate": "item.yggdrasil.helheim.chronicles.quest.familiar.p9"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/barrel.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/lore</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/deepslate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/enchantment</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/chest.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/lore</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 9</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/deepslate</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>44.444%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/lantern</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>22.222%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/wood</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>33.333%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/pots.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 17 | Total weight: 62</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/deepslate</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>6.452%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/lantern</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>3.226%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/wood</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.839%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.452%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.452%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_pearl</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.452%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:copper_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.452%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.452%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.452%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.613%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.065%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.065%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.065%</td>
+<td>minecraft:set_count({"count": {"max": 18, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>4.839%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.065%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 6}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>4.839%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:honeycomb</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>3.226%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/shared/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 21 | Total weight: 66</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>3.03%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.061%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.061%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.515%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 18, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>4.545%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 6}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>4.545%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:honeycomb</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>3.03%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/archer</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/arrow</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/dye</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/redstone</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>6.061%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/echo</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>3.03%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/food</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>6.061%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/harvest</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/small</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/treasure</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>1.515%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/magic</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>1.515%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/shared/deepslate.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 5 | Total weight: 18</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:deepslate_tiles</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>27.778%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:deepslate_brick_stairs</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:deepslate_brick_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>27.778%</td>
+<td>minecraft:set_count({"count": {"max": 19, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:deepslate_brick_wall</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"count": {"max": 11, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:deepslate_bricks</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/shared/enchantment.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 2</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/enchanted_book/rare</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/magic</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/shared/lantern.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:lantern</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:soul_lantern</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>75.0%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/shared/lore.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 7 | Total weight: 7</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_1</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_2</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_3</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_4</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_5</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_6</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_7</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/shared/wood.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 5 | Total weight: 18</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:mangrove_log</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>27.778%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:mangrove_planks</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:mangrove_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>27.778%</td>
+<td>minecraft:set_count({"count": {"max": 19, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:mangrove_stairs</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"count": {"max": 11, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:mangrove_slab</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/vault/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/enchanted_book/vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 5 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/ominous_potion</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/deepslate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/wood</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/lantern</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/enchanted_item_25</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/lore/chapter_8</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/reward/vault/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/enchanted_book/ominous_vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/lore/chapter_9</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 4 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/trim</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>40.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/deepslate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/wood</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/shared/lantern</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 4 | Total weight: 5</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:heavy_core</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spawner</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:totem_of_undying</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>40.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/enchanted_item_50</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/spawner/consumables.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/reward</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 9 | Total weight: 19</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>21.053%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.789%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.789%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:baked_potato</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/enchanted_book/trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/weak_equipement</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 2 | Total weight: 10</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/barrel</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/chest</td>
+<td>minecraft:loot_table</td>
+<td>8</td>
+<td>80.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/spawner/key.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 11</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>10</td>
+<td>90.909%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>9.091%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/spawner/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/reward</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/barrel</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/reward/chest</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/equipement</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:helheim/enchanted_book/ominous_trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.35})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>helheim/treasure/rune_of_reva.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:helheim/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Rune of Reva", "translate": "item.yggdrasil.helheim.rune_of_reva"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:attribute_modifiers": [{"amount": -100, "id": "yggdrasil.helheim.treasure.rune_of_reva.armor", "operation": "add_multiplied_base", "slot": "offhand", "type": "minecraft:burning_time"}], "minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.helheim.treasure.rune_of_reva"}}, "minecraft:enchantment_glint_override": true, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Free Reva from his slumber", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.rune_of_reva.lore1", "underlined": false}, {"bold": false, "color": "#a0a0a0", "fallback": "he will accompany you wherever you go.", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.rune_of_reva.lore2", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Reward)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest.reward", "underlined": false}, {"bold": false, "color": "#6b1616", "fallback": "[Helheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.helheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

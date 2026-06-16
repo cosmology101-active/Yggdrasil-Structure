@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — cubeoid</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — cubeoid</h1></header>
+<div class="card"><p class="meta">Structure: <strong>cubeoid</strong>. Loot tables: 3.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/cubeoid</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>cubeoid/key/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asflors/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trial_key</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Cubeoid Key", "translate": "item.yggdrasil.cubeoid.key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.cubeoid.key.normal"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "gray", "fallback": "This key can only be used on", "italic": false, "translate": "item.yggdrasil.cubeoid.key.lore1"}, {"bold": false, "color": "gray", "fallback": "Vault in the Cubeoid tree", "italic": false, "translate": "item.yggdrasil.cubeoid.key.lore2"}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.vault", "underlined": false}, {"bold": false, "color": "#ffffff", "fallback": "[Cubeoid]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.cubeoid.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>cubeoid/reward/trial_spawner/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:runic_labyrinth/reward</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:cubeoid/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 8 | Total weight: 14</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:silence_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sentry_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ward_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spire_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:vex_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ominous_bottle</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>21.429%</td>
+<td>minecraft:set_ominous_bottle_amplifier({"amplifier": {"max": 5, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:totem_of_undying</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">bundle</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>35.714%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>cubeoid/reward/vault/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:runic_labyrinth/reward</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 8 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:zombie_spawn_egg</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:enchant_with_levels({"levels": 30})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:enchant_with_levels({"levels": 30})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:enchant_with_levels({"levels": 30})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:enchant_with_levels({"levels": 30})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">bow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:enchant_with_levels({"levels": 30})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:enchant_with_levels({"levels": 30})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:shulker_box</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

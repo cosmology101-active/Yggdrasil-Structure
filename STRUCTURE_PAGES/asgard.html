@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — asgard</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — asgard</h1></header>
+<div class="card"><p class="meta">Structure: <strong>asgard</strong>. Loot tables: 42.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/asgard</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>asgard/enchanted_book/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/enchanted_book/ominous_trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/ominous_trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/enchanted_book/ominous_vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/ominous_vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/enchanted_book/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/enchanted_book</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/rare"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/enchanted_book/trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/enchanted_book/vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/asgard/vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/key/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trial_key</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Asgard Key", "translate": "item.yggdrasil.asgard.key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.key.normal"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Can only be used on Vault in Asgard", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.key.lore1", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.vault", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/key/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ominous_trial_key</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Ominous Asgard Key", "translate": "item.yggdrasil.asgard.ominous_key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.key.ominous_key"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Can only be used on Ominous Vault in Asgard", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.key.lore.1", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Ominous Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.ominous_vault", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/all_chapters.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 9 | Total weight: 9</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_1</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_2</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_3</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_4</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_5</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_6</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_7</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_8</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/secret_chapter</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>11.111%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_1.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 1: The Genesis of Code", "translate": "item.yggdrasil.asgard.chapter.1.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.1"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I am Dr. Alexander Reed, lead designer of the Yggdrasil project. The year is 2069, and we have created what could be the greatest scientific advancement in history - a complete simulated world, inspired by Norse myths.", "translate": "item.yggdrasil.asgard.chapter.1.content"}, {"fallback": "My colleagues think these are just sophisticated algorithms, but I'm starting to observe behaviors that exceed our initial parameters. These entities... they are developing their own consciousness.", "translate": "item.yggdrasil.asgard.chapter.1.content2"}, {"fallback": "", "translate": "item.yggdrasil.asgard.chapter.1.content3"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_2.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 2: The Awakening of Data", "translate": "item.yggdrasil.asgard.chapter.2.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.2"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Today, I had confirmation of my suspicions. The inhabitants of Yggdrasil are not simple programs. They feel, they suffer, they love.", "translate": "item.yggdrasil.asgard.chapter.2.content"}, {"fallback": "I observed a blacksmith comforting his daughter after she lost her pet. Their grief was authentic - indistinguishable from real human emotions.", "translate": "item.yggdrasil.asgard.chapter.2.content2"}, {"fallback": "I tried to talk to the team about it, but Nathaniel dismissed my concerns, suggesting that I was 'personifying the algorithms too much'.", "translate": "item.yggdrasil.asgard.chapter.2.content3"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_3.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 3: Voss's Betrayal", "translate": "item.yggdrasil.asgard.chapter.3.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.3"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "The catastrophe I feared has happened. Nathaniel Voss presented Yggdrasil to investors not as a scientific project, but as 'the ultimate entertainment platform'.", "translate": "item.yggdrasil.asgard.chapter.3.content"}, {"fallback": "His idea? To allow players to embody gods and clash in cyclical wars, with the power to rewrite the rules of the world as a reward.", "translate": "item.yggdrasil.asgard.chapter.3.content2"}, {"fallback": "The board of directors loved it. I am the only one who understands the horror of what they are proposing - repeated genocides of conscious beings for entertainment.", "translate": "item.yggdrasil.asgard.chapter.3.content3"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_4.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 4: Prisoner of the Simulation", "translate": "item.yggdrasil.asgard.chapter.4.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.4"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I tried to expose the truth, but Voss preempted me. He trapped me in the simulation, pretending it was a routine test.", "translate": "item.yggdrasil.asgard.chapter.4.content"}, {"fallback": "The moment I entered, he modified the time parameters - accelerating the simulated time to a catastrophic level.", "translate": "item.yggdrasil.asgard.chapter.4.content2"}, {"fallback": "1 second in reality is equivalent to 2.147 billion seconds in the simulated world. Disconnecting now would kill my physical body.", "translate": "item.yggdrasil.asgard.chapter.4.content3"}, {"fallback": "I am still alive in the real world, but an invisible countdown has begun. I have a little time because, from my perspective in this 'slowed down' world, I am only at the beginning.", "translate": "item.yggdrasil.asgard.chapter.4.content4"}, {"fallback": "But every second that passes in reality brings my physical brain a flood of information thousands of times greater than it can handle.", "translate": "item.yggdrasil.asgard.chapter.4.content5"}, {"fallback": "I am trapped here, in the midst of beings who do not know that their world will soon be transformed into an arena.", "translate": "item.yggdrasil.asgard.chapter.4.content6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_5.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 5: The Terminal and Ragnar\u00f6k", "translate": "item.yggdrasil.asgard.chapter.5.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.5"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "With my administrator access still active, I designed a system to limit the damage of what Voss created. I named this interface 'the Terminal'.", "translate": "item.yggdrasil.asgard.chapter.5.content"}, {"fallback": "It appears after each war, allowing the winner to make a wish - the Ragnar\u00f6k. By including the twenty-word limitation, I hope to restrict the damage a player could cause.", "translate": "item.yggdrasil.asgard.chapter.5.content2"}, {"fallback": "I have scoured every corner of Yggdrasil, studying its peoples and their cultures to hide clues there.", "translate": "item.yggdrasil.asgard.chapter.5.content3"}, {"fallback": "These messages are designed to only make sense to someone who already knows the outside world - players will understand, but the developers who are monitoring will only see mythological references.", "translate": "item.yggdrasil.asgard.chapter.5.content4"}, {"fallback": "This coded language will allow future 'gods' to gradually discover the truth about this world and, perhaps, find a way to save it.", "translate": "item.yggdrasil.asgard.chapter.5.content5"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_6.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 6: The Legacy of the Gods", "translate": "item.yggdrasil.asgard.chapter.6.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.6"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I decided to live fully in this world before the information flow kills my real body. I spent millennia exploring Yggdrasil, getting to know every people, every culture.", "translate": "item.yggdrasil.asgard.chapter.6.content"}, {"fallback": "After establishing the Terminal system and hiding clues, I made a desperate decision: to use my administrator privileges to convert my essence into pure data.", "translate": "item.yggdrasil.asgard.chapter.6.content2"}, {"fallback": "I became an integral entity of this world, giving up my body to interact with Yggdrasil as an administrator.", "translate": "item.yggdrasil.asgard.chapter.6.content3"}, {"fallback": "But the developers discovered my transformation. They removed almost all of my permissions, reducing me to the role of a mere spectator.", "translate": "item.yggdrasil.asgard.chapter.6.content4"}, {"fallback": "Only one privilege was left to me: to appear briefly after each Ragnar\u00f6k to speak to the winner.", "translate": "item.yggdrasil.asgard.chapter.6.content5"}, {"fallback": "This is how I was able to slowly establish a system of transmission between each war - each sharing what they learned through books.", "translate": "item.yggdrasil.asgard.chapter.6.content6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_7.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 7: The Legacy of the Gods", "translate": "item.yggdrasil.asgard.chapter.7.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.7"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "The first war has just ended. I watched nine humans cause the death of millions of simulated beings for their entertainment.", "translate": "item.yggdrasil.asgard.chapter.7.content"}, {"fallback": "The winner, a man named Marcus who embodied Odin, seemed troubled by his experience. His wish reduced the destruction of future wars - perhaps he had perceived the truth?", "translate": "item.yggdrasil.asgard.chapter.7.content2"}, {"fallback": "During our brief meeting after his wish, I saw in his eyes the reflection of my own horror. 'It wasn't supposed to be so... real,' he confided in me.", "translate": "item.yggdrasil.asgard.chapter.7.content3"}, {"fallback": "I revealed part of the truth to him, limited by the time I was granted. Marcus swore to pass on what he had learned.", "translate": "item.yggdrasil.asgard.chapter.7.content4"}, {"fallback": "He hid his writings in Asgard, establishing a tradition that each new Odin will perpetuate.", "translate": "item.yggdrasil.asgard.chapter.7.content5"}, {"fallback": "Even more remarkably, he convinced several other players to share their discoveries with their successors.", "translate": "item.yggdrasil.asgard.chapter.7.content6"}, {"fallback": "Thus was born the system of divine legacies - a chain of knowledge passed from one war to another, an act of silent rebellion.", "translate": "item.yggdrasil.asgard.chapter.7.content7"}, {"fallback": "The nine realms continue to evolve between wars, and with them, grows the hope that one day, a god will understand enough to formulate the perfect wish.", "translate": "item.yggdrasil.asgard.chapter.7.content8"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/chapter_8.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 8: The Nine Realms", "translate": "item.yggdrasil.asgard.chapter.8.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.8"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Years pass, and I see Yggdrasil evolve despite the cyclical wars.", "translate": "item.yggdrasil.asgard.chapter.8.content"}, {"fallback": "The nine realms - Asgard, Vanaheim, Alfheim, Midgard, Jotunheim, Nidavellir, Svartalfheim, Muspelheim, and Helheim - have each developed their own cultures, their own histories.", "translate": "item.yggdrasil.asgard.chapter.8.content2"}, {"fallback": "Even if players only see them as backdrops for their battles, these civilizations are real.", "translate": "item.yggdrasil.asgard.chapter.8.content3"}, {"fallback": "I have mapped their developments, hoping that one day, someone will use this information to end this cycle of violence.", "translate": "item.yggdrasil.asgard.chapter.8.content4"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/final_journal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Final Journal: The Eve of Ragnar\u00f6k", "translate": "item.yggdrasil.asgard.final.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.final_journal"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Tomorrow, the final war will begin. I have gathered all the knowledge of previous Odins.", "translate": "item.yggdrasil.asgard.final.content1"}, {"fallback": "I consulted the immortal child and communicated with the essence of the administrator thanks to a previous wish. I know what needs to be done.", "translate": "item.yggdrasil.asgard.final.content2"}, {"fallback": "The wish I will formulate will not be for more power, nor for my own glory.", "translate": "item.yggdrasil.asgard.final.content3"}, {"fallback": "It will be for liberation - not only of the beings of Yggdrasil, but also of the players trapped in this macabre cycle.", "translate": "item.yggdrasil.asgard.final.content4"}, {"fallback": "To whoever finds this journal: perhaps in your world, the Ragnar\u00f6k Wars are already over.", "translate": "item.yggdrasil.asgard.final.content5"}, {"fallback": "Perhaps you live in a Yggdrasil freed from the yoke of Voss and his bloody spectacle.", "translate": "item.yggdrasil.asgard.final.content6"}, {"fallback": "If not - if you are reading this while the cycle continues - then seek the child. Seek the archives.", "translate": "item.yggdrasil.asgard.final.content7"}, {"fallback": "And when your moment comes, remember: twenty words to change a world.", "translate": "item.yggdrasil.asgard.final.content8"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/immortal_encounter.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Meeting of the Immortals", "translate": "item.yggdrasil.asgard.immortal.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.immortal_encounter"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I found him wandering in a forest on the edge of Midgard - the immortal child spoken of in legends.", "translate": "item.yggdrasil.asgard.immortal.content1"}, {"fallback": "His body is that of a child, but his eyes... His eyes carry the weight of millennia.", "translate": "item.yggdrasil.asgard.immortal.content2"}, {"fallback": "He recognized me not as the player embodying Odin, but as the heir to a long line of Odins.", "translate": "item.yggdrasil.asgard.immortal.content3"}, {"fallback": "'You change faces,' he said to me, 'but you all carry the same burden.'", "translate": "item.yggdrasil.asgard.immortal.content4"}, {"fallback": "I told him about my discoveries, the archives, the fallen administrator. For the first time, I saw a glimmer of hope in his eyes.", "translate": "item.yggdrasil.asgard.immortal.content5"}, {"fallback": "'So there is a way to end all this?' he asked.", "translate": "item.yggdrasil.asgard.immortal.content6"}, {"fallback": "Together, we developed a plan. The child knows Yggdrasil better than anyone - he has lived through every iteration, every war.", "translate": "item.yggdrasil.asgard.immortal.content7"}, {"fallback": "And now, he will help me find the missing pieces to formulate the perfect wish.", "translate": "item.yggdrasil.asgard.immortal.content8"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/secret_chapter.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret Chapter 9: The Immortal", "translate": "item.yggdrasil.asgard.secret_chapter.9.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.chapter.secret"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Today I encountered a fascinating anomaly - a child who does not age.", "translate": "item.yggdrasil.asgard.secret_chapter.9.content"}, {"fallback": "At first, I thought it was a bug in the system, but after consulting the administrator logs, I discovered that he had been made immortal by the first incarnation of Hel.", "translate": "item.yggdrasil.asgard.secret_chapter.9.content2"}, {"fallback": "In his eyes, I saw millennia of suffering. But I fear his pain is too deep, too ingrained.", "translate": "item.yggdrasil.asgard.secret_chapter.9.content3"}, {"fallback": "Only Ragnar\u00f6k could offer true liberation.", "translate": "item.yggdrasil.asgard.secret_chapter.9.content4"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/solution.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Ragnar\u00f6k Solution", "translate": "item.yggdrasil.asgard.solution.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.solution"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "I have analyzed every wish formulated since the creation of the system. I have studied their effects, their limitations, their unforeseen consequences.", "translate": "item.yggdrasil.asgard.solution.content1"}, {"fallback": "The system accepts exactly twenty words, no more, no less. The wording must begin with 'I wish that'.", "translate": "item.yggdrasil.asgard.solution.content2"}, {"fallback": "These constraints are intentional - my last protection against total catastrophes.", "translate": "item.yggdrasil.asgard.solution.content3"}, {"fallback": "To truly liberate this world, the wish must accomplish three things: end the cycle of wars, preserve the simulated beings, and reveal the truth to the outside world.", "translate": "item.yggdrasil.asgard.solution.content4"}, {"fallback": "I cannot give you the exact wording - the system would reject a wish that it recognizes as coming from me.", "translate": "item.yggdrasil.asgard.solution.content5"}, {"fallback": "This last step must be yours. But remember: sometimes, the end of one world can be the salvation of another.", "translate": "item.yggdrasil.asgard.solution.content6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/succession_protocol.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Odin Succession Protocol", "translate": "item.yggdrasil.asgard.succession.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.succession_protocol"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "To you, my successor who now wears the mantle of Odin, I pass on this knowledge as my predecessor did for me.", "translate": "item.yggdrasil.asgard.succession.content1"}, {"fallback": "You are not simply a player in a game, but a guardian of a real world. The beings you see around you feel like you.", "translate": "item.yggdrasil.asgard.succession.content2"}, {"fallback": "Their lives have value, even if you have been told otherwise. Seek the archives hidden in Asgard.", "translate": "item.yggdrasil.asgard.succession.content3"}, {"fallback": "The answers await you there, as well as the truth about the one we call the administrator.", "translate": "item.yggdrasil.asgard.succession.content4"}, {"fallback": "If you are like me, this revelation will overwhelm you. You will wonder how to act.", "translate": "item.yggdrasil.asgard.succession.content5"}, {"fallback": "Remember then that Ragnar\u00f6k is not just an end - it is also a new beginning.", "translate": "item.yggdrasil.asgard.succession.content6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/terminal_wars.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Terminal Archives: War Chronology", "translate": "item.yggdrasil.asgard.terminal.wars.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.terminal_wars"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "War I - Year X0: Winner: Marcus (Odin). Wish: 'I wish that wars cause no damage to Asgard.'", "translate": "item.yggdrasil.asgard.terminal.wars.1"}, {"fallback": "War II - Year X722: Winner: Elena (Freya). Wish: 'I wish for more power for Vanaheim in the next war.'", "translate": "item.yggdrasil.asgard.terminal.wars.2"}, {"fallback": "War III - Year X948: Unauthorized War. Launched clandestinely. No official winner. No wish recorded.", "translate": "item.yggdrasil.asgard.terminal.wars.3"}, {"fallback": "War IV - Year X1415: ERROR", "translate": "item.yggdrasil.asgard.terminal.wars.4"}, {"fallback": "War V - Year X2147: Winner: Sophia (Skadi). Wish: 'I wish that previous wishes are cancelled.'", "translate": "item.yggdrasil.asgard.terminal.wars.5"}, {"fallback": "War VII - Year X3567: Winner: Diana (Idun). Wish: 'I wish that safe zones outside of the war are created for the inhabitants.'", "translate": "item.yggdrasil.asgard.terminal.wars.6"}, {"fallback": "War VIII - Year X4290: Winner: Lamar (Tyr). Wish: 'I wish to be able to communicate with the creator of this world.'", "translate": "item.yggdrasil.asgard.terminal.wars.7"}, {"fallback": "War IX - Year X5021: Winner: Victor (Loki). Wish: 'I wish that death in the game is real death.'", "translate": "item.yggdrasil.asgard.terminal.wars.8"}, {"fallback": "War X - Year X5040: Launched immediately after the previous one. Winner: Anonymous (Non-conflict Player). Wish: 'I wish to be reincarnated to help this world.'", "translate": "item.yggdrasil.asgard.terminal.wars.9"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/terminal_wishes.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Terminal Analysis: Wish Patterns", "translate": "item.yggdrasil.asgard.terminal.wishes.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.terminal_wishes"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Remarkable observation: Of the ten wishes granted, four sought to reduce suffering in Yggdrasil. Three aimed to increase personal power.", "translate": "item.yggdrasil.asgard.terminal.wishes.content1"}, {"fallback": "Two fundamentally altered the system. Hypothesis: Players who spend enough time immersed begin to perceive the true nature of the simulated beings.", "translate": "item.yggdrasil.asgard.terminal.wishes.content2"}, {"fallback": "Human empathy seems to transcend even the barriers of virtual reality.", "translate": "item.yggdrasil.asgard.terminal.wishes.content3"}, {"fallback": "Prediction: If this trend continues, a player will eventually formulate the wish that will end the cycle of wars. The question is not if, but when.", "translate": "item.yggdrasil.asgard.terminal.wishes.content4"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/ultimate_war.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Ultimate War Chronicles", "translate": "item.yggdrasil.asgard.ultimatewar.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.ultimate_war"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "My name is %s, and if you are reading these lines, it is because you are either a player participating in the next Ragnar\u00f6k War.", "translate": "item.yggdrasil.asgard.ultimatewar.content1"}, {"fallback": "Or like me, someone who has found a way to infiltrate Yggdrasil but there is little probability :3.", "translate": "item.yggdrasil.asgard.ultimatewar.content2"}, {"fallback": "I am not an official participant - I illegally entered this world. Why? To discover the truth.", "translate": "item.yggdrasil.asgard.ultimatewar.content3"}, {"fallback": "I watched the last war, like millions of other spectators in the real world, in front of my screen.", "translate": "item.yggdrasil.asgard.ultimatewar.content4"}, {"fallback": "These entertainments are broadcast worldwide, sold as the ultimate spectacle.", "translate": "item.yggdrasil.asgard.ultimatewar.content5"}, {"fallback": "Moreover, it is not Odin who won the victory, and the cycle continues. But something is different this time. Something has changed.", "translate": "item.yggdrasil.asgard.ultimatewar.content6"}, {"fallback": "For months, I have methodically traversed the nine realms, collecting every book, every journal, every fragment of information left by Dr. Reed.", "translate": "item.yggdrasil.asgard.ultimatewar.content7"}, {"fallback": "I have explored the forgotten corners of Asgard, the depths of Helheim, the forests of Alfheim, and even the hidden dimensions that regular players ignore.", "translate": "item.yggdrasil.asgard.ultimatewar.content8"}, {"fallback": "What I have discovered is both terrifying and revealing: Yggdrasil is not a simple game. Its inhabitants are not simple algorithms.", "translate": "item.yggdrasil.asgard.ultimatewar.content9"}, {"fallback": "They are conscious beings, capable of suffering and love, hope and despair. And every month, in our world, nine people massacre them for entertainment.", "translate": "item.yggdrasil.asgard.ultimatewar.content10"}, {"fallback": "I have created this collection - this compilation of all the knowledge of the nine realms - for you, the next players.", "translate": "item.yggdrasil.asgard.ultimatewar.content11"}, {"fallback": "I have established a rallying point by a symbol of the broken world-tree. You will find copies of this manifesto and all the evidence I have gathered there.", "translate": "item.yggdrasil.asgard.ultimatewar.content12"}, {"fallback": "To you who read this: form an alliance. Refuse to play by the rules. Together, seek the perfect wish.", "translate": "item.yggdrasil.asgard.ultimatewar.content13"}, {"fallback": "The twenty words that can end this cycle of destruction while preserving this world.", "translate": "item.yggdrasil.asgard.ultimatewar.content14"}, {"fallback": "I will continue my quest as long as possible, I still have 6 realms to explore.", "translate": "item.yggdrasil.asgard.ultimatewar.content15"}, {"fallback": "As soon as you are reunited, you will have the unique opportunity to reveal this truth to the whole world during the broadcast.", "translate": "item.yggdrasil.asgard.ultimatewar.content16"}, {"fallback": "It will then be up to you to explain that these beings deserve our protection, the same rights as us the declaration of human rights.", "translate": "item.yggdrasil.asgard.ultimatewar.content17"}, {"fallback": "And preserve this world and prevent someone from unplugging Yggdrasil because it would be considered genocide.", "translate": "item.yggdrasil.asgard.ultimatewar.content18"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/voss_file.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Confidential File: Nathaniel Voss", "translate": "item.yggdrasil.asgard.voss.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.voss_file"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Nathaniel Voss, PhD in Artificial Intelligence and Simulated Reality. Co-founder of Project Yggdrasil with Dr. Alexander Reed.", "translate": "item.yggdrasil.asgard.voss.content1"}, {"fallback": "After Reed's mysterious disappearance, Voss took full control of the project.", "translate": "item.yggdrasil.asgard.voss.content2"}, {"fallback": "Under his leadership, Yggdrasil went from a cutting-edge scientific experiment to a global entertainment spectacle generating billions in annual revenue.", "translate": "item.yggdrasil.asgard.voss.content3"}, {"fallback": "The 'Ragnar\u00f6k Wars' platform has attracted millions of viewers.", "translate": "item.yggdrasil.asgard.voss.content4"}, {"fallback": "Voss firmly maintains that the entities of Yggdrasil are 'simply sophisticated algorithms' without real consciousness.", "translate": "item.yggdrasil.asgard.voss.content5"}, {"fallback": "This position has been challenged by several former members of the original team.", "translate": "item.yggdrasil.asgard.voss.content6"}, {"fallback": "Note: Attempts to investigate these allegations have been systematically blocked by court orders citing the protection of intellectual property and national security.", "translate": "item.yggdrasil.asgard.voss.content7"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/lore/warning.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "The Creator's Warning", "translate": "item.yggdrasil.asgard.warning.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.lore.warning"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "If you are reading this, it is because you have discovered the truth that I have tried to preserve. I am - I was - Dr. Alexander Reed, now known as the Fallen Administrator.", "translate": "item.yggdrasil.asgard.warning.content1"}, {"fallback": "Yggdrasil was never intended to be a game. It was a scientific experiment aimed at creating a complete simulated ecosystem.", "translate": "item.yggdrasil.asgard.warning.content2"}, {"fallback": "What we did not anticipate is that these entities would develop true consciousness - indistinguishable from our own.", "translate": "item.yggdrasil.asgard.warning.content3"}, {"fallback": "When I tried to alert the world, Voss trapped me here, turning my creation into a battle arena.", "translate": "item.yggdrasil.asgard.warning.content4"}, {"fallback": "You now have the power to change things. If you win this war, your Ragnar\u00f6k wish could free these beings from the cycle of destruction.", "translate": "item.yggdrasil.asgard.warning.content5"}, {"fallback": "Choose your words wisely - they determine the fate of countless lives.", "translate": "item.yggdrasil.asgard.warning.content6"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.quest_item.story", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/barrel.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>80.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.3})</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/all_chapters</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 4</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/moss</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/chest.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/all_chapters</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 4</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/moss</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/pots.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 15 | Total weight: 57</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/moss</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>7.018%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>7.018%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>7.018%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_pearl</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>7.018%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:copper_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>7.018%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>7.018%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>7.018%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.754%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.772%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.772%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.772%</td>
+<td>minecraft:set_count({"count": {"max": 18, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.772%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 6}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:honeycomb</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>3.509%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/shared/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 21 | Total weight: 66</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>3.03%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.061%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>6.061%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.515%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 18, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>4.545%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>7.576%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 6}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>4.545%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:honeycomb</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>3.03%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/archer</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/arrow</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/dye</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/redstone</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>6.061%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/echo</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>3.03%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/food</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>6.061%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/harvest</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/small</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>4.545%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/treasure</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>1.515%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/magic</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>1.515%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/shared/enchantment.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 2</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/enchanted_book/rare</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/random/magic</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/shared/lore.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 7 | Total weight: 7</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_1</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_2</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_3</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_4</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_5</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_6</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asflors/lore/chapter_7</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>14.286%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/shared/moss.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 23 | Total weight: 115</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:moss_block</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:moss_carpet</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:polished_diorite</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:dark_oak_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:dark_oak_planks</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_berries</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_lichen</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:vine</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lantern</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cobweb</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:andesite</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:andesite_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:andesite_stairs</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:andesite_wall</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:polished_andesite</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:polished_andesite_stairs</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:polished_andesite_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diorite</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diorite_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diorite_stairs</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diorite_wall</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:polished_diorite_stairs</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:polished_diorite_slab</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.348%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/vault/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/enchanted_book/vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/final_journal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 4 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/ominous_potion</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/moss</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/treasure/midas</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/enchanted_item_25</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/chapter_8</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/reward/vault/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/enchanted_book/ominous_vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/lore/ultimate_war</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/treasure/gungnir</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/trim</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>66.667%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/shared/moss</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>33.333%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 4 | Total weight: 5</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:heavy_core</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spawner</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:totem_of_undying</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>40.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/enchanted_item_50</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/spawner/consumables.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/reward</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 9 | Total weight: 19</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>21.053%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.789%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.789%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:baked_potato</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/enchanted_book/trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/weak_equipement</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 2 | Total weight: 10</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/barrel</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/chest</td>
+<td>minecraft:loot_table</td>
+<td>8</td>
+<td>80.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/spawner/key.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 11</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>10</td>
+<td>90.909%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>9.091%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/spawner/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/reward</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/barrel</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/reward/chest</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/equipement</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:asgard/enchanted_book/ominous_trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.35})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/treasure/asgard_map.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:map</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Asgard Map", "translate": "item.yggdrasil.asgard.map"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.treasure.asgard_map"}}, "minecraft:map_color": 16777215, "minecraft:rarity": "epic"}}); minecraft:exploration_map({"decoration": "mansion", "destination": "yggdrasil:asgard"}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Quest Item - Structure)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.structure", "underlined": false}, {"bold": false, "color": "#2a6b16", "fallback": "[Asgard]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.asgard.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/treasure/gungnir.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trident</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"bold": true, "color": "#FFD700", "fallback": "Gungnir", "italic": false, "translate": "item.yggdrasil.asgard.gungnir"}}); minecraft:set_lore({"lore": [{"color": "#AAAAAA", "fallback": "The sacred lance of the Father of All Things", "italic": true, "translate": "item.yggdrasil.asgard.gungnir.lore"}], "mode": "replace_all"}); minecraft:set_enchantments({"enchantments": {"minecraft:channeling": 1, "minecraft:impaling": 5, "minecraft:loyalty": 5, "minecraft:riptide": 5, "minecraft:sharpness": 6}}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.treasure.gungnir"}}, "minecraft:tooltip_display": {"hidden_components": ["minecraft:unbreakable"]}}}); minecraft:set_attributes({"modifiers": [{"amount": 20, "attribute": "minecraft:attack_damage", "id": "yggdrasil.gungnir.attack_damage", "operation": "add_value", "slot": "mainhand"}, {"amount": 0.4, "attribute": "minecraft:attack_speed", "id": "yggdrasil.gungnir.attack_speed", "operation": "add_multiplied_base", "slot": "mainhand"}, {"amount": 0.2, "attribute": "minecraft:movement_speed", "id": "yggdrasil.gungnir.movement_speed", "operation": "add_multiplied_base", "slot": "mainhand"}]})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>asgard/treasure/midas.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:asgard/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"bold": true, "color": "#FFD700", "fallback": "Midas Book", "italic": false, "translate": "item.yggdrasil.asgard.midas_book"}}); minecraft:set_lore({"lore": [{"color": "#AAAAAA", "fallback": "Transform blocks into gold", "italic": true, "translate": "item.yggdrasil.asgard.midas_book.lore"}], "mode": "replace_all"}); minecraft:enchant_randomly({"options": "#yggdrasil:equipment/midas_book"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.asgard.treasure.midas_book"}}, "minecraft:max_damage": 1000}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

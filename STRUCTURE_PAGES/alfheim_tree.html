@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — alfheim_tree</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — alfheim_tree</h1></header>
+<div class="card"><p class="meta">Structure: <strong>alfheim_tree</strong>. Loot tables: 20.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/alfheim_tree</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>alfheim_tree/chest/barrel.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:sequence (2 children)</td>
+<td>minecraft:sequence</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/barrel/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/spawner/key</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">2 to 6</span> | Entries: 12 | Total weight: 29</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond_axe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.448%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.9, "min": 0.4, "type": "minecraft:uniform"}}); minecraft:enchant_randomly({})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_pickaxe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.448%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.8, "min": 0.15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.448%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:compass</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.448%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.8, "min": 0.15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bucket</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.448%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_axe</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>13.793%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.8, "min": 0.15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_pickaxe</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>13.793%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.8, "min": 0.15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cherry_sapling</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>13.793%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>13.793%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>6.897%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 17, "min": 8, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>6.897%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>13.793%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/barrel/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/random_loot</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.15})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 11 | Total weight: 102</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond_block</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>0.98%</td>
+<td>minecraft:set_count({"add": false, "count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald_block</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.902%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_axe</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.902%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.5, "min": 0.1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_pickaxe</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>4.902%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 0.5, "min": 0.1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>10</td>
+<td>9.804%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cake</td>
+<td>minecraft:item</td>
+<td>10</td>
+<td>9.804%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>15</td>
+<td>14.706%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 20, "min": 8, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_block</td>
+<td>minecraft:item</td>
+<td>10</td>
+<td>9.804%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>15</td>
+<td>14.706%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_ingot</td>
+<td>minecraft:item</td>
+<td>12</td>
+<td>11.765%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:coal</td>
+<td>minecraft:item</td>
+<td>14</td>
+<td>13.725%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/ominous_vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/rare</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1.0 to 3.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/unique</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/ominous_vault</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.35})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/pots.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/spawner/key</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/random_loot</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.15})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 7 | Total weight: 30</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ender_pearl</td>
+<td>minecraft:item</td>
+<td>8</td>
+<td>26.667%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>8</td>
+<td>26.667%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 12, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>6</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 4}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>10.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:strong_healing"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>6.667%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spectral_arrow</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>6.667%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.333%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/reward/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 10 | Total weight: 25</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>16.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>16.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 8, "min": 2, "type": "minecraft:uniform"}}); minecraft:set_potion({"id": "minecraft:poison"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>16.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>12.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ominous_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_ominous_bottle_amplifier({"amplifier": {"max": 1, "min": 0, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 12, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 18, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:torch</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>16.0%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 6}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/reward/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 15 | Total weight: 21</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>14.286%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:crossbow</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>9.524%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 20, "min": 5, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>9.524%</td>
+<td>minecraft:enchant_randomly({})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_axe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_pickaxe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:enchanting_table</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:end_crystal</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:heart_of_the_sea</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_eye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:set_count({"count": 1}); minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.762%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 15, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/reward/unique.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 7 | Total weight: 23</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:enchanted_golden_apple</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>13.043%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:dragon_breath</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>17.391%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_scrap</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>21.739%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:breeze_spawn_egg</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.696%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:witch_spawn_egg</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>17.391%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:totem_of_undying</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>17.391%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:budding_amethyst</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.348%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/shulker.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/spawner/key</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">3 to 5</span> | Entries: 15 | Total weight: 196</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>1.02%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>20</td>
+<td>10.204%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>18</td>
+<td>9.184%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>15</td>
+<td>7.653%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 12, "min": 6, "type": "minecraft:uniform"}}); minecraft:set_potion({"id": "minecraft:harming"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>20</td>
+<td>10.204%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_pearl</td>
+<td>minecraft:item</td>
+<td>8</td>
+<td>4.082%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:blaze_rod</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>2.041%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:redstone</td>
+<td>minecraft:item</td>
+<td>18</td>
+<td>9.184%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 20, "min": 6, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:fire_charge</td>
+<td>minecraft:item</td>
+<td>15</td>
+<td>7.653%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 6, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>15</td>
+<td>7.653%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 8, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:quartz</td>
+<td>minecraft:item</td>
+<td>20</td>
+<td>10.204%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 16, "min": 6, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>12</td>
+<td>6.122%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 8, "min": 6, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:firework_rocket</td>
+<td>minecraft:item</td>
+<td>8</td>
+<td>4.082%</td>
+<td>minecraft:set_fireworks({"flight_duration": 5}); minecraft:set_count({"add": false, "count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>20</td>
+<td>10.204%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>0.51%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 16, "min": 8, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/random_loot</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/chest/vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3.0</span> | Entries: 1 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/random_loot</td>
+<td>minecraft:loot_table</td>
+<td>8</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/vault</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/enchanted_book/ominous_trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/alfheim_tree/ominous_trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/enchanted_book/ominous_vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/alfheim_tree/ominous_vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/enchanted_book/random_loot.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/alfheim_tree/random_loot"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/enchanted_book/trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/alfheim_tree/trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/enchanted_book/vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/alfheim_tree/vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/key/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trial_key</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Alfheim Key", "translate": "item.yggdrasil.alfheim.key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.alfheim_tree.key.normal"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "gray", "fallback": "This key can only be used on", "italic": false, "translate": "item.yggdrasil.alfheim.key.lore1"}, {"bold": false, "color": "gray", "fallback": "Vault in the Alfheim tree", "italic": false, "translate": "item.yggdrasil.alfheim.key.lore2"}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.vault", "underlined": false}, {"bold": false, "color": "#9a0031", "fallback": "[Alfheim Tree]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.alfheim.location", "underlined": false}], "mode": "append"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/key/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ominous_trial_key</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Ominous Alfheim Key", "translate": "item.yggdrasil.alfheim.ominous_key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.alfheim_tree.key.ominous_key"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "gray", "fallback": "This key can only be used on", "italic": false, "translate": "item.yggdrasil.alfheim.ominous_key.lore1"}, {"bold": false, "color": "gray", "fallback": "Ominous Vault in the Alfheim tree", "italic": false, "translate": "item.yggdrasil.alfheim.ominous_key.lore2"}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Ominous Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.ominous_vault", "underlined": false}, {"bold": false, "color": "#9a0031", "fallback": "[Alfheim Tree]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.alfheim.location", "underlined": false}], "mode": "append"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/spawner/consumables.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/consumables</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 9 | Total weight: 19</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>21.053%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.789%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.789%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:baked_potato</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.526%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.263%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 2 | Total weight: 10</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/rare</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/common</td>
+<td>minecraft:loot_table</td>
+<td>8</td>
+<td>80.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/spawner/key.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 11</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>10</td>
+<td>90.909%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>9.091%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>alfheim_tree/spawner/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/rare</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/chest/reward/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">2.0</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:alfheim_tree/enchanted_book/ominous_trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.35})</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

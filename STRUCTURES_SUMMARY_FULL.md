@@ -1,0 +1,249 @@
+(Full structures summary appended from STRUCTURES_SUMMARY.txt)
+
+Yggdrasil - Structures Summary
+
+This file lists all structure folders under `data/yggdrasil/structure/` and the files/templates they contain, plus a brief note on what to expect inside each structure (chests, spawners, rooms, reward vaults, etc.).
+
+Format:
+- Structure folder: list of files (relative to repo root)
+- Expect: inferred contents/rooms/rewards/spawners based on filenames
+
+---
+
+1) alfheim_tree
+Files (64 total, examples):
+- data/yggdrasil/structure/alfheim_tree/tree/underground.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/middle.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/main/5.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/main/4.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/main/3.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/main/2.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/main/1.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/corner.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/bottom.nbt
+- data/yggdrasil/structure/alfheim_tree/tree/base.nbt
+- data/yggdrasil/structure/alfheim_tree/island/tree.nbt
+- data/yggdrasil/structure/alfheim_tree/island/tiny.nbt
+- data/yggdrasil/structure/alfheim_tree/island/small_alfheim.nbt
+- data/yggdrasil/structure/alfheim_tree/island/satelite.nbt
+- data/yggdrasil/structure/alfheim_tree/island/medium.nbt
+- data/yggdrasil/structure/alfheim_tree/island/large.nbt
+- data/yggdrasil/structure/alfheim_tree/island/huge.nbt
+- data/yggdrasil/structure/alfheim_tree/island/hidden.nbt
+- data/yggdrasil/structure/alfheim_tree/island/flower_sphere.nbt
+- data/yggdrasil/structure/alfheim_tree/island/descend.nbt
+
+Expect: large tree/island structures composed of modular `tree` and `island` pieces; multiple sizes of islands; underground sections; likely contains decorative rooms and reward/generator placements.
+
+---
+2) asflors
+Files (45 total, examples):
+- data/yggdrasil/structure/asflors/main.nbt
+- data/yggdrasil/structure/asflors/underground/treasure.nbt
+- data/yggdrasil/structure/asflors/underground/travel.nbt
+- data/yggdrasil/structure/asflors/underground/room.nbt
+- data/yggdrasil/structure/asflors/road/terminator/small.nbt
+- data/yggdrasil/structure/asflors/road/terminator/medium.nbt
+- data/yggdrasil/structure/asflors/road/terminator/lite.nbt
+- data/yggdrasil/structure/asflors/road/straight/extra_large.nbt
+- data/yggdrasil/structure/asflors/road/straight/dirty.nbt
+- data/yggdrasil/structure/asflors/reward/vault_ominous.nbt
+- data/yggdrasil/structure/asflors/reward/vault.nbt
+- data/yggdrasil/structure/asflors/reward/pots.nbt
+- data/yggdrasil/structure/asflors/reward/lore.nbt
+- data/yggdrasil/structure/asflors/reward/lake.nbt
+- data/yggdrasil/structure/asflors/reward/house.nbt
+- data/yggdrasil/structure/asflors/reward/fountain.nbt
+- data/yggdrasil/structure/asflors/decors/fountain.nbt
+- data/yggdrasil/structure/asflors/decors/bush.nbt
+- data/yggdrasil/structure/asflors/decors/farm.nbt
+- data/yggdrasil/structure/asflors/lake/tree.nbt
+
+Expect: towns/roads/underground complexes with treasure rooms and vaults; reward vaults and decorative blocks; different road pieces (crossroads, straight sections, terminators) used to generate path networks.
+
+---
+3) asgard
+Files (116 total, examples):
+- data/yggdrasil/structure/asgard/underground/main_lush.nbt
+- data/yggdrasil/structure/asgard/underground/lush.nbt
+- data/yggdrasil/structure/asgard/tower/01.nbt .. 04.nbt
+- data/yggdrasil/structure/asgard/reward/vault.nbt
+- data/yggdrasil/structure/asgard/reward/pots.nbt
+- data/yggdrasil/structure/asgard/reward/ominous_vault.nbt
+- data/yggdrasil/structure/asgard/reward/chest.nbt
+- data/yggdrasil/structure/asgard/reward/barrel.nbt
+- data/yggdrasil/structure/asgard/island/woodenhouse.nbt
+- data/yggdrasil/structure/asgard/island/underground/wooden_with_bridge.nbt
+- data/yggdrasil/structure/asgard/island/underground/tree.nbt
+- data/yggdrasil/structure/asgard/island/tower.nbt
+- data/yggdrasil/structure/asgard/island/library.nbt
+- data/yggdrasil/structure/asgard/island/greenhouse.nbt
+- data/yggdrasil/structure/asgard/bridge/underground/* (many connector & terminator pieces)
+
+Expect: large island/tower complexes with reward vaults and chests, multiple island/tower variations, underground connectors and bridge pieces. Reward pieces include `chest` and `barrel` templates (so chests/barrels with loot). Spawner/terminator pieces likely spawn mobs or end corridors.
+
+---
+4) cubeoid
+Files (3):
+- data/yggdrasil/structure/cubeoid/spawner.nbt
+- data/yggdrasil/structure/cubeoid/reward.nbt
+- data/yggdrasil/structure/cubeoid/main.nbt
+
+Expect: small modular cube-like structure with a main room, reward chest/barrel templates, and a mob spawner template.
+
+---
+5) dokkalfar_ruins
+Files (3):
+- data/yggdrasil/structure/dokkalfar_ruins/portal.nbt
+- data/yggdrasil/structure/dokkalfar_ruins/plate.nbt
+- data/yggdrasil/structure/dokkalfar_ruins/grass.nbt
+
+Expect: ruin fragments and portal plate pieces — decorative ruins and possibly a portal activation area.
+
+---
+6) folkvangr
+Files (5):
+- data/yggdrasil/structure/folkvangr/room.nbt
+- data/yggdrasil/structure/folkvangr/plate.nbt
+- data/yggdrasil/structure/folkvangr/hole.nbt
+- data/yggdrasil/structure/folkvangr/corridor.nbt
+- data/yggdrasil/structure/folkvangr/artefact.nbt
+
+Expect: dungeon-style rooms and corridors with artefact/plate components; likely contains artifact chests or traps.
+
+---
+7) generic
+Files (16 total, feature spawners):
+- data/yggdrasil/structure/generic/feature/spawner/zombie.nbt
+- ... (with multiple spawner templates: wither_skeleton, witch, warden, stray, slime, skeleton, piglin_brute, phantom, magma_cube, husk, evoker, enderman, drowned, breeze, bogged)
+
+Expect: generic modular spawner features used across multiple structures to place mob spawners and spawn groups.
+
+---
+8) glaosheimr
+Files (7):
+- data/yggdrasil/structure/glaosheimr/triforce.nbt
+- data/yggdrasil/structure/glaosheimr/terminator.nbt
+- data/yggdrasil/structure/glaosheimr/road.nbt
+- data/yggdrasil/structure/glaosheimr/park.nbt
+- data/yggdrasil/structure/glaosheimr/library.nbt
+- data/yggdrasil/structure/glaosheimr/house.nbt
+- data/yggdrasil/structure/glaosheimr/fountain.nbt
+
+Expect: city/town pieces (roads, houses, parks, libraries) and decorative fountains; possible reward or lore rooms in libraries.
+
+---
+9) helblom
+Files (1):
+- data/yggdrasil/structure/helblom/sanctuary.nbt
+
+Expect: single sanctuary structure (likely boss/ritual area or reward room).
+
+---
+10) helheim
+Files (39 total, examples):
+- data/yggdrasil/structure/helheim/reward/vault.nbt
+- data/yggdrasil/structure/helheim/reward/pots.nbt
+- data/yggdrasil/structure/helheim/reward/ominous_vault.nbt
+- data/yggdrasil/structure/helheim/reward/chest.nbt
+- data/yggdrasil/structure/helheim/reward/barrel.nbt
+- data/yggdrasil/structure/helheim/feature/spawner/zombie.nbt
+- data/yggdrasil/structure/helheim/room/tower.nbt
+- data/yggdrasil/structure/helheim/room/terminator.nbt
+- data/yggdrasil/structure/helheim/room/spiral.nbt
+- data/yggdrasil/structure/helheim/room/sanctuary.nbt
+- data/yggdrasil/structure/helheim/road/* (crossroad, straight, pipe, etc.)
+
+Expect: multi-room complex with vaults and reward rooms, spawner features, multiple room shapes (tower, spiral), and road pieces. Many reward templates imply chests/barrels with loot.
+
+---
+11) lifblom
+Files (1):
+- data/yggdrasil/structure/lifblom/garden.nbt
+
+Expect: garden area, decorative and possibly loot-bearing plants.
+
+---
+12) neogard
+Files (1):
+- data/yggdrasil/structure/neogard/island.nbt
+
+Expect: island template (possibly with houses / loot).
+
+---
+13) proto_fracture
+Files (1):
+- data/yggdrasil/structure/proto_fracture/island.nbt
+
+Expect: experimental island fragment template.
+
+---
+14) runic_crystal
+Files (1):
+- data/yggdrasil/structure/runic_crystal/main.nbt
+
+Expect: main crystalline structure template (central feature for runic crystal biome).
+
+---
+15) runic_fracture
+Files (1):
+- data/yggdrasil/structure/runic_fracture/main.nbt
+
+Expect: fractured runic structure; likely terrain/feature generation piece.
+
+---
+16) runic_labyrinth
+Files (63 total, examples):
+- data/yggdrasil/structure/runic_labyrinth/villager.nbt
+- data/yggdrasil/structure/runic_labyrinth/training/under.nbt
+- data/yggdrasil/structure/runic_labyrinth/training/tower.nbt
+- data/yggdrasil/structure/runic_labyrinth/training/plateform.nbt
+- data/yggdrasil/structure/runic_labyrinth/training/extension.nbt
+- data/yggdrasil/structure/runic_labyrinth/room/turn/variant_1.nbt
+- data/yggdrasil/structure/runic_labyrinth/room/turn/variant_2.nbt
+- data/yggdrasil/structure/runic_labyrinth/room/training.nbt
+- data/yggdrasil/structure/runic_labyrinth/room/splited/variant_1.nbt
+- data/yggdrasil/structure/runic_labyrinth/room/splited/side/huge.nbt
+- data/yggdrasil/structure/runic_labyrinth/access.nbt
+- many room/link/side variants used to assemble labyrinths
+
+Expect: large procedurally assembled maze/labyrinth with many room variants, training / villager pieces, access & link segments, and probably reward rooms and spawners. This is one of the most complex sets.
+
+---
+17) vanaheim
+Files (22 total, examples):
+- data/yggdrasil/structure/vanaheim/underground.nbt
+- data/yggdrasil/structure/vanaheim/tunnel.nbt
+- data/yggdrasil/structure/vanaheim/spawner.nbt
+- data/yggdrasil/structure/vanaheim/room/runic.nbt
+- data/yggdrasil/structure/vanaheim/room/library.nbt
+- data/yggdrasil/structure/vanaheim/room/crypt.nbt
+- data/yggdrasil/structure/vanaheim/reward/vault.nbt
+- data/yggdrasil/structure/vanaheim/main/1.nbt .. 4.nbt
+- data/yggdrasil/structure/vanaheim/laby.nbt
+
+Expect: underground complexes, crypts, libraries, reward vaults, and modular main pieces; spawner template present.
+
+---
+18) voroblom
+Files (1):
+- data/yggdrasil/structure/voroblom/main.nbt
+
+Expect: main structure template (likely village or feature).
+
+---
+19) zenflors
+Files (1):
+- data/yggdrasil/structure/zenflors/room.nbt
+
+Expect: single-room template for zenflors area (decorative/lootable room).
+
+---
+
+Notes & tips
+- Any file with `reward/` or filename `vault`, `chest`, `barrel`, `treasure` likely contains chest/barrel placements that reference loot tables under `data/yggdrasil/loot_table/*`. Use the chest/barrel templates to find which loot tables supply their contents.
+- Files named `spawner` or under `feature/spawner` are mob spawner templates; they correspond with `data/yggdrasil/trial_spawner/` and `loot_table` entries for enemy waves.
+- Road/bridge/room/turn/variant files are modular pieces used by structure-placement code to assemble complex structures (labyrinths, islands, towns) at runtime.
+- If you want a cross-reference between structures and their loot/enchant tags, I can generate that as a CSV linking structure template → contained loot_table references → enchantment tags.
+
+If you'd like this as a machine-readable JSON or CSV (or want the full raw file lists expanded into the docs folder), tell me which format and I'll write it to `STRUCTURES_SUMMARY.json` or `STRUCTURES_SUMMARY.csv` and include cross-references to loot tables and enchantment tags.

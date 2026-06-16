@@ -1,0 +1,361 @@
+Structure,Loot Tables,Enchantment Tags
+alfheim_tree,"chest/barrel
+chest/common
+chest/common
+chest/ominous_vault
+chest/pots
+chest/rare
+chest/rare
+chest/shulker
+chest/unique
+chest/vault
+enchanted_book/ominous_trial_spawner
+enchanted_book/ominous_vault
+enchanted_book/random_loot
+enchanted_book/trial_spawner
+enchanted_book/vault
+key/normal
+key/ominous
+spawner/consumables
+spawner/key
+spawner/ominous","ominous_trial_spawner: #minecraft:non_treasure
+ominous_vault: #minecraft:non_treasure
+random_loot: #minecraft:non_treasure
+trial_spawner: #minecraft:non_treasure
+vault: #minecraft:non_treasure"
+asflors,"enchanted_book/common
+enchanted_book/ominous_vault
+enchanted_book/rare
+enchanted_book/vault
+key/normal
+key/ominous
+lore/chapter_1
+lore/chapter_2
+lore/chapter_3
+lore/chapter_4
+lore/chapter_5
+lore/chapter_6
+lore/chapter_7
+lore/chronicles_of_trials
+lore/last_villager_journal
+lore/secret_chapter_8
+lore/secret_chapter_9
+lore/timeless_one_journal
+reward/common
+reward/common
+reward/enchantment
+reward/equipement
+reward/fountain
+reward/house
+reward/lake
+reward/lore
+reward/normal
+reward/ominous
+reward/pots
+reward/traveler
+treasure/fake_asflors_sword
+treasure/real_asflors_sword
+treasure/rune_of_rupture
+treasure/runic_fracture_map","asflors_sword: #minecraft:non_treasure
+common: #minecraft:non_treasure
+ominous_vault: minecraft:mending
+rare: #minecraft:non_treasure
+stand: #minecraft:non_treasure
+vault: #minecraft:non_treasure"
+asgard,"enchanted_book/common
+enchanted_book/ominous_trial_spawner
+enchanted_book/ominous_vault
+enchanted_book/rare
+enchanted_book/trial_spawner
+enchanted_book/vault
+key/normal
+key/ominous
+lore/all_chapters
+lore/chapter_1
+lore/chapter_2
+lore/chapter_3
+lore/chapter_4
+lore/chapter_5
+lore/chapter_6
+lore/chapter_7
+lore/chapter_8
+lore/final_journal
+lore/immortal_encounter
+lore/secret_chapter
+lore/solution
+lore/succession_protocol
+lore/terminal_wars
+lore/terminal_wishes
+lore/ultimate_war
+lore/voss_file
+lore/warning
+reward/barrel
+reward/chest
+reward/common
+reward/enchantment
+reward/lore
+reward/moss
+reward/normal
+reward/ominous
+reward/pots
+spawner/consumables
+spawner/key
+spawner/ominous
+treasure/asgard_map
+treasure/gungnir
+treasure/midas","common: #minecraft:non_treasure
+gungnir: minecraft:mending
+ominous_trial_spawner: minecraft:mending
+ominous_vault: minecraft:mending
+rare: minecraft:mending
+trial_spawner: minecraft:mending
+vault: #minecraft:non_treasure"
+cubeoid,"key/normal
+reward/normal
+reward/normal",
+dokkalfar_ruins,root/common,
+folkvangr,"root/decorated_pot
+treasure/vanaheim_map",
+generic,"equipment/boots
+equipment/boots
+equipment/bow
+equipment/bow
+equipment/chestplate
+equipment/chestplate
+equipment/helmet
+equipment/helmet
+equipment/helmet
+equipment/helmet
+equipment/leggings
+equipment/leggings
+equipment/melee
+equipment/melee
+equipment/melee
+equipment/melee
+equipment/melee_trident
+equipment/melee_trident
+equipment/melee_trident
+equipment/melee_trident
+equipment/range
+equipment/range
+equipment/range
+equipment/range
+equipment/sword
+equipment/sword
+equipment/trident
+equipment/trident
+mob/bogged
+mob/bogged
+mob/breeze
+mob/breeze
+mob/drowned
+mob/drowned
+mob/enderman
+mob/enderman
+mob/evoker
+mob/evoker
+mob/husk
+mob/husk
+mob/magma_cube
+mob/magma_cube
+mob/phantom
+mob/phantom
+mob/piglin_brute
+mob/piglin_brute
+mob/skeleton
+mob/skeleton
+mob/slime
+mob/slime
+mob/spider
+mob/spider
+mob/stray
+mob/stray
+mob/witch
+mob/witch
+mob/wither_skeleton
+mob/wither_skeleton
+mob/zombie
+mob/zombie
+reward/archer
+reward/arrow
+reward/common
+reward/dye
+reward/echo
+reward/enchanted_book
+reward/enchanted_book
+reward/enchanted_item_10
+reward/enchanted_item_25
+reward/enchanted_item_50
+reward/equipement
+reward/equipement
+reward/equipement
+reward/food
+reward/harvest
+reward/house
+reward/magic
+reward/misc
+reward/misc
+reward/misc
+reward/mob
+reward/ominous_potion
+reward/redstone
+reward/small
+reward/treasure
+reward/trial
+reward/trial
+reward/trim
+reward/water
+reward/weak_equipement","ominous_trial_spawner: #minecraft:non_treasure
+trial_spawner: #minecraft:non_treasure"
+helblom,"root/barrel
+root/decorated_pot
+treasure/helheim_map",
+helheim,"enchanted_book/common
+enchanted_book/ominous_trial_spawner
+enchanted_book/ominous_vault
+enchanted_book/rare
+enchanted_book/trial_spawner
+enchanted_book/vault
+key/normal
+key/ominous
+lore/chapter_1
+lore/chapter_10
+lore/chapter_2
+lore/chapter_3
+lore/chapter_4
+lore/chapter_5
+lore/chapter_6
+lore/chapter_7
+lore/chapter_8
+lore/chapter_9
+lore/quest_assembly
+lore/quest_collection
+lore/quest_familiar
+reward/barrel
+reward/chest
+reward/common
+reward/deepslate
+reward/enchantment
+reward/lantern
+reward/lore
+reward/normal
+reward/ominous
+reward/pots
+reward/wood
+spawner/consumables
+spawner/key
+spawner/ominous
+treasure/rune_of_reva","common: #minecraft:non_treasure
+ominous_trial_spawner: minecraft:mending
+ominous_vault: minecraft:mending
+rare: #minecraft:non_treasure
+trial_spawner: minecraft:mending
+vault: #minecraft:non_treasure"
+lifblom,"root/barrel
+root/decorated_pot
+treasure/alfheim_map",
+proto_fracture,"root/barrel
+root/decorated_pot",
+runic_crystal,"root/chest
+root/decorated_pot
+treasure/era_apple
+treasure/runic_labyrinth",
+runic_fracture,"enchanted_book/boss_trial_spawner
+enchanted_book/monster_trial_spawner
+lore/hidden_truth
+lore/journal_transcendent
+root/reward","boss_trial_spawner: #minecraft:non_treasure
+monster_trial_spawner: #minecraft:non_treasure
+ominous_vault: minecraft:mending"
+runic_labyrinth,"enchanted_book/library
+enchanted_book/ominous_trial
+enchanted_book/ominous_vault
+enchanted_book/random
+enchanted_book/shulker
+enchanted_book/trial
+enchanted_book/vault
+key/normal
+key/ominous
+lore/dark_elf_bastion_chronicle
+lore/dark_elf_bow_testament
+lore/dark_elf_discovery_journal
+lore/dark_elf_escape_journal
+lore/dark_elf_survival_notes
+lore/dark_elf_village_chronicles
+lore/dark_elf_weapon_note
+lore/dark_elves_chronicle
+lore/runic_dimension_chapter
+reward/bed
+reward/black
+reward/chest
+reward/fruit
+reward/library
+reward/miner
+reward/nature
+reward/normal
+reward/ominous
+reward/pots
+reward/variant_1
+reward/variant_1
+reward/variant_1
+reward/variant_2
+reward/variant_2
+reward/variant_2
+reward/variant_3
+reward/variant_3
+reward/variant_3
+reward/white
+treasure/dark_elven_bow
+treasure/ran_apple
+treasure/twilight_of_yggdrasil_bow","dark_elven_bow: minecraft:infinity, minecraft:mending
+library: #minecraft:non_treasure, #minecraft:on_traded_equipment
+ominous_trial: #minecraft:non_treasure, minecraft:mending, minecraft:density, minecraft:wind_burst, minecraft:soul_speed, minecraft:silk_touch, minecraft:breach, minecraft:channeling
+ominous_vault: #minecraft:non_treasure, minecraft:mending, minecraft:density, minecraft:wind_burst, minecraft:soul_speed, minecraft:silk_touch, minecraft:breach, minecraft:channeling
+random: #minecraft:non_treasure
+shulker: #minecraft:non_treasure, #minecraft:tradeable, minecraft:multishot
+trial: #minecraft:non_treasure
+twilight_of_yggdrasil_bow: minecraft:infinity, minecraft:mending, minecraft:piercing, minecraft:power, minecraft:punch, minecraft:quick_charge
+vault: #minecraft:non_treasure, minecraft:mending, #minecraft:tradeable, minecraft:wind_burst, minecraft:multishot"
+vanaheim,"enchanted_book/common
+enchanted_book/ominous_trial_spawner
+enchanted_book/ominous_vault
+enchanted_book/rare
+enchanted_book/trial_spawner
+enchanted_book/vault
+key/normal
+key/ominous
+lore/all_chapters
+lore/chapter_1
+lore/chapter_2
+lore/chapter_3
+lore/chapter_4
+lore/chapter_5
+lore/chapter_6
+lore/chapter_7
+lore/chapter_8
+lore/ominous_chapter
+lore/vault_chapter
+reward/barrel
+reward/chest
+reward/common
+reward/library
+reward/nature
+reward/normal
+reward/ominous
+reward/potion_ingredients
+reward/pots
+reward/rare
+spawner/consumables
+spawner/key
+spawner/ominous
+treasure/vanir_blessing","common: #minecraft:non_treasure
+ominous_trial_spawner: minecraft:mending
+rare: minecraft:mending, minecraft:infinity, minecraft:silk_touch
+trial_spawner: #minecraft:non_treasure
+vault: #minecraft:non_treasure"
+voroblom,"root/barrel
+root/decorated_pot
+treasure/glaosheimr_map",
+zenflors,"root/barrel
+root/decorated_pot
+treasure/asflors_map",

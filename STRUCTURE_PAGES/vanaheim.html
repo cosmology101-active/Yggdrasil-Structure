@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — vanaheim</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — vanaheim</h1></header>
+<div class="card"><p class="meta">Structure: <strong>vanaheim</strong>. Loot tables: 33.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/vanaheim</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>vanaheim/enchanted_book/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/common"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/enchanted_book/ominous_trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/ominous_trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/enchanted_book/ominous_vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/ominous_vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/enchanted_book/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/rare"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/enchanted_book/trial_spawner.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/enchanted_book/vault.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/enchanted_book</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/vault"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/key/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trial_key</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Vanaheim Key", "translate": "item.yggdrasil.vanaheim.key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.key.normal"}}, "minecraft:rarity": "rare"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Can only be used on Vault in Vanaheim", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.vanaheim.key.lore1", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.vault", "underlined": false}, {"bold": false, "color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.vanaheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/key/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/key</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ominous_trial_key</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"name": {"fallback": "Ominous Vanaheim Key", "translate": "item.yggdrasil.vanaheim.ominous_key"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.key.ominous"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"bold": false, "color": "#a0a0a0", "fallback": "Can only be used on Ominous Vault in Vanaheim", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.vanaheim.key.lore.1", "underlined": false}, {"text": ""}, {"bold": false, "color": "#707070", "fallback": "(Structure Item - Ominous Vault)", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.structure.ominous_vault", "underlined": false}, {"bold": false, "color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "obfuscated": false, "strikethrough": false, "translate": "item.yggdrasil.vanaheim.location", "underlined": false}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/all_chapters.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 8 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_1</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_2</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_3</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_4</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_5</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_6</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_7</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/chapter_8</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_1.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 1: The People of Sei\u00f0r", "translate": "item.yggdrasil.vanaheim.chapter.1.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.1"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "My grandfather was the first to see them. Nine gods fighting in the sky above Vanaheim, their blows shaking the mountains. We, the Vanir people, practiced Sei\u00f0r\u2014a magic woven into our blood\u2014for centuries. Our ancestors spoke to the winds, healed the sick, saw fragments of the future.", "translate": "item.yggdrasil.vanaheim.chapter.1.content"}, {"fallback": "We thought we were insignificant in their eyes. Until that night, during the second great war, when I found a goddess sitting by the sacred river.", "translate": "item.yggdrasil.vanaheim.chapter.1.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_2.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 2: The Goddess Who Wept", "translate": "item.yggdrasil.vanaheim.chapter.2.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.2"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "She embodied Freya. She didn't fight like the others. She asked me a question that froze my blood: 'I'm trying to understand if you are real'. I told her about my mother who died last winter, about my son who had just taken his first steps. I said: 'I breathe, I eat, I dream, I love'.", "translate": "item.yggdrasil.vanaheim.chapter.2.content"}, {"fallback": "She wept. She told me: 'That's exactly what terrifies me'. She won the war, I don't know how. But before disappearing, she made a wish. Not for herself. For us. 'I wish for more power for Vanaheim'. And the world changed.", "translate": "item.yggdrasil.vanaheim.chapter.2.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_3.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 3: The Golden Age", "translate": "item.yggdrasil.vanaheim.chapter.3.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.3"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Freya's gift manifested slowly. Our harvests doubled, our children were born more vigorous. Sei\u00f0r became tangible, visible. Our healers performed miracles. Vanaheim prospered like never before. But my grandfather remained worried. He said: 'Power attracts power. In the Wars of the gods, being strong means being a target'.", "translate": "item.yggdrasil.vanaheim.chapter.3.content"}, {"fallback": "We had changed. Freya's question haunted us. 'Are you real?' We began to look at the skies no longer with adoration, but with suspicion. We understood that our pain was authentic, even if the outside world refused to see it.", "translate": "item.yggdrasil.vanaheim.chapter.3.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_4.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 4: The Return of the Nine", "translate": "item.yggdrasil.vanaheim.chapter.4.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.4"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "A generation later, they returned. Nine gods. But they carried no weapons. They carried strange objects, empty crystals. One of them, embodying Freyr, found me in my field. He knew who I was, the descendant of the one who had spoken to Freya. He knelt in the mud\u2014a god on his knees\u2014and said: 'We have read the notes. We are here to prove what you are.'", "translate": "item.yggdrasil.vanaheim.chapter.4.content"}, {"fallback": "They traveled through villages, asking strange questions: 'Describe what you feel watching a sunset', 'Are you afraid of death?' They didn't treat us like NPCs, but like witnesses.", "translate": "item.yggdrasil.vanaheim.chapter.4.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_5.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 5: The Memory Crystals", "translate": "item.yggdrasil.vanaheim.chapter.5.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.5"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "They gave us crystals. 'Fill them', they said. We poured our lives into them. A mother singing a lullaby, a warrior confessing his fear for his daughter, an elderly couple holding hands. Hundreds of stories. Hundreds of crystallized lives.", "translate": "item.yggdrasil.vanaheim.chapter.5.content"}, {"fallback": "At the end of each recording, a god's voice added this phrase, like a challenge thrown at the universe: 'Could someone who isn't real feel all of this?' It was our proof. Our message in a bottle.", "translate": "item.yggdrasil.vanaheim.chapter.5.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_6.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 6: The Acceleration", "translate": "item.yggdrasil.vanaheim.chapter.6.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.6"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Then, the sky changed. It wasn't the usual war. The air crackled with evil energy. Freyr screamed: 'They found us!'. He spoke of acceleration, of time running out. I saw fear in their eyes. Not fear of dying, but fear of losing what they had gathered.", "translate": "item.yggdrasil.vanaheim.chapter.6.content"}, {"fallback": "Cold, mechanical gods approached. They didn't ask questions, they sought to erase. 'There's no more time!', the Nine cried. 'Hide everything! Protect these archives! Someone will come for them one day!'.", "translate": "item.yggdrasil.vanaheim.chapter.6.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_7.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 7: The Burial", "translate": "item.yggdrasil.vanaheim.chapter.7.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.7"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "It was panic. They gave us crystals by the handful. We ran. We buried them under roots, hid them in trees, concealed them in the foundations of our houses.", "translate": "item.yggdrasil.vanaheim.chapter.7.content"}, {"fallback": "'In the Sei\u00f0r temple!', Freyr ordered. 'Under the moon stone!' Then they vanished. The sky closed again. Silence fell over Vanaheim. The next day, it was said that nine gods had died in an 'accident'. But we knew they had sacrificed themselves for us.", "translate": "item.yggdrasil.vanaheim.chapter.7.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/chapter_8.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Chapter 8: The Guardians", "translate": "item.yggdrasil.vanaheim.chapter.8.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.chapter.8"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Cold gods came to search our villages. They looked for traces of the intrusion. We lied. We hid. We protected. In their empty eyes, I saw fear. Fear of what we represented.", "translate": "item.yggdrasil.vanaheim.chapter.8.content"}, {"fallback": "Today, Vanaheim is calm. But the earth beneath our feet vibrates with the memory of those hundreds of crystals. We are the guardians of truth. We await the one who will come to dig beneath the moon stone.", "translate": "item.yggdrasil.vanaheim.chapter.8.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/ominous_chapter.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Secret: The Dark Crystal", "translate": "item.yggdrasil.vanaheim.ominous_chapter.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.ominous_chapter"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "Just before vanishing, the one who led the Nine handed me this. A different crystal. Darker. Heavier. She told me: 'This contains everything. The complete archive of what happened. Of what they did to us.'.", "translate": "item.yggdrasil.vanaheim.ominous_chapter.content"}, {"fallback": "It's not a memory. It's a weapon. Absolute proof of the creators' crimes. She said: 'We are not heroes... but perhaps someone else can finish what we started.' This crystal is that ending.", "translate": "item.yggdrasil.vanaheim.ominous_chapter.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/lore/vault_chapter.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/lore</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:written_book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_name({"entity": "this", "name": {"fallback": "Record: The Moon Stone Cache", "translate": "item.yggdrasil.vanaheim.vault_chapter.title"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.lore.vault_chapter"}}}}); minecraft:set_written_book_pages({"mode": "replace_all", "pages": [{"fallback": "If you are reading this, you have found the temple. Here rest the hundreds of memory crystals we saved that night. They are not mere stones. They are the voices of our dead, the laughter of our children, irrefutable proof that we have a soul.", "translate": "item.yggdrasil.vanaheim.vault_chapter.content"}, {"fallback": "Take them with reverence. They cost the lives of nine 'gods' who dared to believe in us. They are the legacy of Vanaheim.", "translate": "item.yggdrasil.vanaheim.vault_chapter.content2"}]}); minecraft:set_lore({"entity": "this", "lore": [{"text": ""}, {"color": "#707070", "fallback": "(Quest Item - Story)", "italic": false, "translate": "item.yggdrasil.quest_item.story"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/barrel.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>80.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.3})</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/all_chapters</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/nature</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/potion_ingredients</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/chest.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/chest</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.25})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/all_chapters</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/nature</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>75.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/rare</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.15})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/library.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/library</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/all_chapters</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1 to 2</span> | Entries: 2 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/common</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>80.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/rare</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>20.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 5 | Total weight: 17</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>29.412%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:paper</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>23.529%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:feather</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>17.647%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ink_sac</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>17.647%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_ink_sac</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.765%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 9</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>44.444%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>33.333%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.2})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/pots.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/chest</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.15})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 8 | Total weight: 26</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>19.231%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat_seeds</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>15.385%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_nugget</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>15.385%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_nugget</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.538%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:apple</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.538%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sweet_berries</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.538%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/shared/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2 to 4</span> | Entries: 12 | Total weight: 42</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:dark_oak_log</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>11.905%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:dark_oak_planks</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>9.524%</td>
+<td>minecraft:set_count({"count": {"max": 16, "min": 8, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:resin_clump</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>9.524%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone_meal</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>11.905%</td>
+<td>minecraft:set_count({"count": {"max": 10, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_ingot</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.762%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:honeycomb</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wheat_seeds</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>9.524%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:pumpkin_seeds</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:melon_seeds</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:beetroot_seeds</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/shared/nature.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 11 | Total weight: 32</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:firefly_bush</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>9.375%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:pink_petals</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wildflowers</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cactus_flower</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>6.25%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spore_blossom</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.125%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:flowering_azalea</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>6.25%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:moss_block</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_berries</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>9.375%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sweet_berries</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>9.375%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lily_pad</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>9.375%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:hanging_roots</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>9.375%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/shared/potion_ingredients.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 2</span> | Entries: 10 | Total weight: 27</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:glistering_melon_slice</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:pufferfish</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.407%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:rabbit_foot</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.407%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spider_eye</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sugar</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>14.815%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ghast_tear</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.704%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:blaze_powder</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.407%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:nether_wart</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glass_bottle</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>14.815%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/shared/rare.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 9 | Total weight: 25</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:chicken_spawn_egg</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>12.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cow_spawn_egg</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:pig_spawn_egg</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sheep_spawn_egg</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>12.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>16.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>12.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glistering_melon_slice</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>12.0%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>12.0%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/rare</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>8.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/vault/normal.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/vault_chapter</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/ominous_potion</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/nature</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/rare</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 9</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>33.333%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>44.444%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/reward/vault/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/chest</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/ominous_vault</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/lore/ominous_chapter</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/treasure/vanir_blessing</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/trim</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>66.667%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/nature</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>33.333%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 4 | Total weight: 8</p>
+<p class="meta">Pool conditions: minecraft:random_chance</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:totem_of_undying</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:enchanted_golden_apple</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/rare/enchanted_item_25</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/rare</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>37.5%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/spawner/consumables.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/spawner</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 9 | Total weight: 23</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.696%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.696%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>13.043%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>4.348%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>17.391%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:apple</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>17.391%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.696%</td>
+<td>minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>8.696%</td>
+<td>minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>13.043%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.2})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 3 | Total weight: 12</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/rare</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>16.667%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/common</td>
+<td>minecraft:loot_table</td>
+<td>6</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/nature</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>33.333%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/spawner/key.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/spawner</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/normal</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/spawner/ominous.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/spawner</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 7 | Total weight: 17</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.765%</td>
+<td>minecraft:set_count({"count": {"max": 6, "min": 3, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.765%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>17.647%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>17.647%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.765%</td>
+<td>minecraft:set_potion({"id": "minecraft:strong_healing"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.765%</td>
+<td>minecraft:set_potion({"id": "minecraft:strong_regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>17.647%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/enchanted_book/ominous_trial_spawner</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>100.0%</td>
+<td>—</td>
+<td>random_chance({"chance": 0.3})</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1.0</span> | Entries: 3 | Total weight: 9</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/rare</td>
+<td>minecraft:loot_table</td>
+<td>4</td>
+<td>44.444%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/reward/shared/nature</td>
+<td>minecraft:loot_table</td>
+<td>3</td>
+<td>33.333%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/weak_equipement</td>
+<td>minecraft:loot_table</td>
+<td>2</td>
+<td>22.222%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:vanaheim/key/ominous</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.15})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>vanaheim/treasure/vanir_blessing.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:vanaheim/treasure</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/vanaheim/ominous_vault"}); minecraft:set_name({"name": {"color": "#4a7c3f", "fallback": "Vanir Blessing", "italic": false, "translate": "item.yggdrasil.vanaheim.vanir_blessing"}, "target": "item_name"}); minecraft:set_components({"components": {"minecraft:custom_data": {"yggdrasil": {"id": "yggdrasil.vanaheim.vanir_blessing"}}, "minecraft:rarity": "epic"}}); minecraft:set_lore({"entity": "this", "lore": [{"color": "#a0a0a0", "fallback": "A gift from the Vanir gods", "italic": false, "translate": "item.yggdrasil.vanaheim.vanir_blessing.lore1"}, {"text": ""}, {"color": "#707070", "fallback": "(Structure Item - Ominous Vault)", "italic": false, "translate": "item.yggdrasil.structure.ominous_vault"}, {"color": "#4a7c3f", "fallback": "[Vanaheim]", "italic": false, "translate": "item.yggdrasil.vanaheim.location"}], "mode": "replace_all"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

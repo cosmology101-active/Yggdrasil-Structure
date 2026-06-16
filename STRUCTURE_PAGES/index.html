@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil Structure Loot Tables</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil Structure Loot Tables</h1></header>
+<div class="card"><p class="meta">This site lists all loot tables found under <code>data/yggdrasil/loot_table/&lt;structure&gt;/...</code>. Each structure page shows pool rolls, entries, weights, functions, and the nearest file location.</p><div class="grid"><div><div class="card"><h2>Structure pages</h2><ul class="structure-list"><li><a href="alfheim_tree.html">alfheim_tree</a> <span class="badge">20 loot tables</span></li>
+<li><a href="asflors.html">asflors</a> <span class="badge">34 loot tables</span></li>
+<li><a href="asgard.html">asgard</a> <span class="badge">42 loot tables</span></li>
+<li><a href="cubeoid.html">cubeoid</a> <span class="badge">3 loot tables</span></li>
+<li><a href="dokkalfar_ruins.html">dokkalfar_ruins</a> <span class="badge">1 loot tables</span></li>
+<li><a href="folkvangr.html">folkvangr</a> <span class="badge">2 loot tables</span></li>
+<li><a href="generic.html">generic</a> <span class="badge">90 loot tables</span></li>
+<li><a href="helblom.html">helblom</a> <span class="badge">3 loot tables</span></li>
+<li><a href="helheim.html">helheim</a> <span class="badge">36 loot tables</span></li>
+<li><a href="lifblom.html">lifblom</a> <span class="badge">3 loot tables</span></li>
+<li><a href="proto_fracture.html">proto_fracture</a> <span class="badge">2 loot tables</span></li>
+<li><a href="runic_crystal.html">runic_crystal</a> <span class="badge">4 loot tables</span></li>
+<li><a href="runic_fracture.html">runic_fracture</a> <span class="badge">5 loot tables</span></li>
+<li><a href="runic_labyrinth.html">runic_labyrinth</a> <span class="badge">41 loot tables</span></li>
+<li><a href="vanaheim.html">vanaheim</a> <span class="badge">33 loot tables</span></li>
+<li><a href="voroblom.html">voroblom</a> <span class="badge">3 loot tables</span></li>
+<li><a href="zenflors.html">zenflors</a> <span class="badge">3 loot tables</span></li></ul></div></div><div><div class="card"><h2>Rendering</h2><p class="meta">Open <code>STRUCTURE_PAGES/index.html</code> directly in your browser, or serve the repo with a local static file server.</p><p class="meta">For local rendering:</p><ul class="meta"><li>Use VS Code Live Server or</li><li>run <code>python -m http.server 8000</code> from the repo root and visit <code>http://localhost:8000/STRUCTURE_PAGES/index.html</code>.</li></ul></div></div></div></div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>

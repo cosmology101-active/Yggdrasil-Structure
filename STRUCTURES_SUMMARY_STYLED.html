@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Yggdrasil — Structures Summary (Styled)</title>
+  <style>
+    :root{--bg:#0f1720;--card:#111827;--muted:#9aa4af;--accent:#2ea44f;--accent2:#f6c84c;--glass:rgba(255,255,255,0.03)}
+    body{font-family:Inter,Segoe UI,system-ui,Arial;margin:0;background:linear-gradient(180deg,#071019 0%, #081521 60%);color:#e6eef6}
+    header{padding:28px 36px;border-bottom:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;gap:16px}
+    h1{margin:0;font-size:20px;color:var(--accent)}
+    .container{max-width:1200px;margin:28px auto;padding:0 18px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .muted{color:var(--muted);font-size:13px}
+    .search{display:flex;gap:8px;margin-bottom:14px}
+    .search input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit}
+    .treasure{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .treasure .item{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:10px}
+    .item h3{margin:0 0 6px 0;font-size:15px}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .files{font-family:monospace;font-size:12px;color:#cfe8d0;background:rgba(46,164,79,0.06);padding:8px;border-radius:6px}
+    nav{position:sticky;top:20px}
+    .structure-list{display:flex;flex-direction:column;gap:8px}
+    .structure{padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);cursor:pointer}
+    details summary{cursor:pointer;outline:none}
+    footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+    a.link{color:var(--accent2);text-decoration:none}
+    @media(max-width:1000px){.grid{grid-template-columns:1fr;}.treasure{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yggdrasil — Structures & Treasures</h1>
+    <div class="muted">Concise, searchable overview of structure templates, rewards and enchant pools.</div>
+  </header>
+  <div class="container">
+    <div class="grid">
+      <main>
+        <section class="card">
+          <div class="search">
+            <input id="filter" placeholder="Filter structures or treasures (e.g. 'asgard', 'trident', 'vault')">
+            <button id="clear">Clear</button>
+          </div>
+
+          <h2 style="margin-top:0">Treasures — Quick Reference</h2>
+          <div class="treasure" id="treasure">
+            <div class="item">
+              <h3>Gungnir — trident</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/asgard/treasure/gungnir.json">data/yggdrasil/loot_table/asgard/treasure/gungnir.json</a></div>
+              <div class="meta">Attributes: <strong>attack_damage</strong> +20, <strong>attack_speed</strong> +0.4 (mult), <strong>movement_speed</strong> +0.2 (mult)</div>
+              <div class="meta">Enchants (set): <code>sharpness 6</code>, <code>loyalty 5</code>, <code>impaling 5</code>, <code>riptide 5</code>, <code>channeling 1</code></div>
+            </div>
+
+            <div class="item">
+              <h3>Midas Book — book</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/asgard/treasure/midas.json">midas.json</a></div>
+              <div class="meta">Enchant pool tag: <a class="link" href="data/yggdrasil/tags/enchantment/equipment/midas_book.json">data/yggdrasil/tags/enchantment/equipment/midas_book.json</a> (contains <code>minecraft:sharpness</code>)</div>
+            </div>
+
+            <div class="item">
+              <h3>Asgard Map — map</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/asgard/treasure/asgard_map.json">asgard_map.json</a></div>
+              <div class="meta">Exploration map to <code>yggdrasil:asgard</code>; rarity: epic</div>
+            </div>
+
+            <div class="item">
+              <h3>Real Asflors Sword — diamond_sword</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/asflors/treasure/real_asflors_sword.json">real_asflors_sword.json</a></div>
+              <div class="meta">Attributes: attack_damage +7, attack_speed +1.6, sweeping ratio +0.75, etc.</div>
+              <div class="meta">Enchant pool: <a class="link" href="data/yggdrasil/tags/enchantment/structure/asflors/asflors_sword.json">structure/asflors/asflors_sword.json</a> (references <code>#minecraft:non_treasure</code>).</div>
+            </div>
+
+            <div class="item">
+              <h3>Vanir Blessing — book</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/vanaheim/treasure/vanir_blessing.json">vanir_blessing.json</a></div>
+              <div class="meta">Enchant pool tag: <a class="link" href="data/yggdrasil/tags/enchantment/structure/vanaheim/ominous_vault.json">structure/vanaheim/ominous_vault.json</a> (empty tag)</div>
+            </div>
+
+            <div class="item">
+              <h3>Twilight Bow — bow</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/runic_labyrinth/treasure/twilight_of_yggdrasil_bow.json">twilight_of_yggdrasil_bow.json</a></div>
+              <div class="meta">Enchant pool: <a class="link" href="data/yggdrasil/tags/enchantment/structure/runic_labyrinth/twilight_of_yggdrasil_bow.json">runic_labyrinth/twilight_of_yggdrasil_bow.json</a></div>
+            </div>
+
+            <div class="item">
+              <h3>Dark Elven Bow — bow</h3>
+              <div class="meta">File: <a class="link" href="data/yggdrasil/loot_table/runic_labyrinth/treasure/dark_elven_bow.json">dark_elven_bow.json</a></div>
+              <div class="meta">Enchant pool: <a class="link" href="data/yggdrasil/tags/enchantment/structure/runic_labyrinth/dark_elven_bow.json">runic_labyrinth/dark_elven_bow.json</a></div>
+            </div>
+
+          </div>
+
+          <hr style="margin:18px 0;border-color:rgba(255,255,255,0.03)">
+
+          <h2>Structures — Overview</h2>
+
+          <div id="structures">
+            <!-- We'll render a compact list for each structure folder -->
+            <details open>
+              <summary><strong>alfheim_tree</strong> — large tree/island templates (examples shown)</summary>
+              <div class="muted" style="margin-top:8px">
+                Examples: <span class="files">data/yggdrasil/structure/alfheim_tree/tree/underground.nbt, tree/main/1.nbt, island/large.nbt</span>
+                <div style="margin-top:8px">Expect: large island/tree templates, underground rooms, reward/generator placements</div>
+              </div>
+            </details>
+
+            <details>
+              <summary><strong>asflors</strong> — towns, roads, vaults</summary>
+              <div class="muted" style="margin-top:8px">Examples: <span class="files">data/yggdrasil/structure/asflors/underground/treasure.nbt, reward/vault.nbt</span><div>Expect: towns with treasure rooms and reward vaults</div></div>
+            </details>
+
+            <details>
+              <summary><strong>asgard</strong> — islands, towers, reward vaults</summary>
+              <div class="muted" style="margin-top:8px">Examples: <span class="files">data/yggdrasil/structure/asgard/reward/chest.nbt, island/tower.nbt</span><div>Expect: island/tower complexes with chests/barrels and spawner/terminator pieces</div></div>
+            </details>
+
+            <details>
+              <summary><strong>cubeoid</strong> — compact spawner + reward</summary>
+              <div class="muted" style="margin-top:8px">Files: <span class="files">data/yggdrasil/structure/cubeoid/main.nbt, spawner.nbt, reward.nbt</span></div>
+            </details>
+
+            <details>
+              <summary><strong>dokkalfar_ruins</strong> — portal/ruins pieces</summary>
+              <div class="muted" style="margin-top:8px">Files: portal/plate/grass templates</div>
+            </details>
+
+            <details>
+              <summary><strong>folkvangr</strong> — dungeon rooms & artefact</summary>
+              <div class="muted" style="margin-top:8px">Examples: <span class="files">room.nbt, corridor.nbt, artefact.nbt</span></div>
+            </details>
+
+            <details>
+              <summary><strong>generic</strong> — feature spawners used across structures</summary>
+              <div class="muted" style="margin-top:8px">Contains numerous `feature/spawner/*` templates for many mob types (zombie, skeleton, warden, etc.).</div>
+            </details>
+
+            <details>
+              <summary><strong>glaosheimr</strong> — city pieces</summary>
+              <div class="muted" style="margin-top:8px">Examples: library, house, fountain, park</div>
+            </details>
+
+            <details>
+              <summary><strong>helblom</strong> — sanctuary</summary>
+              <div class="muted" style="margin-top:8px">Single sanctuary template</div>
+            </details>
+
+            <details>
+              <summary><strong>helheim</strong> — multi-room complex with vaults</summary>
+              <div class="muted" style="margin-top:8px">Many room shapes, reward vaults, spawners and road pieces.</div>
+            </details>
+
+            <details>
+              <summary><strong>lifblom</strong> — garden</summary>
+              <div class="muted" style="margin-top:8px">Garden template (decorative)</div>
+            </details>
+
+            <details>
+              <summary><strong>neogard</strong> — island</summary>
+              <div class="muted" style="margin-top:8px">Single island template</div>
+            </details>
+
+            <details>
+              <summary><strong>proto_fracture</strong> — experimental island</summary>
+              <div class="muted" style="margin-top:8px">Single island fragment</div>
+            </details>
+
+            <details>
+              <summary><strong>runic_crystal</strong> — crystalline feature</summary>
+              <div class="muted" style="margin-top:8px">Main crystal feature template</div>
+            </details>
+
+            <details>
+              <summary><strong>runic_fracture</strong> — fractured runic piece</summary>
+              <div class="muted" style="margin-top:8px">Main fractured runic piece</div>
+            </details>
+
+            <details>
+              <summary><strong>runic_labyrinth</strong> — large modular labyrinth</summary>
+              <div class="muted" style="margin-top:8px">Many room/link/side variants, training rooms, villager pieces, reward rooms. Highly modular.</div>
+            </details>
+
+            <details>
+              <summary><strong>vanaheim</strong> — underground crypts & libraries</summary>
+              <div class="muted" style="margin-top:8px">Underground rooms, crypts, reward vaults, spawner templates</div>
+            </details>
+
+            <details>
+              <summary><strong>voroblom</strong> — main template</summary>
+              <div class="muted" style="margin-top:8px">Single main template (feature/village)</div>
+            </details>
+
+            <details>
+              <summary><strong>zenflors</strong> — room</summary>
+              <div class="muted" style="margin-top:8px">Single room template</div>
+            </details>
+
+          </div>
+
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2 style="margin-top:0">Full structures appendix</h2>
+          <div class="muted">The full raw summary follows. Use the filter box above to quickly find names.</div>

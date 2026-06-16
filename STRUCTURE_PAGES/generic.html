@@ -1,0 +1,4343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yggdrasil — generic</title>
+<style>
+:root{--bg:#071019;--card:#0f1720;--text:#e6eef6;--muted:#9aa4af;--accent:#4fb5ff;--accent2:#7ee787;--border:rgba(255,255,255,0.08)}
+body{margin:0;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:#05080f;color:var(--text)}
+.container{max-width:1160px;margin:0 auto;padding:24px}
+header,footer{padding:20px 0;text-align:center}
+header h1{margin:0;font-size:2rem;color:var(--accent)}
+header p,footer p{margin:10px 0;color:var(--muted)}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:18px;padding:22px;margin-bottom:20px;box-shadow:0 16px 40px rgba(0,0,0,0.25)}
+.grid{display:grid;grid-template-columns:1fr 260px;gap:20px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+.structure-list{list-style:none;margin:0;padding:0}
+.structure-list li{margin:0 0 10px}
+.structure-list a{color:var(--accent2);text-decoration:none;font-weight:600}
+.structure-list a:hover{text-decoration:underline}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{border:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;vertical-align:top}
+.table th{background:rgba(255,255,255,0.04)}
+.code{font-family:Consolas,monospace;font-size:0.92rem;color:#b7c6f3;background:rgba(255,255,255,0.04);padding:4px 6px;border-radius:6px}
+.meta{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:0.8rem;background:rgba(79,181,255,0.12);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>Yggdrasil — generic</h1></header>
+<div class="card"><p class="meta">Structure: <strong>generic</strong>. Loot tables: 90.</p><p class="meta">Files under <code>data/yggdrasil/loot_table/generic</code>.</p><p class="meta"><a class="code" href="index.html">Back to structure index</a></p></div><div class="card"><h2>generic/equipment/normal/asgard/helmet.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); set_attributes({"modifiers": [{"amount": 0.5, "attribute": "minecraft:scale", "id": "yggdrasil:spawners/scale", "operation": "add_multiplied_base", "slot": "head"}], "replace": false}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>set_attributes({"modifiers": [{"amount": 0.25, "attribute": "minecraft:scale", "id": "yggdrasil:spawners/scale", "operation": "add_multiplied_base", "slot": "head"}], "replace": false})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); set_attributes({"modifiers": [{"amount": 2, "attribute": "minecraft:scale", "id": "yggdrasil:spawners/scale", "operation": "add_multiplied_base", "slot": "head"}], "replace": false}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>set_attributes({"modifiers": [{"amount": 2.5, "attribute": "minecraft:scale", "id": "yggdrasil:spawners/scale", "operation": "add_multiplied_base", "slot": "head"}], "replace": false})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); set_attributes({"modifiers": [{"amount": 1.2, "attribute": "minecraft:scale", "id": "yggdrasil:spawners/scale", "operation": "add_multiplied_base", "slot": "head"}]}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/asgard/melee.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/sword</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/asgard/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/asgard/melee_trident.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/trident</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/asgard/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/asgard/range.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/bow</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/asgard/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/boots.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_boots</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_boots</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/boots"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/boots"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/boots"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/bow.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>37.5%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/bow"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:set_enchantments({"add": false, "enchantments": {"minecraft:multishot": 7}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/chestplate.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/chestplate"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/chestplate"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/chestplate"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/helmet.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/leggings.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_leggings</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_leggings</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/leggings"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/leggings"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/leggings"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/sword.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/item/trident.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 7</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trident</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>57.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:trident</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>42.857%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 15, "min": 5}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/melee.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/sword</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/melee_trident.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/trident</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/normal/range.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/bow</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/normal/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/asgard/helmet.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:amethyst", "pattern": "minecraft:wayfinder"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:copper", "pattern": "minecraft:bolt"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:diamond", "pattern": "minecraft:dune"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:netherite", "pattern": "minecraft:shaper"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:redstone", "pattern": "minecraft:silence"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:quartz", "pattern": "minecraft:flow"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/asgard/melee.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/sword</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/asgard/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/asgard/melee_trident.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/trident</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/asgard/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/asgard/range.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/bow</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/asgard/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/boots.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_boots</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:amethyst", "pattern": "minecraft:sentry"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_boots</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/boots"}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:copper", "pattern": "minecraft:shaper"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:diamond", "pattern": "minecraft:snout"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/boots"}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:netherite", "pattern": "minecraft:coast"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:redstone", "pattern": "minecraft:snout"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/boots"}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:quartz", "pattern": "minecraft:wild"}}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/bow.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>37.5%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}, "options": "#yggdrasil:equipment/item/bow"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:set_enchantments({"add": false, "enchantments": {"minecraft:multishot": 7}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/chestplate.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:amethyst", "pattern": "minecraft:eye"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:copper", "pattern": "minecraft:rib"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/chestplate"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:diamond", "pattern": "minecraft:shaper"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:netherite", "pattern": "minecraft:tide"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/chestplate"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:redstone", "pattern": "minecraft:host"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:quartz", "pattern": "minecraft:ward"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/chestplate"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/helmet.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:amethyst", "pattern": "minecraft:wayfinder"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:copper", "pattern": "minecraft:bolt"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:diamond", "pattern": "minecraft:dune"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:netherite", "pattern": "minecraft:shaper"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:redstone", "pattern": "minecraft:silence"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:quartz", "pattern": "minecraft:flow"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/helmet"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/leggings.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_leggings</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:amethyst", "pattern": "minecraft:coast"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_leggings</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:copper", "pattern": "minecraft:raiser"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/leggings"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:diamond", "pattern": "minecraft:shaper"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:netherite", "pattern": "minecraft:tide"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/leggings"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:redstone", "pattern": "minecraft:ward"}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:set_components({"components": {"minecraft:trim": {"material": "minecraft:quartz", "pattern": "minecraft:wayfinder"}}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/leggings"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/sword.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>23.077%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>15.385%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:netherite_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 45, "min": 20}}); minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/item/trident.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 7</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trident</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>57.143%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:trident</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>42.857%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 75, "min": 20}, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/melee.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/sword</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/melee_trident.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/trident</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/equipment/ominous/range.json</h2><p class="meta">Type: <span class="code">minecraft:equipment</span> | random_sequence: <span class="code">yggdrasil:equipment</span> | pools: 5</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/bow</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/helmet</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/chestplate</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/leggings</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 5</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/equipment/ominous/item/boots</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/bogged.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/bogged</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/bogged</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/breeze.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/breeze</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/breeze</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/drowned.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/drowned</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/drowned</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/enderman.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/enderman</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/enderman</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/evoker.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/evoker</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/evoker</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/husk.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/husk</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/husk</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/magma_cube.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/magma_cube</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/magma_cube</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/phantom.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/phantom</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/phantom</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/piglin_brute.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/piglin_brute</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/piglin_brute</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/skeleton.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/skeleton</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/skeleton</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/slime.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/slime</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/slime</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/spider.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/spider</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/spider</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/stray.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/stray</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/stray</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/witch.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/witch</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/witch</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/wither_skeleton.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/wither_skeleton</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/wither_skeleton</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/normal/zombie.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/zombie</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/zombie</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/bogged.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/bogged</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 4 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:red_mushroom_block</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:brown_mushroom_block</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:mushroom_stem</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/bogged</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/breeze.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/breeze</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:mace</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.005})</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/breeze</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/drowned.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/drowned</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 3 | Total weight: 3</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:trident</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>33.333%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 100, "min": 15}, "options": "#yggdrasil:equipment/item/sword"})</td>
+<td>minecraft:random_chance({"chance": 0.01})</td>
+</tr>
+<tr>
+<td class="code">minecraft:heart_of_the_sea</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>33.333%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.01})</td>
+</tr>
+<tr>
+<td class="code">minecraft:nautilus_shell</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>33.333%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>minecraft:random_chance({"chance": 0.01})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/drowned</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/enderman.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/enderman</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ender_eye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:chorus_fruit</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/enderman</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/evoker.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/evoker</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/evoker</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/husk.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/husk</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:fire_charge</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/husk</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/magma_cube.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/magma_cube</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:blaze_powder</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:slime_ball</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/magma_cube</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/phantom.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/phantom</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:elytra</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.001})</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:night_vision"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/phantom</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/piglin_brute.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/piglin_brute</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:gold_block</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/piglin_brute</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/skeleton.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/skeleton</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 2</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:bone_block</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>50.0%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 100, "min": 45}, "options": "#yggdrasil:equipment/item/bow"})</td>
+<td>minecraft:random_chance({"chance": 0.05})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/skeleton</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/slime.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/slime</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:oozing"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/slime</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/spider.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/spider</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:fermented_spider_eye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/spider</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/stray.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/stray</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:blue_ice</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/stray</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/witch.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/witch</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 5 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:fire_resistance"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:wind_charged"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:strength"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>minecraft:random_chance({"chance": 0.1})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/witch</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/wither_skeleton.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/wither_skeleton</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:wither_skeleton_skull</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.05})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/wither_skeleton</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/mob/ominous/zombie.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | random_sequence: <span class="code">minecraft:entities/zombie</span> | pools: 3</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:enchanted_golden_apple</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>minecraft:random_chance({"chance": 0.05})</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/mob</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:minecraft:entities/zombie</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/mob.json</h2><p class="meta">Type: <span class="code">minecraft:entity</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>minecraft:random_chance({"chance": 0.5})</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/normal/enchanted_book.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/generic/trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/normal/equipement.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">tag:yggdrasil:equipement</td>
+<td>minecraft:tag</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 12, "min": 0}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/normal/misc.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/consumables</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 10 | Total weight: 27</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.407%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:fire_charge</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.407%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>8</td>
+<td>29.63%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>14.815%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:copper_ingot</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:baked_potato</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>7.407%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.704%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.704%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>3.704%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/normal/trial.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/enchanted_book</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/normal/misc</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/normal/weak_equipement.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">tag:yggdrasil:weak_equipement</td>
+<td>minecraft:tag</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 12, "min": 0}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/ominous/enchanted_book.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:book</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_randomly({"only_compatible": true, "options": "#yggdrasil:structure/generic/ominous_trial_spawner"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/ominous/equipement.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/consumables</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 22 | Total weight: 56</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:diamond_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_shovel</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_pickaxe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_axe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_hoe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>1.786%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:chainmail_boots</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.929%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:chainmail_chestplate</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.929%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:chainmail_leggings</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.929%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:chainmail_helmet</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>8.929%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_boots</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_leggings</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_shovel</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_pickaxe</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_axe</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_hoe</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>5.357%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 12}, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/ominous/misc.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:alfheim_tree/spawner/consumables</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 10 | Total weight: 20</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 5, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wind_charge</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:enchanted_golden_apple</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_apple</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>15.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:baked_potato</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>10.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:swiftness"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/ominous/trial.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/ominous/enchanted_book</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">loot_table:yggdrasil:generic/reward/ominous/misc</td>
+<td>minecraft:loot_table</td>
+<td>1</td>
+<td>100.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/archer.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 9 | Total weight: 9</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:crossbow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_damage({"add": false, "damage": {"max": 0.5, "min": 0.1, "type": "minecraft:uniform"}}); minecraft:enchant_randomly({"options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spectral_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 28, "min": 10, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:enchant_randomly({"options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:enchant_randomly({"options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:chainmail_leggings</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:enchant_randomly({"options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:leather_boots</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:enchant_randomly({"options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:stone_axe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:enchant_randomly({"options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>11.111%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 30, "min": 0}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/arrow.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 2</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_count({"count": {"max": 12, "min": 5}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 6 | Total weight: 6</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_potion({"id": "minecraft:healing"}); minecraft:set_count({"count": {"max": 5, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_potion({"id": "minecraft:fire_resistance"}); minecraft:set_count({"count": {"max": 5, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_potion({"id": "minecraft:long_poison"}); minecraft:set_count({"count": {"max": 5, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_potion({"id": "minecraft:invisibility"}); minecraft:set_count({"count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_potion({"id": "minecraft:weakness"}); minecraft:set_count({"count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tipped_arrow</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_potion({"id": "minecraft:strong_harming"}); minecraft:set_count({"count": {"max": 5, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/common.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 4</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:stone_axe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wooden_axe</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>75.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 2</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 2 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:stone_pickaxe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wooden_pickaxe</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>75.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 3</h3>
+<p class="meta">Rolls: <span class="code">3</span> | Entries: 3 | Total weight: 11</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:apple</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>45.455%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>27.273%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:salmon</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>27.273%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3>Pool 4</h3>
+<p class="meta">Rolls: <span class="code">4</span> | Entries: 9 | Total weight: 41</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:stick</td>
+<td>minecraft:item</td>
+<td>10</td>
+<td>24.39%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 12, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:oak_planks</td>
+<td>minecraft:item</td>
+<td>10</td>
+<td>24.39%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 12, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:oak_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spruce_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:birch_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:jungle_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:acacia_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:dark_oak_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:mangrove_log</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>7.317%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/dye.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3 to 6</span> | Entries: 6 | Total weight: 7</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:black_dye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:red_dye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:blue_dye</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>28.571%</td>
+<td>minecraft:set_count({"count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:green_dye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:yellow_dye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:white_dye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 2}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/echo.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2 to 6</span> | Entries: 3 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:echo_shard</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>40.0%</td>
+<td>minecraft:set_count({"count": {"max": 5, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:string</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>40.0%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 2}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/equipement.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2</span> | Entries: 10 | Total weight: 15</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bow</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>20.0%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 20, "min": 10, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:crossbow</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>13.333%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 22, "min": 5, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_chestplate</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 20, "min": 10, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:diamond_axe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 20, "min": 10, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_pickaxe</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 20, "min": 10}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:heart_of_the_sea</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_eye</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_sword</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>minecraft:set_count({"count": 1}); minecraft:enchant_with_levels({"levels": {"max": 20, "min": 10, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_helmet</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>6.667%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 20, "min": 10, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/food.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 2</span> | Entries: 4 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:melon_slice</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bread</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tropical_fish</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 17, "min": 4}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:apple</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": {"max": 17, "min": 4}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/harvest.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 4 | Total weight: 5</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:dried_kelp</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sweet_berries</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:milk_bucket</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>40.0%</td>
+<td>minecraft:set_count({"count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:leather</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>20.0%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 2}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/house.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">5 to 10</span> | Entries: 18 | Total weight: 50</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:music_disc_otherside</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>2.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:stone_hoe</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 1, "min": 0.8, "type": "minecraft:uniform"}}); minecraft:enchant_with_levels({"levels": {"max": 15, "min": 10, "type": "minecraft:uniform"}, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:stone_axe</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 1, "min": 0.8, "type": "minecraft:uniform"}}); minecraft:enchant_with_levels({"levels": {"max": 15, "min": 10, "type": "minecraft:uniform"}, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:stone_pickaxe</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 1, "min": 0.8, "type": "minecraft:uniform"}}); minecraft:enchant_with_levels({"levels": {"max": 15, "min": 10, "type": "minecraft:uniform"}, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:stone_sword</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 1, "min": 0.8, "type": "minecraft:uniform"}}); minecraft:enchant_with_levels({"levels": {"max": 15, "min": 10, "type": "minecraft:uniform"}, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:stone_shovel</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_damage({"add": false, "damage": {"max": 1, "min": 0.8, "type": "minecraft:uniform"}}); minecraft:enchant_with_levels({"levels": {"max": 15, "min": 10, "type": "minecraft:uniform"}, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lead</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_horse_armor</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:saddle</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>4.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:candle</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>6.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:amethyst_shard</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>6.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 7, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>6.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 7, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:glow_berries</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>6.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 15, "min": 4, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_leggings</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>6.0%</td>
+<td>minecraft:enchant_with_levels({"levels": {"max": 12, "min": 5, "type": "minecraft:uniform"}, "options": "#minecraft:on_random_loot"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:potion</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>10.0%</td>
+<td>minecraft:set_count({"add": false, "count": 1}); minecraft:set_potion({"id": "minecraft:regeneration"})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bone</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>10.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 15, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:coal</td>
+<td>minecraft:item</td>
+<td>7</td>
+<td>14.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 15, "min": 6, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_pearl</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>2.0%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/magic.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">5</span> | Entries: 6 | Total weight: 14</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>5</td>
+<td>35.714%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:emerald</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>21.429%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_ingot</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.143%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:echo_shard</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ender_pearl</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>14.286%</td>
+<td>minecraft:set_count({"count": {"max": 2, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/misc.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">2 to 6</span> | Entries: 8 | Total weight: 18</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:cherry_sapling</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:experience_bottle</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:golden_carrot</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>11.111%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 4, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_ingot</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>22.222%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 2, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:axolotl_bucket</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.556%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:firework_rocket</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.556%</td>
+<td>minecraft:set_components({"components": {"minecraft:fireworks": {"explosions": [], "flight_duration": 3}}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cherry_boat</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.556%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:map</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.556%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/redstone.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3 to 7</span> | Entries: 3 | Total weight: 6</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:flint</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>16.667%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:redstone</td>
+<td>minecraft:item</td>
+<td>3</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:feather</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>33.333%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/small.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 3</span> | Entries: 4 | Total weight: 4</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:string</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 6, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:leather</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 3, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_nugget</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_nugget</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"add": false, "count": {"max": 6, "min": 2, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/treasure.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1 to 4</span> | Entries: 4 | Total weight: 8</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:quartz</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": 1})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:lapis_lazuli</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>50.0%</td>
+<td>minecraft:set_count({"count": {"max": 7, "min": 2}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:gold_nugget</td>
+<td>minecraft:item</td>
+<td>2</td>
+<td>25.0%</td>
+<td>minecraft:set_count({"count": {"max": 17, "min": 4}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:iron_nugget</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>12.5%</td>
+<td>minecraft:set_count({"count": {"max": 17, "min": 4}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/random/water.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">3 to 7</span> | Entries: 10 | Total weight: 13</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:cherry_sapling</td>
+<td>minecraft:item</td>
+<td>4</td>
+<td>30.769%</td>
+<td>minecraft:set_count({"count": {"max": 8, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:seagrass</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:big_dripleaf</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:small_dripleaf</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cod</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:salmon</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 3, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:pufferfish</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cherry_wood</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 15, "min": 1}})</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:water_bucket</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:cobblestone</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>7.692%</td>
+<td>minecraft:set_count({"count": {"max": 4, "min": 1}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/rare/enchanted_item_10.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">tag:yggdrasil:weak_equipement</td>
+<td>minecraft:tag</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_with_levels({"levels": 10, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/rare/enchanted_item_25.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">tag:yggdrasil:common_equipement</td>
+<td>minecraft:tag</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_with_levels({"levels": 25, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/rare/enchanted_item_50.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">tag:yggdrasil:equipement</td>
+<td>minecraft:tag</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:enchant_with_levels({"levels": 50, "options": "#minecraft:non_treasure"})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/rare/ominous_potion.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 1 | Total weight: 1</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:ominous_bottle</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>100.0%</td>
+<td>minecraft:set_ominous_bottle_amplifier({"amplifier": {"max": 5, "min": 1, "type": "minecraft:uniform"}})</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<div class="card"><h2>generic/reward/rare/trim.json</h2><p class="meta">Type: <span class="code">minecraft:chest</span> | random_sequence: <span class="code">yggdrasil:generic/reward</span> | pools: 1</p>
+<h3>Pool 1</h3>
+<p class="meta">Rolls: <span class="code">1</span> | Entries: 17 | Total weight: 17</p>
+<table class="table"><thead><tr><th>Entry</th><th>Type</th><th>Weight</th><th>Chance/roll</th><th>Functions</th><th>Conditions</th></tr></thead><tbody>
+<tr>
+<td class="code">minecraft:eye_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:rib_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:vex_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:bolt_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:dune_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:host_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:tide_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:ward_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wild_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:silence_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:wayfinder_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:shaper_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:sentry_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:raiser_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:spire_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:snout_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="code">minecraft:coast_armor_trim_smithing_template</td>
+<td>minecraft:item</td>
+<td>1</td>
+<td>5.882%</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+</div>
+<footer><p>Generated from data/yggdrasil/loot_table structure. Open this file in a browser or serve with a static file server.</p></footer>
+</div>
+</body>
+</html>
